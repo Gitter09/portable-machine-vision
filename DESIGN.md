@@ -1,0 +1,15 @@
+# Summit dashboard visual system
+
+User-approved direction: “white industrial interface, with a focus on accessibility”; large exact-frame inspection hero, component findings at right, telemetry underneath, smaller live preview and recent changes. Story: “See what’s missing. Right at the edge.”
+
+Light environment: summit visitors viewing a bright external display from a distance. White panels on cool-grey ground; BITS navy #302b65 carries identity. Text #202735, secondary #596171; presence #176447 and absence #a52f38 always paired with text. Amber denotes simulation and unknown states. No colour-only meaning.
+
+System UI typography is used for this operating dashboard, with tabular measurement numerals. 44px controls, visible keyboard focus, restrained 6–8px corners and 1px separators. No decorative charting or fabricated accuracy. Component imagery is explicitly labelled schematic simulation. Downloaded Lucide icons are served locally. At widths below 700px panels stack; wide displays enlarge type and spacing. Desktop presentation is viewport-height: inspection and performance strip stay together, with a contained, undistorted canvas. Supporting panels follow below the fold. Very short windows use a minimum presentation height rather than compress text below readability. The intro has no subtitle or side connection copy; simulation is labelled inside the inspection image.
+
+The compact topbar uses a slightly smaller logo and the larger title “Portable Machine Vision Inspection Setup”, with no station subtitle. Pause/Resume sits beside the headline with a dynamic icon in simulation mode and is hidden in Live mode. No source badge appears in the topbar; the image retains its schematic simulation label. The inference note is vertically centered in the space below the screw-terminal findings, with larger text. Footer sales copy, host-receipt qualifier and simulation-session caption are omitted.
+
+Presenter controls use an anchored stacked drill-down dropdown, adapted from the owner's supplied interaction reference without adding React dependencies. Selected choices, pressed button states, keyboard focus, and short confirmation messages provide feedback. Fullscreen expands only the inspection viewport, is controlled from its header, and uses the same 44px button dimensions as settings; redundant confidence/frame-pairing captions are removed and the detections panel has no inner scrollbar. Menu transitions honor reduced-motion preferences.
+
+The reduced headline frees inspection height. The inspection title/fullscreen row and bottom legend are positioned above the image on 84%-white, 16px backdrop-blurred surfaces with readable opaque text, replacing layout-height bezels. Source tags sit below the title and frame status alongside the legend to avoid collisions; video remains contained and undistorted. The preview has no explanatory paragraph.
+
+Implementation lives in frontend/style.css. Browser-rendered review remains outstanding; this records implemented intent, not visual acceptance.

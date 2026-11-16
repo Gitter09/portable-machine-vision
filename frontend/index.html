@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Portable Vision · BITS Pilani WILP</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img
+        class="brand"
+        src="assets/bits-wilp.png"
+        alt="BITS Pilani Work Integrated Learning Programmes"
+      />
+      <div class="station">
+        <strong>Portable Machine Vision Inspection Setup</strong>
+      </div>
+      <div class="header-actions">
+        <div class="menu-anchor">
+          <button
+            id="settings"
+            aria-expanded="false"
+            aria-controls="presenter-menu"
+            aria-haspopup="menu"
+            aria-label="Presenter controls"
+          >
+            <img src="assets/settings-2.svg" alt="" />
+          </button>
+          <div id="presenter-menu" class="menu-stack" hidden></div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="presentation">
+        <section class="intro">
+          <div>
+            <h1>See what’s missing.<br /><span>Right at the edge.</span></h1>
+          </div>
+          <button id="pause" aria-pressed="false">
+            <img src="assets/pause.svg" alt="" />Pause simulation
+          </button>
+        </section>
+        <section id="controls" class="controls" hidden>
+          <label
+            >Data source<select id="source">
+              <option value="mock">Offline simulation</option>
+              <option value="live">Live receiver</option>
+            </select></label
+          ><label
+            >Simulation scenario<select id="scenario">
+              <option value="cycle">Guided demonstration</option>
+              <option value="present">Both present</option>
+              <option value="ic">IC missing</option>
+              <option value="terminal">Terminal missing</option>
+              <option value="both">Both missing</option>
+              <option value="unknown">PCB not located</option>
+              <option value="stale">Stale result</option>
+              <option value="disconnected">Connection lost</option>
+            </select></label
+          >
+          <p>
+            Live mode reads an already running receiver. It does not start or
+            restart the board.
+          </p>
+        </section>
+        <section class="workspace">
+          <div class="inspection">
+            <div class="panel-title">
+              <h2><img src="assets/scan-eye.svg" alt="" />Inspection view</h2>
+              <button
+                id="fullscreen"
+                class="inspection-fullscreen"
+                aria-label="Enter fullscreen"
+                title="Enter fullscreen"
+              >
+                <img src="assets/maximize.svg" alt="" />
+              </button>
+            </div>
+            <div class="viewport" id="inspection-video">
+              <canvas
+                id="scene"
+                width="1280"
+                height="720"
+                role="img"
+                aria-label="Illustrative PCB inspection with component detection boxes"
+              ></canvas>
+              <div class="view-tag" id="viewTag">
+                SCHEMATIC SIMULATION · NOT CAMERA FOOTAGE
+              </div>
+              <div id="empty" class="empty" hidden>
+                <img src="assets/unplug.svg" alt="" />
+                <h3 id="emptyTitle">No current inspection</h3>
+                <p id="emptyText">Waiting for an exact frame match.</p>
+              </div>
+              <div class="view-bottom">
+                <span id="frame">Frame —</span>
+              </div>
+            </div>
+            <div class="inspection-caption">
+              <span><span class="legend present"></span>Present</span
+              ><span><span class="legend missing"></span>Missing</span>
+            </div>
+          </div>
+          <aside class="findings">
+            <div class="panel-title">
+              <h2>Latest detections</h2>
+              <span id="count">2 findings</span>
+            </div>
+            <div id="detections"></div>
+            <div class="finding-note">
+              <img src="assets/cpu.svg" alt="" />
+              <div>
+                <strong>Inference at the edge</strong>
+                <p>
+                  Detection runs on the SiMa Modalix board. This dashboard
+                  displays its results.
+                </p>
+              </div>
+            </div>
+          </aside>
+        </section>
+        <section class="telemetry" aria-label="Session metrics">
+          <div>
+            <img src="assets/activity.svg" alt="" /><span id="rateLabel"
+              >AI inspection rate</span
+            ><strong id="aiRate">—</strong><small>inspections / second</small>
+          </div>
+          <div>
+            <img src="assets/camera.svg" alt="" /><span>Video rate</span
+            ><strong id="videoRate">—</strong><small>frames / second</small>
+          </div>
+          <div>
+            <img src="assets/radio.svg" alt="" /><span>Result age</span
+            ><strong id="age">—</strong><small>milliseconds</small>
+          </div>
+          <div>
+            <span>Session elapsed</span><strong id="elapsed">00:00</strong
+            ><small id="sessionNote"></small>
+          </div>
+        </section>
+      </div>
+      <section class="lower">
+        <div class="preview-panel">
+          <div class="panel-title">
+            <h2>Live camera</h2>
+            <span id="previewLabel">Illustrative preview</span>
+          </div>
+          <div class="preview-content">
+            <canvas
+              id="preview"
+              width="640"
+              height="360"
+              role="img"
+              aria-label="Unannotated illustrative PCB preview"
+            ></canvas
+            ><img id="live" alt="Live unannotated camera feed" hidden />
+          </div>
+        </div>
+        <div class="history-panel">
+          <div class="panel-title">
+            <h2>Recent detection changes</h2>
+            <span>Not a product count</span>
+          </div>
+          <ol id="history">
+            <li>Waiting for the first detection.</li>
+          </ol>
+        </div>
+      </section>
+      <details class="diagnostics">
+        <summary>Receiver diagnostics</summary>
+        <pre id="diagnostics">Simulation mode. No hardware telemetry.</pre>
+      </details>
+      <footer>
+        <span>BITS Pilani · Work Integrated Learning Programmes</span>
+      </footer>
+    </main>
+    <div
+      id="action-feedback"
+      class="action-feedback"
+      role="status"
+      aria-live="polite"
+      hidden
+    ></div>
+    <script type="module" src="app.js"></script>
+    <script type="module" src="menu.js"></script>
+  </body>
+</html>

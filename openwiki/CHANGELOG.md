@@ -1443,3 +1443,41 @@ Entries are appended, never edited, removed, reordered or squashed.
   attributed to Gitter09 using account-ID GitHub noreply address. Current pipeline
   files retained, no co-author trailers. Earlier changelog records are preserved
   as operational documentation, not assertions of retained Git ancestry.
+
+## 2026-11-16 — Offline summit detection dashboard
+
+- Added standalone `frontend/` white/navy dashboard with owner-supplied BITS WILP logo, locally vendored Lucide icons, schematic PCB simulation, selectable missing/present/unknown/stale/disconnected scenarios, fullscreen and presenter controls.
+- Added read-only loopback bridge to existing coordinate receiver endpoints; exact-frame overlays only, stale/disconnected findings cleared, conflicts explicit. No overall verdict, product counter, accuracy or yield claims. Live result rate is dashboard-observed, not model throughput.
+- Added dashboard guide and product/design context. Seven Python server tests and three Node state tests pass; JavaScript syntax and local HTTP smoke pass. Rendered browser/4K/accessibility and physical-board integration validation remain outstanding. No SDK, frozen payload, model, runtime lifecycle, board or fixed-station changes.
+
+## 2026-11-16 — Summit first-screen layout refinement
+
+- Removed owner-rejected introductory subtitle and side simulation/connection copy, retaining the header mode badge and inspection failure messages.
+- Desktop presentation now budgets viewport height for inspection plus performance strip together. Canvas uses contained scaling without cropping or distortion; supporting preview/history remain below. Very short windows retain a readable minimum height. Narrow layout remains stacked.
+- Updated dashboard guide and design record. All seven server and three state tests plus JavaScript syntax checks pass. Rendered fit still needs owner confirmation; no board, SDK or frozen runtime changes.
+
+## 2026-11-16 — Presenter dropdown and interaction refinement
+
+- Removed confidence disclaimer and frame-pairing caption from the dashboard, and removed detections-panel scrolling. Moved fullscreen into the inspection header in place of Exact-frame overlay.
+- Replaced expanding presenter controls with an anchored, stacked source/scenario dropdown adapted from the owner's React reference for the existing plain-JavaScript UI. Added outside-click dismissal, keyboard traversal/back/escape, selection indicators, reduced-motion support, click feedback and action confirmations.
+- Updated dashboard/design documentation. Existing seven Python and three Node checks pass, and menu syntax passes; rendered menu and hardware checks remain outstanding. No board or frozen runtime changes.
+
+## 2026-11-16 — Video-only fullscreen and compact presentation controls
+
+- Moved simulation Pause/Resume beside the headline with dynamic play/pause icon and pressed state. Removed it from presenter dropdown; remains disabled in live mode rather than implying board control.
+- Fullscreen now targets only the inspection viewport, retaining stale/error safety messages and hiding auxiliary tags. Fullscreen/settings buttons share 44px dimensions.
+- Shortened topbar, reduced logo scale, enlarged station title to Portable Machine Vision Inspection Setup, and removed station subtitle, footer sales line, host-receipt qualifier and simulation-session caption. Centered and enlarged the inference note below findings.
+- Added Node regressions for pause icon changes and inspection-only fullscreen; updated documentation. Browser visual and hardware validation still required. No board/runtime changes.
+
+## 2026-11-16 — Floating inspection chrome and source-aware pause visibility
+
+- Removed topbar source badge and live preview description. Pause/Resume now disappears in Live mode and returns in simulation; schematic simulation remains labelled within the image.
+- Reduced headline size and replaced inspection header/legend bezels with user-confirmed translucent, backdrop-blurred floating overlays, freeing image height within the first-screen budget. Repositioned source/frame labels around the overlays without stretching video.
+- Added pause visibility regression and updated design/dashboard documentation. Browser-rendered acceptance and board checks remain outstanding; no board/runtime changes.
+
+## 2026-11-16 — Summit dashboard publication and label cleanup
+
+- Removed PCB-location overlay text and its update code; frame identifier remains right-aligned. Updated dashboard guide.
+- Prepared the offline summit dashboard for owner-requested publication on main, using Gitter09 author/committer identity without co-author trailers. GitHub contributors API and current commit history both report only Gitter09; no contributor-removal or history rewrite was needed. A stale website contributor display is not authoritative evidence of current history.
+- No board, SDK, frozen runtime, repository visibility or access-setting changes.
+
