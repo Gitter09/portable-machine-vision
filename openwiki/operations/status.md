@@ -19,6 +19,18 @@ from the code, and the drift that has already bitten once.
 
 Last updated: 2026-11-16.
 
+## Summit dashboard recovery candidate (offline validated)
+
+Standalone `frontend/serve.py` now discovers local receiver sessions and retries
+without port edits; client requests/images are bounded, stale results clear via
+an independent watchdog, and camera preview reconnects. Optional `run-summit.py`
+renews verified bounded sessions sequentially with prompt-once or existing key
+authentication. It stops on unconfirmed cleanup, retry exhaustion or low host disk.
+This is an opt-in host candidate, NOT a change to selected production r2, a new
+board service or Mac/board/soak qualification. Frozen55-file payload verification
+still passes unchanged. No board was contacted during this work. Morning two-cycle
+and recovery acceptance is required: [summit runbook](summit-runbook.md).
+
 ## GitHub handoff completed
 
 Initialized main and pushed component-based commits to

@@ -16,6 +16,23 @@ sources:
 
 # Tests
 
+## Summit recovery tests (no board)
+
+```sh
+python3 -m pytest tests/test_dashboard_server.py tests/test_dashboard_recovery.py tests/test_summit_supervisor.py -q
+node --test tests/dashboard.test.cjs tests/recovery.test.cjs
+python3 -B deployment/portable-v1/verify.py
+```
+
+These use pytest/standard-library loopback fixtures and Node's built-in test
+runner, not the model dependencies. They cover bounded HTTP/image failures,
+malformed/stale packets, cancellation/watchdog/source-switch behavior, receiver
+session/port discovery, cross-session frame rejection, preview recovery,
+concurrency/serving limits, supervision locks/retry/safety policy and temporary
+credential permissions/cleanup. They do not constitute browser-rendered, Mac-wheel,
+physical-network, decoder, SSH, actual renewal or soak qualification. See
+[onsite acceptance](../operations/summit-runbook.md).
+
 ## Running
 
 The workspace ships **no virtual environment**. The system interpreter does not

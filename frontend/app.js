@@ -16,9 +16,21 @@ let source = "mock",
   previous = "",
   generation = 0,
   lastSequence = null,
-  lastReceived = null,
-  liveCount = 0,
-  liveStart = null;
+  lastReceived = null;
+const recovery = globalThis.VisionRecovery;
+let liveAbort = new AbortController(),
+  failures = 0,
+  freshUntil = 0,
+  currentReceiver = null,
+  lastResult = null,
+  statsPending = false,
+  statsAt = 0,
+  previewFrames = null,
+  previewProgressAt = 0,
+  previewRetryAt = 0,
+  previewFailures = 0,
+  supervisorState = "not-supervised";
+const samples = [];
 const history = [];
 const components = [
   {
@@ -301,89 +313,197 @@ function renderStatus(r) {
         : "No current inspection";
   $("emptyText").textContent =
     r.state === "disconnected"
-      ? "Receiver unavailable. Check the local receiver and its session, then try live mode again."
+      ? "Receiver unavailable. Reconnecting automatically; no action needed while the receiver restarts."
       : "Overlays are cleared until a fresh, exact-matched result is available.";
+  if (source === "live" && !valid) showRecoveryAdvice();
   renderFindings(r);
+}
+function showRecoveryAdvice() {
+  const advice = {
+    "cleanup-unconfirmed-manual-check-required":
+      "Automatic session renewal stopped because worker cleanup could not be confirmed. Check the last session and board before restarting.",
+    "retry-limit-reached":
+      "Automatic session renewal reached its retry limit. Check the receiver logs and board connection, then restart the supervisor.",
+    "low-disk-space-manual-check-required":
+      "Automatic renewal stopped: less than 2 GiB of host disk space remains. Free space, then restart the supervisor.",
+    "stopped-by-presenter":
+      "Session supervisor was stopped. Start it again when ready; the dashboard will reconnect automatically.",
+  };
+  if (advice[supervisorState])
+    $("emptyText").textContent = advice[supervisorState];
+}
+function resetLive() {
+  liveAbort.abort();
+  liveAbort = new AbortController();
+  freshUntil = 0;
+  lastResult = null;
+  lastSequence = null;
+  currentReceiver = null;
+  failures = 0;
+  samples.length = 0;
+  statsAt = 0;
+  previewFrames = null;
+  previewProgressAt = 0;
+  previewRetryAt = 0;
+  previewFailures = 0;
+  supervisorState = "not-supervised";
+  $("live").removeAttribute("src");
+  $("live").hidden = true;
+}
+function previewUnavailable() {
+  $("live").hidden = true;
+  $("live").removeAttribute("src");
+  $("preview-status").hidden = source !== "live";
+  $("preview-status").textContent =
+    "Camera preview unavailable · reconnecting automatically";
+}
+function refreshPreview(stats) {
+  if (!Number.isSafeInteger(stats.decoded_frames) || stats.decoded_frames < 0)
+    return;
+  if (stats.decoded_frames !== previewFrames) {
+    previewFrames = stats.decoded_frames;
+    previewProgressAt = Date.now();
+  }
+  if (Date.now() - previewProgressAt > 2000 || !stats.decoded_frames) return;
+  if (!$("live").getAttribute("src") && Date.now() >= previewRetryAt) {
+    $("live").src =
+      `/bridge/live.mjpg?receiver_id=${encodeURIComponent(currentReceiver || "")}&t=${Date.now()}`;
+    $("live").hidden = false;
+    $("preview-status").hidden = true;
+  }
+}
+function refreshStats(token) {
+  if (statsPending || Date.now() - statsAt < 1000) return;
+  statsPending = true;
+  statsAt = Date.now();
+  recovery
+    .json("/bridge/stats.json", liveAbort.signal)
+    .then((stats) => {
+      if (token !== generation || stats.receiver_id !== currentReceiver) return;
+      $("videoRate").textContent = Number.isFinite(stats.decoded_arrival_fps)
+        ? stats.decoded_arrival_fps.toFixed(1)
+        : "—";
+      refreshPreview(stats);
+      $("diagnostics").textContent = JSON.stringify(
+        {
+          ...stats,
+          inspection_rate_note:
+            "Distinct results received by dashboard, not board model throughput.",
+        },
+        null,
+        2,
+      );
+    })
+    .catch(async (error) => {
+      if (token !== generation) return;
+      $("videoRate").textContent = "—";
+      $("diagnostics").textContent = error.message;
+      try {
+        const status = await recovery.json(
+          "/bridge/status.json",
+          liveAbort.signal,
+        );
+        if (token !== generation) return;
+        supervisorState = status.supervisor_state;
+        $("diagnostics").textContent = JSON.stringify(status, null, 2);
+        if (!$("empty").hidden) showRecoveryAdvice();
+      } catch {
+        /* Receiver/server outage remains visible; the next bounded poll retries. */
+      }
+    })
+    .finally(() => {
+      statsPending = false;
+    });
 }
 async function liveTick() {
   const token = generation;
   try {
-    const response = await fetch("/bridge/inspection.json", {
-      signal: AbortSignal.timeout(2000),
-      cache: "no-store",
-    });
-    if (!response.ok) throw Error("Receiver unavailable");
-    const r = await response.json();
-    if (token !== generation) return;
-    const age = Date.now() - r.received_unix * 1000;
-    if (!Number.isFinite(age) || age > 500) r.state = "stale";
-    r.detections = (r.detections || []).filter(
-      (d) =>
-        Number.isInteger(d.class_id) &&
-        d.class_id >= 0 &&
-        d.class_id < 4 &&
-        Number.isFinite(d.score) &&
-        d.score >= 0 &&
-        d.score <= 1,
+    const r = recovery.normalize(
+      await recovery.json("/bridge/inspection.json", liveAbort.signal),
     );
-    if (
-      r.state === "matched" &&
-      r.image_url &&
-      /^\/frames\/[a-f0-9]+\.jpg$/.test(r.image_url)
-    ) {
-      if (r.sequence !== lastSequence) {
-        const image = new Image();
-        image.src = "/bridge" + r.image_url;
-        await image.decode();
-        if (token !== generation) return;
-        if (Date.now() - r.received_unix * 1000 > 500) {
-          r.state = "stale";
-        } else {
-          ctx.clearRect(0, 0, 1280, 720);
-          ctx.drawImage(image, 0, 0, 1280, 720);
-          boxes(r.detections);
-          lastSequence = r.sequence;
-          liveCount++;
-          liveStart ??= Date.now();
-        }
-      }
-    } else if (r.state === "matched") r.state = "unmatched";
+    if (token !== generation) return;
+    if (r.receiver_id !== currentReceiver) {
+      currentReceiver = r.receiver_id;
+      lastSequence = null;
+      samples.length = 0;
+      previewFrames = null;
+      previewProgressAt = 0;
+      freshUntil = 0;
+      lastResult = null;
+      renderStatus({ state: "waiting", detections: [] });
+      previewUnavailable();
+    }
+    if (r.state === "matched" && recovery.key(r) !== lastSequence) {
+      const image = await recovery.image(
+        `/bridge${r.image_url}?receiver_id=${encodeURIComponent(r.receiver_id || "")}`,
+        liveAbort.signal,
+      );
+      if (token !== generation) return;
+      const checked = recovery.normalize(r);
+      if (checked.state === "matched") {
+        ctx.clearRect(0, 0, 1280, 720);
+        ctx.drawImage(image, 0, 0, 1280, 720);
+        boxes(r.detections);
+        lastSequence = recovery.key(r);
+        samples.push(Date.now());
+      } else r.state = checked.state;
+    }
+    if (r.state === "matched") {
+      freshUntil =
+        Date.now() +
+        Math.max(0, recovery.FRESH_MS - (Date.now() - r.received_unix * 1000));
+      lastResult = r;
+    } else {
+      freshUntil = 0;
+      lastResult = null;
+    }
+    failures = 0;
     renderStatus(r);
+    const age = Date.now() - Number(r.received_unix) * 1000;
     $("age").textContent = Number.isFinite(age)
-      ? Math.max(0, Math.round(Date.now() - r.received_unix * 1000))
+      ? Math.max(0, Math.round(age))
       : "—";
+    while (samples.length && samples[0] < Date.now() - 5000) samples.shift();
     $("aiRate").textContent =
-      liveStart && Date.now() - liveStart > 1000
-        ? (liveCount / ((Date.now() - liveStart) / 1000)).toFixed(1)
+      samples.length > 1
+        ? (
+            (samples.length - 1) /
+            Math.max(0.001, (Date.now() - samples[0]) / 1000)
+          ).toFixed(1)
         : "—";
-    $("sessionNote").textContent = "Dashboard connected time";
-    const statsResponse = await fetch("/bridge/stats.json", {
-      signal: AbortSignal.timeout(2000),
-    });
-    if (!statsResponse.ok) throw Error("Stats unavailable");
-    const stats = await statsResponse.json();
-    if (token !== generation) return;
-    $("videoRate").textContent = Number.isFinite(stats.decoded_arrival_fps)
-      ? stats.decoded_arrival_fps.toFixed(1)
-      : "—";
-    $("diagnostics").textContent = JSON.stringify(
-      {
-        ...stats,
-        inspection_rate_note:
-          "Observed distinct results received by dashboard; not board model-call throughput.",
-      },
-      null,
-      2,
-    );
+    refreshStats(token);
   } catch (error) {
     if (token !== generation) return;
+    failures++;
+    freshUntil = 0;
+    lastResult = null;
     renderStatus({ state: "disconnected", detections: [] });
-    $("age").textContent =
-      $("aiRate").textContent =
-      $("videoRate").textContent =
-        "—";
+    $("age").textContent = $("aiRate").textContent = "—";
     $("diagnostics").textContent = error.message;
+    previewUnavailable();
   }
+}
+function healthTick() {
+  if (source === "live") {
+    refreshStats(generation);
+    if (lastResult) {
+      $("age").textContent = Math.max(
+        0,
+        Math.round(Date.now() - lastResult.received_unix * 1000),
+      );
+      if (Date.now() >= freshUntil) {
+        renderStatus({ state: "stale", detections: [] });
+        freshUntil = 0;
+        lastResult = null;
+        $("aiRate").textContent = "—";
+      }
+    }
+    if (previewProgressAt && Date.now() - previewProgressAt > 2000) {
+      previewUnavailable();
+      $("videoRate").textContent = "—";
+    }
+  }
+  setTimeout(healthTick, 100);
 }
 async function tick() {
   if (source === "mock") {
@@ -418,7 +538,7 @@ async function tick() {
   const seconds = Math.floor((Date.now() - started) / 1000);
   $("elapsed").textContent =
     `${String(Math.floor(seconds / 60)).padStart(2, "0")}:${String(seconds % 60).padStart(2, "0")}`;
-  setTimeout(tick, source === "mock" ? 100 : 120);
+  setTimeout(tick, source === "mock" ? 100 : recovery.retryDelay(failures));
 }
 $("fullscreen").onclick = async () => {
   try {
@@ -444,11 +564,15 @@ $("pause").onclick = () => {
 };
 $("source").onchange = (e) => {
   source = e.target.value;
+  try {
+    globalThis.localStorage?.setItem("portable-vision-source", source);
+  } catch {
+    /* Private browsing may block storage. */
+  }
   generation++;
+  resetLive();
   started = Date.now();
   lastSequence = null;
-  liveCount = 0;
-  liveStart = null;
   previous = "";
   history.length = 0;
   $("pause").hidden = source === "live";
@@ -457,9 +581,8 @@ $("source").onchange = (e) => {
   $("previewLabel").textContent =
     source === "mock" ? "Illustrative preview" : "Unannotated feed";
   $("preview").hidden = source !== "mock";
-  $("live").hidden = source !== "live";
-  if (source === "live") $("live").src = "/bridge/live.mjpg";
-  else $("live").removeAttribute("src");
+  $("live").hidden = true;
+  $("preview-status").hidden = source !== "live";
   $("scenario").disabled = $("pause").disabled = source !== "mock";
   $("rateLabel").textContent =
     source === "mock" ? "AI inspection rate" : "Results received / second";
@@ -474,4 +597,26 @@ $("source").onchange = (e) => {
   );
   renderStatus({ state: "waiting", detections: [] });
 };
+$("live").onerror = $("live").onload = () => {
+  if (source !== "live") return;
+  previewFailures++;
+  previewRetryAt = Date.now() + recovery.retryDelay(previewFailures);
+  previewUnavailable();
+};
+document.addEventListener?.("visibilitychange", () => {
+  if (document.visibilityState === "visible" && source === "live") {
+    generation++;
+    resetLive();
+    renderStatus({ state: "waiting", detections: [] });
+  }
+});
+try {
+  if (globalThis.localStorage?.getItem("portable-vision-source") === "live") {
+    $("source").value = "live";
+    $("source").onchange({ target: { value: "live" } });
+  }
+} catch {
+  /* Storage is optional; source remains explicitly selectable. */
+}
+healthTick();
 tick();

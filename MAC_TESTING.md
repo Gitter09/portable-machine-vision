@@ -107,6 +107,16 @@ several rotations/positions and temporary occlusion. Do not infer production
 accuracy from smooth streaming alone. Existing diagnostic confidence.05 is not
 an independently qualified production decision threshold.
 
+## Summit dashboard and optional session renewal
+
+After the original bounded-run stop/restart test passes, follow
+[the summit runbook](openwiki/operations/summit-runbook.md) for the recovery-enabled
+dashboard and opt-in `run-summit.py`. Test two60s sessions before using300s renewal.
+The dashboard URL stays8088 and discovers changing receiver ports automatically.
+This new host supervisor is offline-tested only; it must stop when worker cleanup
+cannot be confirmed. It is not an always-on board service or a replacement for
+Mac/video/decoder/physical-failure qualification.
+
 ## Troubleshooting / reporting
 
 - No ping: cable/switch/power/manual Ethernet subnet/duplicate IP first.
@@ -129,8 +139,9 @@ Do NOT share password, private key or local credentials profile.
 This portable candidate is Windows-smoke-tested with owned stop/restart, not
 Mac-qualified. Latest recent network tests had no PCB, not renewed model quality
 validation. Earlier accepted board pipeline/quality evidence remains historical.
-Sessions remain bounded300s, no unattended continuous supervisor/autostart/soak
-qualification yet. Frontend lifecycle/auth/retention work is separate.
+Each session remains bounded300s. The optional summit host supervisor renews
+confirmed-ended sessions, but unattended operation/autostart/soak is not qualified.
+No automatic evidence retention/deletion or OS autostart service is installed.
 
 Repository runtime is self-contained. Some historical development/training scripts
 reference old sibling evidence folders; they are NOT required by root setup-host.py

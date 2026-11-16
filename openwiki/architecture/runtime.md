@@ -25,6 +25,20 @@ is preserved, not the new default. Each launch creates a new verified board job;
 no global board symlink/service is changed. Default/max300s until frontend
 lifecycle work. [Release/verification/handoff](../operations/production-pipeline-20261116.md).
 
+## Opt-in summit host supervision (not board-qualified)
+
+The standalone dashboard now discovers running loopback receivers from trusted
+local `session.json` records and includes bounded client/proxy recovery. Root
+`run-summit.py` optionally launches sequential frozen `run-portable.py` sessions;
+each retains its20..300s board bound, hash checks and decoder-busy refusal.
+Renewal requires child exit plus terminal host/worker evidence. Confirmed-ended
+errors have bounded retries; missing cleanup evidence stops for manual review.
+A per-checkout OS lock prevents simultaneous supervisors; low host disk stops
+renewal without deleting evidence. Prompt-once credentials use a permission-
+restricted temporary profile, removed on ordinary exit. No SDK/frozen package,
+model, board service or default launcher changes. Offline policy/HTTP/state tests
+are not hardware acceptance. [Operation and limits](../operations/summit-runbook.md).
+
 ## Two different runtimes live near this workspace
 
 This distinction is the most expensive one to get wrong, so it comes first.

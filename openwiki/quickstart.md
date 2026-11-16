@@ -44,8 +44,10 @@ IDs fixed. Historical labels do not establish current-camera acceptance.
 Owner-selected release is **portable-vision-production-20261116-r2**, started with
 repo `run-production.ps1`. `config/production-pipeline.json` pins the frozen package,
 native library and dedicated environment. It uses coordinate/browser + pose reuse
-+ feature ROI + C++8, not old full-frame r33. Default/max300s sessions remain until
-frontend lifecycle work; no autostart service added. Old releases/fallbacks intact.
++ feature ROI + C++8, not old full-frame r33. Individual sessions remain bounded
+at max300s. An opt-in [summit host supervisor](operations/summit-runbook.md) can
+renew confirmed-ended sessions; it is offline-tested, not Mac/board-qualified.
+No autostart service added. Old releases/fallbacks intact.
 [Production deployment and limits](operations/production-pipeline-20261116.md).
 
 ## The pieces

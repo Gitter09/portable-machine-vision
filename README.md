@@ -33,6 +33,20 @@ compatible Mac Ethernet address needed. Actual Mac test pending.
 The Windows production selection below is historical/local to the original PC;
 use the clone-only launcher above on Mac.
 
+## Summit dashboard and recovery
+
+```sh
+python3 frontend/serve.py
+```
+
+Open http://127.0.0.1:8088 for offline simulation, or select Live to automatically
+follow local receiver sessions. Optional `run-summit.py` renews confirmed-ended
+bounded sessions sequentially, without modifying the frozen worker or removing
+its300s limit. It stops when cleanup cannot be confirmed. Follow the
+[summit runbook](openwiki/operations/summit-runbook.md) for prompt-once/key setup,
+two-cycle Mac acceptance, recovery behavior and safety limits. This host recovery
+candidate is offline-tested, not yet Mac/board/soak-qualified.
+
 ## Production-selected pipeline
 
 The owner-approved operational default is **`portable-vision-production-20261116-r2`**:

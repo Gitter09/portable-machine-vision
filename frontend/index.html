@@ -155,6 +155,9 @@
               aria-label="Unannotated illustrative PCB preview"
             ></canvas
             ><img id="live" alt="Live unannotated camera feed" hidden />
+            <p id="preview-status" role="status" hidden>
+              Waiting for camera preview · reconnecting automatically
+            </p>
           </div>
         </div>
         <div class="history-panel">
@@ -182,6 +185,7 @@
       aria-live="polite"
       hidden
     ></div>
+    <script src="recovery.js"></script>
     <script type="module" src="app.js"></script>
     <script type="module" src="menu.js"></script>
   </body>

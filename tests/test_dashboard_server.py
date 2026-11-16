@@ -22,6 +22,9 @@ def test_receiver_rejects_non_loopback_origins(url):
 
 def test_receiver_accepts_loopback():
     assert dashboard.receiver_url('http://127.0.0.1:58078/') == 58078
+    for invalid in ('http://127.0.0.1:0', 'http://127.0.0.1:65536'):
+        with pytest.raises(argparse.ArgumentTypeError):
+            dashboard.receiver_url(invalid)
 
 
 def test_offline_dashboard_and_bridge():

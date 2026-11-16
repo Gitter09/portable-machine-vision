@@ -1481,3 +1481,10 @@ Entries are appended, never edited, removed, reordered or squashed.
 - Prepared the offline summit dashboard for owner-requested publication on main, using Gitter09 author/committer identity without co-author trailers. GitHub contributors API and current commit history both report only Gitter09; no contributor-removal or history rewrite was needed. A stale website contributor display is not authoritative evidence of current history.
 - No board, SDK, frozen runtime, repository visibility or access-setting changes.
 
+## 2026-11-16 — Focused summit reliability and recovery candidate
+
+- Added bounded HTTP/image requests, independent freshness watchdog, metadata/geometry validation, frame/session/receipt identity, rolling observed-result rate, independent stats polling, source-switch/tab-resume cancellation, persisted Live selection and automatic MJPEG reconnect/stall hiding. Live errors never substitute mock data.
+- Hardened the loopback bridge with trusted local session/port discovery, cross-session frame rejection, payload/connection/stream limits, UI-asset serving allowlist, no-cache/security headers and sanitized supervisor recovery status.
+- Added opt-in `run-summit.py` sequential bounded-session renewal through the unchanged verified launcher. Includes a per-checkout lock, finite failure retries, host watchdog, explicit cleanup-evidence safety stops and low-host-disk guard. Prompt-once authentication uses a private temporary profile removed on ordinary exit; no credentials are committed. Worker300s bounds, frozen payload, model, SDK, board services and production selection are unchanged.
+- Added HTTP fault-injection, client recovery and supervisor-policy tests;49 targeted tests pass (29 Python,20 Node), and the frozen55-file verifier passes. Added summit runbook and updated Mac/runtime/status/test guidance. Board access, actual Mac/video/renewal cycles, real browser rendering and extended soak remain unverified; this is a host recovery candidate, not production qualification.
+
