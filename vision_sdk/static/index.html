@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Demeter Vision Setup</title>
+  <link rel="stylesheet" href="/static/app.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="mark" aria-hidden="true"></span><span>Demeter Vision</span></div>
+    <div class="top-actions"><span id="local-note" class="local-note">Local setup · this computer</span><button id="start-sdk" class="button quit-button" type="button" hidden>Start SDK inspection</button><button id="quit-sdk" class="button quit-button" type="button">Quit and release camera</button></div>
+  </header>
+  <main class="shell">
+    <aside class="rail" aria-label="Setup progress">
+      <h2>Set up your inspection</h2>
+      <p>Complete these steps once. You can return and change them later.</p>
+      <ol class="steps">
+        <li><a href="#connect" class="step-link active"><span>1</span> Connect equipment</a></li>
+        <li><a href="#area" class="step-link"><span>2</span> Choose inspection area</a></li>
+        <li><a href="#images" class="step-link"><span>3</span> Add training images</a></li>
+        <li><a href="#model" class="step-link"><span>4</span> Review model</a></li>
+        <li id="inspection-link" hidden><a href="#inspection" class="step-link"><span>5</span> Inspection</a></li>
+      </ol>
+      <div class="rail-help">Your current machine control and PLC are separate from this setup.</div>
+    </aside>
+    <div class="content">
+      <div id="message" class="message" role="status" aria-live="polite" hidden></div>
+      <section id="inspection" class="section" hidden>
+        <div class="section-head"><h1>Manual inspection</h1><p>Place a sample under the camera, then capture to see its detections.</p></div>
+        <p id="inspection-model" class="fine-print"></p>
+        <div class="actions"><button id="capture-once" class="button primary">Capture and inspect</button><button id="capture-repeat" class="button">Start repeated testing</button><button id="capture-stop" class="button" hidden>Stop testing</button></div>
+        <p id="inspection-status" role="status" aria-live="polite">Ready for a sample.</p>
+        <div id="inspection-empty" class="empty-state">Your captured image and detection boxes will appear here.</div>
+        <div class="canvas-wrap"><canvas id="inspection-canvas" width="1600" height="1128" aria-label="Captured camera image with detection boxes" hidden></canvas></div>
+        <p id="inspection-summary" aria-live="polite"></p>
+        <ul id="inspection-detections"></ul>
+      </section>
+      <section id="connect" class="section">
+        <div class="section-head"><h1>Connect equipment</h1><p>Use the computer connected to your SiMa board and camera. We’ll check each connection.</p></div>
+        <div class="field-row">
+          <label for="board-host">SiMa board address<input id="board-host" type="text" inputmode="decimal" placeholder="192.168.1.20" autocomplete="off"></label>
+          <label for="camera-ip">Camera address<input id="camera-ip" type="text" inputmode="decimal" placeholder="192.168.1.10" autocomplete="off"></label>
+          <label for="light-port">Light connection<input id="light-port" type="text" placeholder="COM1" autocomplete="off"></label>
+        </div>
+        <div class="actions"><button id="save-connections" class="button primary">Save and check connections</button><button id="check-light" class="button">Test light briefly</button></div><div id="connection-status" class="connection-status" aria-live="polite"></div>
+      </section>
+
+      <section id="area" class="section">
+        <div class="section-head"><h2>Choose the inspection area</h2><p>Upload one clear, full-size camera image. Drag across it to mark where objects should be detected.</p></div>
+        <label class="file-drop" for="reference-file"><strong>Choose reference image</strong><span>PNG or JPEG · 3200 × 2256 pixels</span><input id="reference-file" type="file" accept="image/png,image/jpeg"></label>
+        <div id="reference-workspace" class="image-workspace" hidden><div class="canvas-wrap"><canvas id="reference-canvas" width="3200" height="2256" aria-label="Draw the inspection area on the reference image"></canvas></div>
+          <div class="image-actions"><span id="area-details" class="inline-status">Drag to choose an area</span><button id="save-area" class="button primary" disabled>Save inspection area</button></div></div>
+        <details class="advanced"><summary>Training and compiler locations</summary><div class="field-row">
+          <label for="base-weights">YOLO26s starting weights (.pt)<input id="base-weights" type="text" placeholder="C:\path\to\yolo26s.pt"></label>
+          <label for="compiler-image">SiMa compiler image<input id="compiler-image" type="text" placeholder="Provisioned Docker image name"></label>
+        </div><button id="save-tools" class="button">Save locations</button></details>
+      </section>
+
+      <section id="images" class="section">
+        <div class="section-head"><h2>Add training images</h2><p>Choose full-size camera images and draw boxes here, or upload an annotated COCO ZIP. Aim for at least 50 varied, correctly labeled images for the SiMa build; every object you want detected needs a box.</p><a class="template-link" href="/api/dataset/template" download>Download an example ZIP to see the required format</a></div>
+        <details id="labeler-panel" class="labeler"><summary>I have camera images but need to draw the boxes</summary>
+          <p>Name the kinds of objects the model should find, separated by commas. Then add full-size camera images and draw one box around each object. Mark an image empty only when it truly has no objects.</p>
+          <div id="labeler-start"><label for="class-names">Object names<input id="class-names" type="text" placeholder="screw, missing_screw" autocomplete="off"></label><label for="raw-images" class="file-drop"><strong>Choose camera images</strong><span>PNG or JPEG · 3200 × 2256 pixels</span><input id="raw-images" type="file" accept="image/png,image/jpeg" multiple></label><button id="create-label-set" class="button">Start drawing boxes</button></div>
+          <div id="labeler-workspace" hidden><div class="labeler-toolbar"><strong id="labeler-count"></strong><label for="label-class">Box label<select id="label-class"></select></label></div><div class="canvas-wrap"><canvas id="label-canvas" width="3200" height="2256" aria-label="Draw boxes around objects in this image"></canvas></div>
+            <label class="empty-check"><input id="empty-labeled-image" type="checkbox"> I checked: this image has no objects to box</label><div class="actions"><button id="previous-labeled" class="button">Previous image</button><button id="next-labeled" class="button">Next image</button><button id="undo-box" class="button">Undo last box</button><button id="save-labeled-image" class="button primary">Save this image and continue</button></div><p id="labeler-feedback" class="fine-print" role="status" aria-live="polite">Draw boxes for every object. Save changes before switching images.</p><div class="actions"><label for="more-images" class="button-link">Add more camera images<input id="more-images" type="file" accept="image/png,image/jpeg" multiple></label><button id="new-label-set" class="button">Start a new image set</button></div><div class="actions"><a id="download-labeled" class="button-link" hidden download>Download annotated ZIP</a><button id="train-labeled" class="button primary" hidden>Train from these images</button></div></div>
+        </details>
+        <label class="file-drop" for="dataset-file"><strong>Choose annotated image ZIP</strong><span>Images without boxes may be included only when they are confirmed empty examples.</span><input id="dataset-file" type="file" accept=".zip,application/zip"></label>
+        <div class="actions"><button id="start-training" class="button primary" disabled>Check images and start training</button><span id="upload-name" class="inline-status"></span></div>
+        <div id="job-panel" class="job-panel" hidden><div class="job-head"><strong id="job-title">Preparing images</strong><span id="job-phase"></span></div><p id="job-description">This can take a while. You can leave this page open.</p><div id="job-error" class="job-error" hidden></div><div class="actions"><button id="retry-training" class="button" hidden>Restart this training job</button><button id="compile-training" class="button" hidden>Build for SiMa now</button></div></div>
+      </section>
+
+      <section id="model" class="section">
+        <div class="section-head"><h2 id="model-heading">Review your model</h2><p id="model-intro">Training creates a candidate. Production keeps using the current model until the SiMa build and board check pass and you activate it.</p></div>
+        <div id="model-import" class="model-import" hidden><label class="file-drop" for="model-package-file"><strong>Choose model package from workstation</strong><span>Demeter model ZIP</span><input id="model-package-file" type="file" accept=".zip,application/zip"></label><div class="actions"><button id="import-model" class="button primary" disabled>Import model package</button><span id="model-package-name" class="inline-status"></span></div></div>
+        <div id="model-empty" class="empty-state">No candidate model yet. Complete the image step to create one.</div>
+        <div id="model-details" hidden><dl class="metrics"><div><dt>Model version</dt><dd id="model-version"></dd></div><div><dt>Detection score (mAP50)</dt><dd id="model-score"></dd></div><div><dt>Board status</dt><dd id="model-board-status"></dd></div></dl>
+          <div id="model-previews" class="model-previews" aria-label="Examples from held-out images"></div>
+          <div class="actions"><a id="export-model" class="button-link" hidden download>Download package for Admin PC</a><button id="send-model" class="button" hidden>Send model to SiMa board</button><button id="activate-model" class="button primary" disabled>Open inspection</button><button id="rollback-model" class="button" hidden>Restore previous model</button></div><p id="model-note" class="fine-print">Open inspection to start the model and camera. You can place samples and capture them from the inspection screen.</p></div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

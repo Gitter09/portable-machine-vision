@@ -1,0 +1,10 @@
+{
+  "board": {
+    "host": "<board-ip-or-hostname>",
+    "user": "sima",
+    "host_key_sha256": "3e0408ab1e375e57f56cb898abb17d829ed8131d5a7c6af84f11f7bc6cc5eba0"
+  },
+  "camera": {
+    "rtsp": "rtsp://192.168.1.10:5005/routecam"
+  }
+}

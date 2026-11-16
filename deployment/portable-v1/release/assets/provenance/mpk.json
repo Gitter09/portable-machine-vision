@@ -1,0 +1,997 @@
+{
+    "name": "yolov8",
+    "model_path": "/work/model_sima_6out.onnx",
+    "model_checksum": "a488c6f7f6c0510d87b0f22de25cc2c10381e63a222a84c582c4569948e673dc",
+    "sequence": 1,
+    "model_sdk_version": "2.0.0",
+    "input_nodes": [
+        {
+            "name": "images",
+            "type": "buffer",
+            "size": 19660800,
+            "input_range": [
+                0.003921568859368563,
+                1.0
+            ]
+        }
+    ],
+    "plugins": [
+        {
+            "name": "quantize_0",
+            "sequence": 1,
+            "processor": "EV74",
+            "config_params": {
+                "desired_batch_size": 1,
+                "actual_batch_size": 1,
+                "kernel": "quantization_transform",
+                "params": {
+                    "channel_params": [
+                        [
+                            255.12385843826655,
+                            -128
+                        ]
+                    ],
+                    "num_bits": 8,
+                    "rounding": "TONEAREST",
+                    "output_data_type": "int8",
+                    "input_shapes": [
+                        [
+                            1,
+                            1280,
+                            1280,
+                            3
+                        ]
+                    ],
+                    "output_shapes": [
+                        [
+                            1,
+                            1280,
+                            1280,
+                            3
+                        ]
+                    ]
+                }
+            },
+            "input_nodes": [
+                {
+                    "name": "images",
+                    "size": 19660800
+                }
+            ],
+            "output_nodes": [
+                {
+                    "name": "quantize_0",
+                    "type": "buffer",
+                    "size": 4915200
+                }
+            ],
+            "type": "sgpProcess",
+            "resources": {
+                "executable": "kernel_name_tbd"
+            }
+        },
+        {
+            "name": "tessellate_quantize_0_MLA_0/placeholder_0_0_tessellation_transform",
+            "sequence": 2,
+            "processor": "EV74",
+            "config_params": {
+                "desired_batch_size": 1,
+                "actual_batch_size": 1,
+                "kernel": "tessellation_transform",
+                "params": {
+                    "slice_shape": [
+                        1280,
+                        64,
+                        3
+                    ],
+                    "align_c16": false,
+                    "cblock": false,
+                    "frame_type": "int8",
+                    "input_shapes": [
+                        [
+                            1,
+                            1280,
+                            1280,
+                            3
+                        ]
+                    ],
+                    "output_shapes": [
+                        [
+                            1,
+                            4915200
+                        ]
+                    ]
+                }
+            },
+            "input_nodes": [
+                {
+                    "name": "quantize_0",
+                    "size": 4915200
+                }
+            ],
+            "output_nodes": [
+                {
+                    "name": "tessellate_quantize_0_MLA_0/placeholder_0_0_tessellation_transform",
+                    "type": "buffer",
+                    "size": 4915200
+                }
+            ],
+            "type": "sgpProcess",
+            "resources": {
+                "executable": "kernel_name_tbd"
+            }
+        },
+        {
+            "name": "MLA_0",
+            "sequence": 3,
+            "processor": "MLA",
+            "config_params": {
+                "desired_batch_size": 1,
+                "actual_batch_size": 1,
+                "number_of_quads_to_user": 4
+            },
+            "input_nodes": [
+                {
+                    "name": "tessellate_quantize_0_MLA_0/placeholder_0_0_tessellation_transform",
+                    "size": 4915200
+                }
+            ],
+            "output_nodes": [
+                {
+                    "name": "MLA_0",
+                    "type": "buffer",
+                    "size": 2688000
+                }
+            ],
+            "type": "sgpProcess",
+            "resources": {
+                "executable": "yolov8_stage1_mla.elf"
+            }
+        },
+        {
+            "name": "MLA_0_ofm_unpack_transform",
+            "sequence": 4,
+            "processor": "EV74",
+            "config_params": {
+                "desired_batch_size": 1,
+                "actual_batch_size": 1,
+                "kernel": "unpack_transform",
+                "params": {
+                    "tensor_types": [
+                        "int8",
+                        "int8",
+                        "int8",
+                        "int8",
+                        "int8",
+                        "int8"
+                    ],
+                    "tensor_shapes": [
+                        [
+                            1,
+                            1638400
+                        ],
+                        [
+                            1,
+                            409600
+                        ],
+                        [
+                            1,
+                            102400
+                        ],
+                        [
+                            1,
+                            409600
+                        ],
+                        [
+                            1,
+                            102400
+                        ],
+                        [
+                            1,
+                            25600
+                        ]
+                    ],
+                    "input_shapes": [
+                        [
+                            1,
+                            2688000
+                        ]
+                    ],
+                    "output_shapes": [
+                        [
+                            1,
+                            1638400
+                        ],
+                        [
+                            1,
+                            409600
+                        ],
+                        [
+                            1,
+                            102400
+                        ],
+                        [
+                            1,
+                            409600
+                        ],
+                        [
+                            1,
+                            102400
+                        ],
+                        [
+                            1,
+                            25600
+                        ]
+                    ]
+                }
+            },
+            "input_nodes": [
+                {
+                    "name": "MLA_0",
+                    "size": 2688000
+                }
+            ],
+            "output_nodes": [
+                {
+                    "name": "MLA_0_ofm_unpack_transform_0",
+                    "type": "buffer",
+                    "size": 1638400
+                },
+                {
+                    "name": "MLA_0_ofm_unpack_transform_1",
+                    "type": "buffer",
+                    "size": 409600
+                },
+                {
+                    "name": "MLA_0_ofm_unpack_transform_2",
+                    "type": "buffer",
+                    "size": 102400
+                },
+                {
+                    "name": "MLA_0_ofm_unpack_transform_3",
+                    "type": "buffer",
+                    "size": 409600
+                },
+                {
+                    "name": "MLA_0_ofm_unpack_transform_4",
+                    "type": "buffer",
+                    "size": 102400
+                },
+                {
+                    "name": "MLA_0_ofm_unpack_transform_5",
+                    "type": "buffer",
+                    "size": 25600
+                }
+            ],
+            "type": "sgpProcess",
+            "resources": {
+                "executable": "kernel_name_tbd"
+            }
+        },
+        {
+            "name": "detessellate_MLA_0/tuple_get_item_0_detessellation_transform",
+            "sequence": 5,
+            "processor": "EV74",
+            "config_params": {
+                "desired_batch_size": 1,
+                "actual_batch_size": 1,
+                "kernel": "detessellation_transform",
+                "params": {
+                    "slice_shape": [
+                        2,
+                        160,
+                        64
+                    ],
+                    "align_c16": true,
+                    "cblock": true,
+                    "frame_type": "int8",
+                    "frame_shape": [
+                        1,
+                        160,
+                        160,
+                        64
+                    ],
+                    "input_shapes": [
+                        [
+                            1,
+                            1638400
+                        ]
+                    ],
+                    "output_shapes": [
+                        [
+                            1,
+                            160,
+                            160,
+                            64
+                        ]
+                    ]
+                }
+            },
+            "input_nodes": [
+                {
+                    "name": "MLA_0_ofm_unpack_transform_0",
+                    "size": 1638400
+                }
+            ],
+            "output_nodes": [
+                {
+                    "name": "detessellate_MLA_0/tuple_get_item_0_detessellation_transform",
+                    "type": "buffer",
+                    "size": 1638400
+                }
+            ],
+            "type": "sgpProcess",
+            "resources": {
+                "executable": "kernel_name_tbd"
+            }
+        },
+        {
+            "name": "dequantize_2",
+            "sequence": 6,
+            "processor": "EV74",
+            "config_params": {
+                "desired_batch_size": 1,
+                "actual_batch_size": 1,
+                "kernel": "dequantization_transform",
+                "params": {
+                    "channel_params": [
+                        [
+                            10.131666947100133,
+                            -41
+                        ]
+                    ],
+                    "input_data_type": "int8",
+                    "input_shapes": [
+                        [
+                            1,
+                            160,
+                            160,
+                            64
+                        ]
+                    ],
+                    "output_shapes": [
+                        [
+                            1,
+                            160,
+                            160,
+                            64
+                        ]
+                    ]
+                }
+            },
+            "input_nodes": [
+                {
+                    "name": "detessellate_MLA_0/tuple_get_item_0_detessellation_transform",
+                    "size": 1638400
+                }
+            ],
+            "output_nodes": [
+                {
+                    "name": "dequantize_2/bbox_0",
+                    "type": "buffer",
+                    "size": 6553600
+                }
+            ],
+            "type": "sgpProcess",
+            "resources": {
+                "executable": "kernel_name_tbd"
+            }
+        },
+        {
+            "name": "detessellate_MLA_0/tuple_get_item_1_detessellation_transform",
+            "sequence": 7,
+            "processor": "EV74",
+            "config_params": {
+                "desired_batch_size": 1,
+                "actual_batch_size": 1,
+                "kernel": "detessellation_transform",
+                "params": {
+                    "slice_shape": [
+                        1,
+                        80,
+                        64
+                    ],
+                    "align_c16": true,
+                    "cblock": true,
+                    "frame_type": "int8",
+                    "frame_shape": [
+                        1,
+                        80,
+                        80,
+                        64
+                    ],
+                    "input_shapes": [
+                        [
+                            1,
+                            409600
+                        ]
+                    ],
+                    "output_shapes": [
+                        [
+                            1,
+                            80,
+                            80,
+                            64
+                        ]
+                    ]
+                }
+            },
+            "input_nodes": [
+                {
+                    "name": "MLA_0_ofm_unpack_transform_1",
+                    "size": 409600
+                }
+            ],
+            "output_nodes": [
+                {
+                    "name": "detessellate_MLA_0/tuple_get_item_1_detessellation_transform",
+                    "type": "buffer",
+                    "size": 409600
+                }
+            ],
+            "type": "sgpProcess",
+            "resources": {
+                "executable": "kernel_name_tbd"
+            }
+        },
+        {
+            "name": "dequantize_3",
+            "sequence": 8,
+            "processor": "EV74",
+            "config_params": {
+                "desired_batch_size": 1,
+                "actual_batch_size": 1,
+                "kernel": "dequantization_transform",
+                "params": {
+                    "channel_params": [
+                        [
+                            5.892768069946611,
+                            4
+                        ]
+                    ],
+                    "input_data_type": "int8",
+                    "input_shapes": [
+                        [
+                            1,
+                            80,
+                            80,
+                            64
+                        ]
+                    ],
+                    "output_shapes": [
+                        [
+                            1,
+                            80,
+                            80,
+                            64
+                        ]
+                    ]
+                }
+            },
+            "input_nodes": [
+                {
+                    "name": "detessellate_MLA_0/tuple_get_item_1_detessellation_transform",
+                    "size": 409600
+                }
+            ],
+            "output_nodes": [
+                {
+                    "name": "dequantize_3/bbox_1",
+                    "type": "buffer",
+                    "size": 1638400
+                }
+            ],
+            "type": "sgpProcess",
+            "resources": {
+                "executable": "kernel_name_tbd"
+            }
+        },
+        {
+            "name": "detessellate_MLA_0/tuple_get_item_2_detessellation_transform",
+            "sequence": 9,
+            "processor": "EV74",
+            "config_params": {
+                "desired_batch_size": 1,
+                "actual_batch_size": 1,
+                "kernel": "detessellation_transform",
+                "params": {
+                    "slice_shape": [
+                        1,
+                        40,
+                        64
+                    ],
+                    "align_c16": true,
+                    "cblock": true,
+                    "frame_type": "int8",
+                    "frame_shape": [
+                        1,
+                        40,
+                        40,
+                        64
+                    ],
+                    "input_shapes": [
+                        [
+                            1,
+                            102400
+                        ]
+                    ],
+                    "output_shapes": [
+                        [
+                            1,
+                            40,
+                            40,
+                            64
+                        ]
+                    ]
+                }
+            },
+            "input_nodes": [
+                {
+                    "name": "MLA_0_ofm_unpack_transform_2",
+                    "size": 102400
+                }
+            ],
+            "output_nodes": [
+                {
+                    "name": "detessellate_MLA_0/tuple_get_item_2_detessellation_transform",
+                    "type": "buffer",
+                    "size": 102400
+                }
+            ],
+            "type": "sgpProcess",
+            "resources": {
+                "executable": "kernel_name_tbd"
+            }
+        },
+        {
+            "name": "dequantize_4",
+            "sequence": 10,
+            "processor": "EV74",
+            "config_params": {
+                "desired_batch_size": 1,
+                "actual_batch_size": 1,
+                "kernel": "dequantization_transform",
+                "params": {
+                    "channel_params": [
+                        [
+                            8.482137883776312,
+                            -19
+                        ]
+                    ],
+                    "input_data_type": "int8",
+                    "input_shapes": [
+                        [
+                            1,
+                            40,
+                            40,
+                            64
+                        ]
+                    ],
+                    "output_shapes": [
+                        [
+                            1,
+                            40,
+                            40,
+                            64
+                        ]
+                    ]
+                }
+            },
+            "input_nodes": [
+                {
+                    "name": "detessellate_MLA_0/tuple_get_item_2_detessellation_transform",
+                    "size": 102400
+                }
+            ],
+            "output_nodes": [
+                {
+                    "name": "dequantize_4/bbox_2",
+                    "type": "buffer",
+                    "size": 409600
+                }
+            ],
+            "type": "sgpProcess",
+            "resources": {
+                "executable": "kernel_name_tbd"
+            }
+        },
+        {
+            "name": "detessellate_MLA_0/tuple_get_item_3_detessellation_transform",
+            "sequence": 11,
+            "processor": "EV74",
+            "config_params": {
+                "desired_batch_size": 1,
+                "actual_batch_size": 1,
+                "kernel": "detessellation_transform",
+                "params": {
+                    "slice_shape": [
+                        160,
+                        160,
+                        4
+                    ],
+                    "align_c16": true,
+                    "cblock": true,
+                    "frame_type": "int8",
+                    "frame_shape": [
+                        1,
+                        160,
+                        160,
+                        4
+                    ],
+                    "input_shapes": [
+                        [
+                            1,
+                            409600
+                        ]
+                    ],
+                    "output_shapes": [
+                        [
+                            1,
+                            160,
+                            160,
+                            4
+                        ]
+                    ]
+                }
+            },
+            "input_nodes": [
+                {
+                    "name": "MLA_0_ofm_unpack_transform_3",
+                    "size": 409600
+                }
+            ],
+            "output_nodes": [
+                {
+                    "name": "detessellate_MLA_0/tuple_get_item_3_detessellation_transform",
+                    "type": "buffer",
+                    "size": 102400
+                }
+            ],
+            "type": "sgpProcess",
+            "resources": {
+                "executable": "kernel_name_tbd"
+            }
+        },
+        {
+            "name": "dequantize_5",
+            "sequence": 12,
+            "processor": "EV74",
+            "config_params": {
+                "desired_batch_size": 1,
+                "actual_batch_size": 1,
+                "kernel": "dequantization_transform",
+                "params": {
+                    "channel_params": [
+                        [
+                            17.8192252674572,
+                            127
+                        ]
+                    ],
+                    "input_data_type": "int8",
+                    "input_shapes": [
+                        [
+                            1,
+                            160,
+                            160,
+                            4
+                        ]
+                    ],
+                    "output_shapes": [
+                        [
+                            1,
+                            160,
+                            160,
+                            4
+                        ]
+                    ]
+                }
+            },
+            "input_nodes": [
+                {
+                    "name": "detessellate_MLA_0/tuple_get_item_3_detessellation_transform",
+                    "size": 102400
+                }
+            ],
+            "output_nodes": [
+                {
+                    "name": "dequantize_5/class_prob_0",
+                    "type": "buffer",
+                    "size": 409600
+                }
+            ],
+            "type": "sgpProcess",
+            "resources": {
+                "executable": "kernel_name_tbd"
+            }
+        },
+        {
+            "name": "detessellate_MLA_0/tuple_get_item_4_detessellation_transform",
+            "sequence": 13,
+            "processor": "EV74",
+            "config_params": {
+                "desired_batch_size": 1,
+                "actual_batch_size": 1,
+                "kernel": "detessellation_transform",
+                "params": {
+                    "slice_shape": [
+                        80,
+                        80,
+                        4
+                    ],
+                    "align_c16": true,
+                    "cblock": true,
+                    "frame_type": "int8",
+                    "frame_shape": [
+                        1,
+                        80,
+                        80,
+                        4
+                    ],
+                    "input_shapes": [
+                        [
+                            1,
+                            102400
+                        ]
+                    ],
+                    "output_shapes": [
+                        [
+                            1,
+                            80,
+                            80,
+                            4
+                        ]
+                    ]
+                }
+            },
+            "input_nodes": [
+                {
+                    "name": "MLA_0_ofm_unpack_transform_4",
+                    "size": 102400
+                }
+            ],
+            "output_nodes": [
+                {
+                    "name": "detessellate_MLA_0/tuple_get_item_4_detessellation_transform",
+                    "type": "buffer",
+                    "size": 25600
+                }
+            ],
+            "type": "sgpProcess",
+            "resources": {
+                "executable": "kernel_name_tbd"
+            }
+        },
+        {
+            "name": "dequantize_6",
+            "sequence": 14,
+            "processor": "EV74",
+            "config_params": {
+                "desired_batch_size": 1,
+                "actual_batch_size": 1,
+                "kernel": "dequantization_transform",
+                "params": {
+                    "channel_params": [
+                        [
+                            6.8026093836240955,
+                            93
+                        ]
+                    ],
+                    "input_data_type": "int8",
+                    "input_shapes": [
+                        [
+                            1,
+                            80,
+                            80,
+                            4
+                        ]
+                    ],
+                    "output_shapes": [
+                        [
+                            1,
+                            80,
+                            80,
+                            4
+                        ]
+                    ]
+                }
+            },
+            "input_nodes": [
+                {
+                    "name": "detessellate_MLA_0/tuple_get_item_4_detessellation_transform",
+                    "size": 25600
+                }
+            ],
+            "output_nodes": [
+                {
+                    "name": "dequantize_6/class_prob_1",
+                    "type": "buffer",
+                    "size": 102400
+                }
+            ],
+            "type": "sgpProcess",
+            "resources": {
+                "executable": "kernel_name_tbd"
+            }
+        },
+        {
+            "name": "detessellate_MLA_0/tuple_get_item_5_detessellation_transform",
+            "sequence": 15,
+            "processor": "EV74",
+            "config_params": {
+                "desired_batch_size": 1,
+                "actual_batch_size": 1,
+                "kernel": "detessellation_transform",
+                "params": {
+                    "slice_shape": [
+                        40,
+                        40,
+                        4
+                    ],
+                    "align_c16": true,
+                    "cblock": true,
+                    "frame_type": "int8",
+                    "frame_shape": [
+                        1,
+                        40,
+                        40,
+                        4
+                    ],
+                    "input_shapes": [
+                        [
+                            1,
+                            25600
+                        ]
+                    ],
+                    "output_shapes": [
+                        [
+                            1,
+                            40,
+                            40,
+                            4
+                        ]
+                    ]
+                }
+            },
+            "input_nodes": [
+                {
+                    "name": "MLA_0_ofm_unpack_transform_5",
+                    "size": 25600
+                }
+            ],
+            "output_nodes": [
+                {
+                    "name": "detessellate_MLA_0/tuple_get_item_5_detessellation_transform",
+                    "type": "buffer",
+                    "size": 6400
+                }
+            ],
+            "type": "sgpProcess",
+            "resources": {
+                "executable": "kernel_name_tbd"
+            }
+        },
+        {
+            "name": "dequantize_7",
+            "sequence": 16,
+            "processor": "EV74",
+            "config_params": {
+                "desired_batch_size": 1,
+                "actual_batch_size": 1,
+                "kernel": "dequantization_transform",
+                "params": {
+                    "channel_params": [
+                        [
+                            8.823349889939633,
+                            80
+                        ]
+                    ],
+                    "input_data_type": "int8",
+                    "input_shapes": [
+                        [
+                            1,
+                            40,
+                            40,
+                            4
+                        ]
+                    ],
+                    "output_shapes": [
+                        [
+                            1,
+                            40,
+                            40,
+                            4
+                        ]
+                    ]
+                }
+            },
+            "input_nodes": [
+                {
+                    "name": "detessellate_MLA_0/tuple_get_item_5_detessellation_transform",
+                    "size": 6400
+                }
+            ],
+            "output_nodes": [
+                {
+                    "name": "dequantize_7/class_prob_2",
+                    "type": "buffer",
+                    "size": 25600
+                }
+            ],
+            "type": "sgpProcess",
+            "resources": {
+                "executable": "kernel_name_tbd"
+            }
+        },
+        {
+            "name": "PassThrough",
+            "sequence": 17,
+            "processor": "EV74",
+            "config_params": {
+                "desired_batch_size": 1,
+                "actual_batch_size": 1,
+                "kernel": "pass_through",
+                "params": {}
+            },
+            "input_nodes": [
+                {
+                    "name": "dequantize_2/bbox_0",
+                    "size": 6553600
+                },
+                {
+                    "name": "dequantize_3/bbox_1",
+                    "size": 1638400
+                },
+                {
+                    "name": "dequantize_4/bbox_2",
+                    "size": 409600
+                },
+                {
+                    "name": "dequantize_5/class_prob_0",
+                    "size": 409600
+                },
+                {
+                    "name": "dequantize_6/class_prob_1",
+                    "size": 102400
+                },
+                {
+                    "name": "dequantize_7/class_prob_2",
+                    "size": 25600
+                }
+            ],
+            "output_nodes": [
+                {
+                    "name": "pass_through_out_0",
+                    "type": "buffer",
+                    "size": 6553600
+                },
+                {
+                    "name": "pass_through_out_1",
+                    "type": "buffer",
+                    "size": 1638400
+                },
+                {
+                    "name": "pass_through_out_2",
+                    "type": "buffer",
+                    "size": 409600
+                },
+                {
+                    "name": "pass_through_out_3",
+                    "type": "buffer",
+                    "size": 409600
+                },
+                {
+                    "name": "pass_through_out_4",
+                    "type": "buffer",
+                    "size": 102400
+                },
+                {
+                    "name": "pass_through_out_5",
+                    "type": "buffer",
+                    "size": 25600
+                }
+            ],
+            "type": "sgpProcess",
+            "resources": null
+        }
+    ]
+}

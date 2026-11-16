@@ -1,0 +1,13 @@
+<!doctype html><meta charset="utf-8"><title>Latest inspection — separate from live video</title>
+<style>body{font:18px system-ui;background:#15191d;color:#eee;margin:24px}img{max-width:100%}.warning{color:#ffd45a}#state{font-weight:bold}pre{white-space:pre-wrap}</style>
+<h1>Latest inspection snapshot</h1><p class="warning">The FFplay window is LIVE camera video. This page is an older, inspected frame—not a live overlay. No tracking or production acceptance.</p>
+<p id="state">Waiting for an inspection…</p><p id="info"></p><img id="image"><pre id="detections"></pre>
+<script>
+let last=null;
+async function refresh(){try{const r=await fetch('latest.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('No result');last=await r.json();
+const age=Math.max(0,(Date.now()/1000-last.received_unix));document.getElementById('state').textContent=(age>2?'STALE — ':'')+(last.crop_status==='located'?'Snapshot available':'UNKNOWN — crop not located');
+document.getElementById('info').textContent=`Snapshot #${last.sequence} | Received ${age.toFixed(1)}s ago | Processing ${last.processing_ms.toFixed(0)}ms | Source-frame pull ${new Date(last.input_taken_unix*1000).toISOString()}`;
+const im=document.getElementById('image');if(im.getAttribute('src')!==last.image)im.src=last.image;
+document.getElementById('detections').textContent=last.detections.map(d=>`${d.label}: ${d.score.toFixed(3)}`).join('\n')||'No detections — not an automatic pass';
+}catch(e){document.getElementById('state').textContent='WAITING / DISCONNECTED — no fresh inspection';}setTimeout(refresh,300)}refresh();
+</script>

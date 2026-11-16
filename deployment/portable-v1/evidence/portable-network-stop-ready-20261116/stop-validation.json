@@ -1,0 +1,11 @@
+{
+  "owned_stop": {
+    "signalled": [
+      2968628
+    ]
+  },
+  "ready_before_stop": true,
+  "host_exit": 0,
+  "worker_state": "stopped",
+  "session_state": "stopped"
+}

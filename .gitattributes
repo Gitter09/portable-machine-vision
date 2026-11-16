@@ -1,0 +1,8 @@
+# Frozen payload hashes must survive cloning on every host.
+deployment/portable-v1/** -text
+*.whl -text
+*.elf -text
+*.so -text
+*.onnx -text
+# Keep copied fixed-station SDK bytes unchanged.
+vision_sdk/** -text

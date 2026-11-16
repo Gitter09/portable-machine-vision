@@ -1,0 +1,62 @@
+{
+  "checkpoint_sha256": "abb182cf838b6f6c3d2ebc7eff2a3632aa520ddbe1e3b293146dda4e170a818e",
+  "fused_sha256": "612530f731b8ed3bffda223c0911b091baf5ee2e08dfa3fd32997e8e2397339c",
+  "raw_sha256": "a488c6f7f6c0510d87b0f22de25cc2c10381e63a222a84c582c4569948e673dc",
+  "output_contract": [
+    [
+      1,
+      64,
+      160,
+      160
+    ],
+    [
+      1,
+      64,
+      80,
+      80
+    ],
+    [
+      1,
+      64,
+      40,
+      40
+    ],
+    [
+      1,
+      4,
+      160,
+      160
+    ],
+    [
+      1,
+      4,
+      80,
+      80
+    ],
+    [
+      1,
+      4,
+      40,
+      40
+    ]
+  ],
+  "raw_fused_parity": [
+    {
+      "id": "missing-40__base",
+      "max_box_error": 0.000244140625,
+      "max_score_error": 1.4461465980275534e-07
+    },
+    {
+      "id": "present-20__base",
+      "max_box_error": 0.000244140625,
+      "max_score_error": 1.3605085769086145e-07
+    },
+    {
+      "id": "hist-absent_006413__base",
+      "max_box_error": 0.000244140625,
+      "max_score_error": 1.2724512998829596e-07
+    }
+  ],
+  "calibration_base_images": 90,
+  "calibration": "90 real preprocessed BASE views only; no random augmented copies or val/test images"
+}

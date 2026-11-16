@@ -1,0 +1,7 @@
+{
+  "kind": "isolated replay fixture; NOT a staged live release",
+  "assets": {
+    "provenance/mpk.json": "36fb73d575a1a7dd861954b514cddacdb4e0a0f9d04be83c6a8dc82d18976530",
+    "share/processmla/yolov8_stage1_mla.elf": "50da550b5abed51860c1a60fa63dc6b3726d171620a588759e8c10cb98f51f98"
+  }
+}

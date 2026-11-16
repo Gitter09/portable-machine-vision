@@ -1,0 +1,17 @@
+{
+  "link": {
+    "board_host": "172.21.30.120",
+    "board_ip": "172.21.30.120",
+    "receiver_ip": "172.21.30.230",
+    "route_receiver_ip": "172.21.30.230",
+    "route_interface": null
+  },
+  "host_platform": "Windows-10-10.0.26200-SP0",
+  "host_python": "C:\\Users\\DELL\\Desktop\\d-meter\\IC_TERMINAL_TRAIN\\browser-view-env\\Scripts\\python.exe",
+  "remote_directory": "/media/nvme/portable-network-stop-ready-20261116",
+  "command": "env OMP_WAIT_POLICY=PASSIVE OMP_DYNAMIC=FALSE timeout -k 5s 90s python3 -u /media/nvme/portable-network-stop-ready-20261116/latest_frame_stream.py --release /media/nvme/portable-network-stop-ready-20261116/release --output /media/nvme/portable-network-stop-ready-20261116/run --rtsp <configured-camera> --seconds 60 --host 172.21.30.230 --optimized --fast-transforms --coordinates-only --track-pose --feature-roi --cpp-library /media/nvme/portable-network-stop-ready-20261116/libportable_input.so --cpp-sha256 da2f8d81121aec34955fb6dd23df1bb9180e7151f5badc4a59cc1594b32f5182 --cpp-kernel parallel8",
+  "panel_url": "http://127.0.0.1:60643/",
+  "state": "stopped",
+  "started_unix": 1794834992.8668642,
+  "remote_exit": 0
+}

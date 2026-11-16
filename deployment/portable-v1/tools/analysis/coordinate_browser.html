@@ -1,0 +1,11 @@
+<!doctype html><meta charset="utf-8"><title>Live video + frame-matched inspection coordinates</title>
+<style>body{font:17px system-ui;background:#15191d;color:#eee;margin:16px}.panes{display:flex;gap:15px;flex-wrap:wrap}.pane{width:48%;min-width:480px}img,canvas{width:100%}.warn{color:#ffd55a}canvas{background:#222}</style>
+<h1>Camera + coordinate-only inspection</h1><p class="warn">Left: smooth LIVE camera. Right: browser-drawn boxes on the EXACT inspected frame, not stale boxes on moving video. Tracking estimates PCB geometry only—not component state.</p>
+<p id="status">Waiting…</p><div class="panes"><div class="pane"><h2>Live camera</h2><img src="/live.mjpg"></div><div class="pane"><h2>Frame-matched inspection</h2><canvas id="canvas" width="1280" height="720"></canvas><pre id="info"></pre></div></div>
+<script>
+let sequence=-1,pending=-1;const c=document.getElementById('canvas'),ctx=c.getContext('2d');
+async function poll(){try{const r=await (await fetch('/inspection.json?t='+Date.now(),{cache:'no-store'})).json();document.getElementById('status').textContent=`Result: ${r.state}; crop ${r.crop_status||'waiting'}; pose ${r.pose?.source||'none'}`;
+if(r.state==='matched'&&r.image_url&&r.sequence!==sequence){pending=r.sequence;const im=new Image();im.onload=()=>{if(pending!==r.sequence)return;ctx.drawImage(im,0,0,1280,720);for(const d of r.detections){const q=d.source_quad;ctx.strokeStyle=[0,3].includes(d.class_id)?'#ff3838':'#00ee66';ctx.lineWidth=3;ctx.beginPath();q.forEach((p,i)=>i?ctx.lineTo(p[0],p[1]):ctx.moveTo(p[0],p[1]));ctx.closePath();ctx.stroke();ctx.font='18px sans-serif';ctx.fillStyle=ctx.strokeStyle;ctx.fillText(`${d.label} ${d.score.toFixed(2)}`,q[0][0],q[0][1]-5)}sequence=r.sequence;document.getElementById('info').textContent=`Frame #${r.sequence} | ${r.processing_ms.toFixed(0)}ms | ${r.crop_status} | ${r.detections.length} detections`;};im.src=r.image_url;}
+if(r.state!=='matched'){pending=-1;ctx.clearRect(0,0,1280,720);ctx.fillStyle='#ffd55a';ctx.font='28px sans-serif';ctx.fillText(`${r.state.toUpperCase()} — no current frame-matched overlay`,25,60);}
+}catch(e){pending=-1;ctx.clearRect(0,0,1280,720);document.getElementById('status').textContent='DISCONNECTED — no current inspection';}setTimeout(poll,50)}poll();
+</script>

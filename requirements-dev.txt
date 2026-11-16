@@ -1,0 +1,16 @@
+# Development and analysis dependencies for the portable workspace.
+# The workspace ships no virtual environment; point pip at one of these, or at an
+# existing environment that already has them.
+#
+# Verified interpreter on this machine: the sibling repository's environment,
+#   ..\demeter-systems-mv-full\.venv\Scripts\python.exe
+# which has everything below. The system Python does not.
+
+pytest>=8,<10
+httpx>=0.27,<1
+fastapi>=0.110,<1
+numpy>=1.24,<3
+opencv-python>=4.8,<5
+onnx>=1.16,<2
+paramiko>=3,<4
+ultralytics>=8,<10        # host reference runs; pulls torch

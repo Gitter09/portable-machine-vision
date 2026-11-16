@@ -1,0 +1,1977 @@
+{
+  "schema": "portable-cropped-validation-boxes/v1",
+  "status": "Validation-box human review export; per-image review required; NOT a finalized training dataset",
+  "classes": [
+    "IC_Fail",
+    "Terminal_pass",
+    "IC_Pass",
+    "Terminal_Fail"
+  ],
+  "source_review_sha256": null,
+  "hybrid_results_sha256": "b1f98fce2d287655fcb3f324ed32293dc86a2d1fd64532372d9cde6a84cb5a33",
+  "training_eligible": false,
+  "evaluation_eligible": false,
+  "approved_images": 31,
+  "annotations": [
+    {
+      "id": "val-present_003574",
+      "image": "images/val-present_003574.png",
+      "image_sha256": "1e57bae1602342e6e3a641c8bfcf8aabfe6168d5d351d3845a8c3b6b5aee183e",
+      "width": 173,
+      "height": 113,
+      "state": "both_present",
+      "capture_group": "historical-source-run-present",
+      "source_ancestor_sha256": "fd9e7af9fdda5307c7a656feb45b2e30bd562ac0e1fb4dcba77f8febffce888c",
+      "source_to_crop": [
+        [
+          -0.936842393613987,
+          -0.3406692754688385,
+          871.5420058827568
+        ],
+        [
+          0.3389958698064656,
+          -0.9322388174165886,
+          320.79820903004793
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "split": "val",
+      "original_split": "val",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 2,
+          "label": "IC_Pass",
+          "xyxy": [
+            78.43846130371094,
+            33.425209045410156,
+            103.40193939208984,
+            64.18669891357422
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            98.01828002929688,
+            10.424965858459473,
+            150.3065643310547,
+            73.02196502685547
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "evaluation_eligible": false,
+      "historical_camera": true,
+      "review_priority": "normal",
+      "reviewed_utc": "2026-11-16T06:07:44.529Z"
+    },
+    {
+      "id": "val-present_003608",
+      "image": "images/val-present_003608.png",
+      "image_sha256": "24896bfb160eb1233e31e3e8ee80cf8f8d84d55ffb92cd07cb197e3ecc86fc57",
+      "width": 164,
+      "height": 94,
+      "state": "both_present",
+      "capture_group": "historical-source-run-present",
+      "source_ancestor_sha256": "e7953dbdcfbfd0689928b633fda7658d1348b04a5aab0ae84c7c68b712499652",
+      "source_to_crop": [
+        [
+          0.9866601188454707,
+          -0.12813835811462565,
+          -588.5956209719521
+        ],
+        [
+          0.12756027888979413,
+          0.9822108264340031,
+          -551.1947117175173
+        ],
+        [
+          -3.5802085364299565e-18,
+          1.4012727151685696e-18,
+          1
+        ]
+      ],
+      "split": "val",
+      "original_split": "val",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 2,
+          "label": "IC_Pass",
+          "xyxy": [
+            64.53863525390625,
+            32.32141876220703,
+            82.62852478027344,
+            58.936927795410156
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            8.911760330200195,
+            30.290910720825195,
+            68.62855529785156,
+            72.02183532714844
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "evaluation_eligible": false,
+      "historical_camera": true,
+      "review_priority": "normal",
+      "reviewed_utc": "2026-11-16T06:07:49.584Z"
+    },
+    {
+      "id": "val-present_003677",
+      "image": "images/val-present_003677.png",
+      "image_sha256": "862b56beb422ec097fe8e0e5141e8e98f05644680ac4711f2f69648c6bfd0d3a",
+      "width": 171,
+      "height": 112,
+      "state": "both_present",
+      "capture_group": "historical-source-run-present",
+      "source_ancestor_sha256": "1efd07776dc5e8076f50281472958177035108d311d27f5fecc262e0cf66cee8",
+      "source_to_crop": [
+        [
+          0.5755657239796501,
+          -0.8125632469650672,
+          -119.79991876977917
+        ],
+        [
+          0.8111693808089824,
+          0.5745784002514746,
+          -850.7620809646329
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "split": "val",
+      "original_split": "val",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 2,
+          "label": "IC_Pass",
+          "xyxy": [
+            58.2203483581543,
+            42.886531829833984,
+            86.49134063720703,
+            74.15404510498047
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            8.717775344848633,
+            35.38865280151367,
+            69.59561157226562,
+            100.42780303955078
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "evaluation_eligible": false,
+      "historical_camera": true,
+      "review_priority": "normal",
+      "reviewed_utc": "2026-11-16T06:07:51.232Z"
+    },
+    {
+      "id": "val-present_003712",
+      "image": "images/val-present_003712.png",
+      "image_sha256": "3874e29d54c839236f9ee18bb8f24377021a22bb16d32ba45dfef6a1ffcf3560",
+      "width": 171,
+      "height": 94,
+      "state": "both_present",
+      "capture_group": "historical-source-run-present",
+      "source_ancestor_sha256": "08b3cf1a12492bfc0f35bc1db6a30b84831c8cae2f1ef4838956e1cb35cc399d",
+      "source_to_crop": [
+        [
+          0.008214150156542624,
+          -0.9939057082289071,
+          335.90772824119585
+        ],
+        [
+          0.9903950747480027,
+          0.00818494013419396,
+          -806.8030705439502
+        ],
+        [
+          2.742378108370802e-19,
+          -6.251781539481132e-18,
+          1
+        ]
+      ],
+      "split": "val",
+      "original_split": "val",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 2,
+          "label": "IC_Pass",
+          "xyxy": [
+            62.76810073852539,
+            32.46726989746094,
+            78.5502700805664,
+            57.66181945800781
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            19.689924240112305,
+            22.82868194580078,
+            53.65152359008789,
+            78.2003402709961
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "evaluation_eligible": false,
+      "historical_camera": true,
+      "review_priority": "normal",
+      "reviewed_utc": "2026-11-16T06:07:53.097Z"
+    },
+    {
+      "id": "val-present_003746",
+      "image": "images/val-present_003746.png",
+      "image_sha256": "3c58635a53bb00cf511a574b20b1bce72b60ede3e3bd4ec40c939459a7e8d1a4",
+      "width": 170,
+      "height": 93,
+      "state": "both_present",
+      "capture_group": "historical-source-run-present",
+      "source_ancestor_sha256": "a57df67e79099bc8f4e010207b6795d50a020cd19072713e14e6a8d959a96288",
+      "source_to_crop": [
+        [
+          -0.449212332774229,
+          -0.8852133441138598,
+          603.1091810839707
+        ],
+        [
+          0.8782793991269312,
+          -0.44569366771016,
+          -586.4400526103599
+        ],
+        [
+          -5.665163120676966e-10,
+          7.743908087382529e-10,
+          1
+        ]
+      ],
+      "split": "val",
+      "original_split": "val",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 2,
+          "label": "IC_Pass",
+          "xyxy": [
+            58.31306838989258,
+            30.456071853637695,
+            84.89762878417969,
+            59.765380859375
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            8.218794822692871,
+            16.920461654663086,
+            65.64366912841797,
+            82.65077209472656
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "evaluation_eligible": false,
+      "historical_camera": true,
+      "review_priority": "normal",
+      "reviewed_utc": "2026-11-16T06:07:54.937Z"
+    },
+    {
+      "id": "val-present_003780",
+      "image": "images/val-present_003780.png",
+      "image_sha256": "ae3d08eb492bee1b8ee3761fa10a03a5a7154ff9e1b1ddf1c6a534b16882a651",
+      "width": 165,
+      "height": 94,
+      "state": "both_present",
+      "capture_group": "historical-source-run-present",
+      "source_ancestor_sha256": "c46c57031e927e8132141951fd6610642d566287546b97b86e7a40d769e8e98d",
+      "source_to_crop": [
+        [
+          -0.8062236192249151,
+          -0.5822725598755994,
+          740.3487490775864
+        ],
+        [
+          0.5813856373487785,
+          -0.8049953423761566,
+          -276.5491837321431
+        ],
+        [
+          7.765490206334953e-11,
+          2.344676523581066e-10,
+          1
+        ]
+      ],
+      "split": "val",
+      "original_split": "val",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 2,
+          "label": "IC_Pass",
+          "xyxy": [
+            57.7523193359375,
+            29.491281509399414,
+            85.7559814453125,
+            59.05110549926758
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            5.313623428344727,
+            17.326112747192383,
+            67.4841537475586,
+            83.7822494506836
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "evaluation_eligible": false,
+      "historical_camera": true,
+      "review_priority": "normal",
+      "reviewed_utc": "2026-11-16T06:07:57.713Z"
+    },
+    {
+      "id": "val-present_003815",
+      "image": "images/val-present_003815.png",
+      "image_sha256": "0778ac0321080781d519d0f9bd70c8fb80d21209ce2692d412a30611be86343a",
+      "width": 166,
+      "height": 99,
+      "state": "both_present",
+      "capture_group": "historical-source-run-present",
+      "source_ancestor_sha256": "68b35f1517711094c18875bcffa1830bdc6c05c4cf8e825c4f71a3828db99ecc",
+      "source_to_crop": [
+        [
+          -0.9864765845985574,
+          -0.12647081410642214,
+          711.7580652868887
+        ],
+        [
+          0.1255373735801183,
+          -0.9791925308512309,
+          79.99526129920339
+        ],
+        [
+          -8.965354749344723e-10,
+          -2.3372142484952746e-10,
+          1
+        ]
+      ],
+      "split": "val",
+      "original_split": "val",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 2,
+          "label": "IC_Pass",
+          "xyxy": [
+            62.25825500488281,
+            30.41768455505371,
+            83.01433563232422,
+            56.65545654296875
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            15.59230899810791,
+            21.31610870361328,
+            58.01480484008789,
+            80.00350952148438
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "evaluation_eligible": false,
+      "historical_camera": true,
+      "review_priority": "normal",
+      "reviewed_utc": "2026-11-16T06:07:59.744Z"
+    },
+    {
+      "id": "val-present_003849",
+      "image": "images/val-present_003849.png",
+      "image_sha256": "4c79b1c1238ff22c8b00575e249c817efec1249f8cf2e4916e4bce8f87609bfd",
+      "width": 177,
+      "height": 96,
+      "state": "both_present",
+      "capture_group": "historical-source-run-present",
+      "source_ancestor_sha256": "6e7153aef04e1f64b1e36e35598f5c93ecf42e6888f8c5d20097aa5e443525fb",
+      "source_to_crop": [
+        [
+          0.931487480986609,
+          -0.3431797481934093,
+          -359.50623912383253
+        ],
+        [
+          0.34314536411487007,
+          0.9313946817790442,
+          -277.06658013342815
+        ],
+        [
+          -2.333619148801777e-9,
+          -2.7371766488555473e-9,
+          1
+        ]
+      ],
+      "split": "val",
+      "original_split": "val",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 2,
+          "label": "IC_Pass",
+          "xyxy": [
+            79.46802520751953,
+            36.87366485595703,
+            104.07606506347656,
+            64.92029571533203
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            101.92214965820312,
+            14.048439979553223,
+            154.12112426757812,
+            76.66545104980469
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "evaluation_eligible": false,
+      "historical_camera": true,
+      "review_priority": "normal",
+      "reviewed_utc": "2026-11-16T06:08:01.417Z"
+    },
+    {
+      "id": "val-present_003883",
+      "image": "images/val-present_003883.png",
+      "image_sha256": "d0661c0b50f5374d92b4e014022b4beb9255a07d85da825a297338928b2a6b77",
+      "width": 186,
+      "height": 93,
+      "state": "both_present",
+      "capture_group": "historical-source-run-present",
+      "source_ancestor_sha256": "de92cad725ec47c1e262e8f26d4ce094c71219b1fe21e1f99b8bedcb7829b1ff",
+      "source_to_crop": [
+        [
+          0.6773753003451868,
+          -0.7306521922029072,
+          -66.15034288639559
+        ],
+        [
+          0.7221549741490054,
+          0.6694976391483797,
+          -446.9497122369597
+        ],
+        [
+          1.6212621965617234e-9,
+          -1.8871448458763145e-9,
+          1
+        ]
+      ],
+      "split": "val",
+      "original_split": "val",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 2,
+          "label": "IC_Pass",
+          "xyxy": [
+            78.48049926757812,
+            33.216270446777344,
+            107.4094467163086,
+            62.02838134765625
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            98.10926818847656,
+            10.8954439163208,
+            160.45164489746094,
+            71.65972900390625
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "evaluation_eligible": false,
+      "historical_camera": true,
+      "review_priority": "normal",
+      "reviewed_utc": "2026-11-16T06:08:03.169Z"
+    },
+    {
+      "id": "val-absent_010026",
+      "image": "images/val-absent_010026.png",
+      "image_sha256": "59da35245aff50cf472d35c36abc3b36d5580016f06fa4799d39a93840ab8059",
+      "width": 166,
+      "height": 90,
+      "state": "ic_missing_terminal_present",
+      "capture_group": "historical-source-run-absent",
+      "source_ancestor_sha256": "4a6df348c8812c9cea323120cb9ce7cd0f0d3c49ede180aa31ced791c93a99ce",
+      "source_to_crop": [
+        [
+          0.6491025368012785,
+          -0.7511046044338994,
+          -167.97012925630017
+        ],
+        [
+          0.7481478627433583,
+          0.6465473395807257,
+          -462.4117207579122
+        ],
+        [
+          -1.4782025600425918e-10,
+          -1.0091992857176754e-9,
+          1
+        ]
+      ],
+      "split": "val",
+      "original_split": "val",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 0,
+          "label": "IC_Fail",
+          "xyxy": [
+            60.625728607177734,
+            34.57980728149414,
+            85.98383331298828,
+            60.605247497558594
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            9.67124080657959,
+            10.69124984741211,
+            71.72623443603516,
+            74.2504653930664
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "evaluation_eligible": false,
+      "historical_camera": true,
+      "review_priority": "normal",
+      "reviewed_utc": "2026-11-16T06:08:07.025Z"
+    },
+    {
+      "id": "val-absent_010116",
+      "image": "images/val-absent_010116.png",
+      "image_sha256": "b5668d3d440cb8bf9f64db014dea4840992eb7eb021077b6243ce965e17c719b",
+      "width": 172,
+      "height": 111,
+      "state": "ic_missing_terminal_present",
+      "capture_group": "historical-source-run-absent",
+      "source_ancestor_sha256": "3277c6c2115ac4b3681ee15a0bcfe74a2b960a266862504cfbfc36ddce4cfcb8",
+      "source_to_crop": [
+        [
+          -0.45997065190681086,
+          -0.8816109647341107,
+          596.9683866583123
+        ],
+        [
+          0.8814867935854319,
+          -0.4599060611174433,
+          -194.23089021971452
+        ],
+        [
+          4.588061879472386e-10,
+          -6.578203674017007e-10,
+          1
+        ]
+      ],
+      "split": "val",
+      "original_split": "val",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 0,
+          "label": "IC_Fail",
+          "xyxy": [
+            60.73005676269531,
+            35.0395622253418,
+            83.59773254394531,
+            62.436317443847656
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            9.400564193725586,
+            9.960558891296387,
+            68.02818298339844,
+            76.41310119628906
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "evaluation_eligible": false,
+      "historical_camera": true,
+      "review_priority": "normal",
+      "reviewed_utc": "2026-11-16T06:08:09.825Z"
+    },
+    {
+      "id": "val-absent_010206",
+      "image": "images/val-absent_010206.png",
+      "image_sha256": "905f0c536b1400cbe21209706b6fd8bdcbcdb5f438baccefa5fef708ccb936c9",
+      "width": 201,
+      "height": 121,
+      "state": "ic_missing_terminal_present",
+      "capture_group": "historical-source-run-absent",
+      "source_ancestor_sha256": "e86efab8b617c359e8a21d0bdbc710e1ea069ec3845756918330ee13097a4653",
+      "source_to_crop": [
+        [
+          0.9702643996771162,
+          -0.22608147776484488,
+          -351.35659260614227
+        ],
+        [
+          0.22448630281934231,
+          0.9634185971817459,
+          -575.028828883649
+        ],
+        [
+          1.6243662888943414e-11,
+          -2.802101637148889e-9,
+          1
+        ]
+      ],
+      "split": "val",
+      "original_split": "val",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 0,
+          "label": "IC_Fail",
+          "xyxy": [
+            116.4610366821289,
+            48.65585708618164,
+            135.383056640625,
+            73.68875885009766
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            135.50050354003906,
+            41.50019073486328,
+            182.35047912597656,
+            102.1409683227539
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "evaluation_eligible": false,
+      "historical_camera": true,
+      "review_priority": "normal",
+      "reviewed_utc": "2026-11-16T06:08:12.553Z"
+    },
+    {
+      "id": "val-absent_010297",
+      "image": "images/val-absent_010297.png",
+      "image_sha256": "b372ea7f78aa6a150982fee034cc1d4c7e4eaabda9acd30eedfc24b7c79b7517",
+      "width": 164,
+      "height": 94,
+      "state": "ic_missing_terminal_present",
+      "capture_group": "historical-source-run-absent",
+      "source_ancestor_sha256": "1fae33675dfdf5c891abc3549365c5d043e3b2015de765e68aae2d00ddc58373",
+      "source_to_crop": [
+        [
+          0.3496836166079176,
+          -0.9324887845238475,
+          218.05109905528448
+        ],
+        [
+          0.9237549345899075,
+          0.3464084223881942,
+          -863.3987455765638
+        ],
+        [
+          1.7319535712924266e-18,
+          6.494835979559534e-19,
+          1
+        ]
+      ],
+      "split": "val",
+      "original_split": "val",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 0,
+          "label": "IC_Fail",
+          "xyxy": [
+            79.43310546875,
+            32.69438171386719,
+            100.62016296386719,
+            57.73569869995117
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            98.42513275146484,
+            21.368331909179688,
+            151.0998992919922,
+            83.46344757080078
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "evaluation_eligible": false,
+      "historical_camera": true,
+      "review_priority": "normal",
+      "reviewed_utc": "2026-11-16T06:08:16.017Z"
+    },
+    {
+      "id": "val-absent_010387",
+      "image": "images/val-absent_010387.png",
+      "image_sha256": "c0553a9f3f322f8f0f6d61af5294de144f02dfd8fb23ccf23d3681c3fc9f86f1",
+      "width": 166,
+      "height": 90,
+      "state": "ic_missing_terminal_present",
+      "capture_group": "historical-source-run-absent",
+      "source_ancestor_sha256": "f3a20ed00891541f4444b279e04bfd38b1702140c95bddc01ab66dd609876010",
+      "source_to_crop": [
+        [
+          -0.6951636549982821,
+          -0.7134574708120587,
+          831.7492245955149
+        ],
+        [
+          0.7055654362993712,
+          -0.6874740986231722,
+          -391.5665183154984
+        ],
+        [
+          -6.92849920535247e-19,
+          2.0209759319058872e-18,
+          1
+        ]
+      ],
+      "split": "val",
+      "original_split": "val",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 0,
+          "label": "IC_Fail",
+          "xyxy": [
+            77.12959289550781,
+            28.350269317626953,
+            102.47769927978516,
+            53.5710334777832
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            92.23095703125,
+            15.422479629516602,
+            155.00924682617188,
+            77.79290771484375
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "evaluation_eligible": false,
+      "historical_camera": true,
+      "review_priority": "normal",
+      "reviewed_utc": "2026-11-16T06:08:17.953Z"
+    },
+    {
+      "id": "val-absent_010477",
+      "image": "images/val-absent_010477.png",
+      "image_sha256": "a91f7c40e48ac6404adccbf722b707e9a06ff999439ec2962488324eca0f9452",
+      "width": 165,
+      "height": 98,
+      "state": "ic_missing_terminal_present",
+      "capture_group": "historical-source-run-absent",
+      "source_ancestor_sha256": "d5d4ca7b87e4f5e094dda97ae7719ba8a164e8f0ec335ca09e0f9d5f4757e3f5",
+      "source_to_crop": [
+        [
+          0.9333933743098363,
+          -0.34287919557906643,
+          -485.1507231132163
+        ],
+        [
+          0.3399237152662858,
+          0.9253478459555707,
+          -275.3528277473801
+        ],
+        [
+          7.166686320564476e-10,
+          -6.086678814218951e-10,
+          1
+        ]
+      ],
+      "split": "val",
+      "original_split": "val",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 0,
+          "label": "IC_Fail",
+          "xyxy": [
+            63.61152267456055,
+            43.73744583129883,
+            84.28555297851562,
+            69.04557800292969
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            15.016645431518555,
+            20.1254940032959,
+            67.77015686035156,
+            81.80231475830078
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "evaluation_eligible": false,
+      "historical_camera": true,
+      "review_priority": "normal",
+      "reviewed_utc": "2026-11-16T06:08:20.816Z"
+    },
+    {
+      "id": "val-absent_010567",
+      "image": "images/val-absent_010567.png",
+      "image_sha256": "4e1f53cc59646212e0e3d87497b70078f3e7825b2ec3c800d80071c496875414",
+      "width": 174,
+      "height": 95,
+      "state": "ic_missing_terminal_present",
+      "capture_group": "historical-source-run-absent",
+      "source_ancestor_sha256": "cda0428cdc0da306b18d206da134706adf3961cbfd0825cecc1ea5425c5b9088",
+      "source_to_crop": [
+        [
+          0.02819819211696077,
+          -0.9963395513552942,
+          313.89096619777445
+        ],
+        [
+          0.9932844719654903,
+          0.028111828798932502,
+          -424.9601050829887
+        ],
+        [
+          -1.85570742417596e-9,
+          -1.0512429921504056e-10,
+          1
+        ]
+      ],
+      "split": "val",
+      "original_split": "val",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 0,
+          "label": "IC_Fail",
+          "xyxy": [
+            65.06562805175781,
+            35.851863861083984,
+            79.34183502197266,
+            59.69712448120117
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            20.377941131591797,
+            14.608880996704102,
+            58.73062515258789,
+            70.18804931640625
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "evaluation_eligible": false,
+      "historical_camera": true,
+      "review_priority": "normal",
+      "reviewed_utc": "2026-11-16T06:08:23.161Z"
+    },
+    {
+      "id": "val-absent_010658",
+      "image": "images/val-absent_010658.png",
+      "image_sha256": "49eac1b3a173a152a23bb178f2a41288dde361b11f834229f32383840ad79b61",
+      "width": 165,
+      "height": 108,
+      "state": "ic_missing_terminal_present",
+      "capture_group": "historical-source-run-absent",
+      "source_ancestor_sha256": "1c72696339422c0bece1ee2e5b0f3e45d538a6f524b56cf2d1ebd7b9355f66bd",
+      "source_to_crop": [
+        [
+          -0.8875560198355841,
+          -0.44377800991779204,
+          744.1168855985563
+        ],
+        [
+          0.44480620312389,
+          -0.8896124062477798,
+          232.08974485187397
+        ],
+        [
+          -3.5938360779301035e-19,
+          -1.7969180389650534e-19,
+          1
+        ]
+      ],
+      "split": "val",
+      "original_split": "val",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 0,
+          "label": "IC_Fail",
+          "xyxy": [
+            60.60102462768555,
+            32.847896575927734,
+            84.43580627441406,
+            60.29179382324219
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            9.224510192871094,
+            9.014547348022461,
+            66.69832611083984,
+            74.61466217041016
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "evaluation_eligible": false,
+      "historical_camera": true,
+      "review_priority": "normal",
+      "reviewed_utc": "2026-11-16T06:08:24.785Z"
+    },
+    {
+      "id": "val-absent_010748",
+      "image": "images/val-absent_010748.png",
+      "image_sha256": "744c85291a83a9eccf4ad8942c3ceec3a2769fa8fccb83473620f1e7c344798d",
+      "width": 168,
+      "height": 130,
+      "state": "ic_missing_terminal_present",
+      "capture_group": "historical-source-run-absent",
+      "source_ancestor_sha256": "448c74cb817c9bbdc2e12a2202d1c2105fbba4dcd53d5dcbafc16d7c804193ae",
+      "source_to_crop": [
+        [
+          0.8069425378873467,
+          -0.5802732646207046,
+          -208.635934429018
+        ],
+        [
+          0.5814946573241584,
+          0.8086402587863587,
+          -785.3358615212122
+        ],
+        [
+          4.463682218144782e-10,
+          -1.329419139539841e-9,
+          1
+        ]
+      ],
+      "split": "val",
+      "original_split": "val",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 0,
+          "label": "IC_Fail",
+          "xyxy": [
+            81.64518737792969,
+            40.829345703125,
+            105.48300170898438,
+            67.22296905517578
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            97.59320831298828,
+            27.050676345825195,
+            160.94187927246094,
+            86.63724517822266
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "evaluation_eligible": false,
+      "historical_camera": true,
+      "review_priority": "normal",
+      "reviewed_utc": "2026-11-16T06:08:27.810Z"
+    },
+    {
+      "id": "val-absent_010838",
+      "image": "images/val-absent_010838.png",
+      "image_sha256": "11cad32045c0e064e3ccf66ec89d43cdf4edc28a800568a4b5782e5c7a87507f",
+      "width": 163,
+      "height": 90,
+      "state": "ic_missing_terminal_present",
+      "capture_group": "historical-source-run-absent",
+      "source_ancestor_sha256": "7cdf2d58defbe5ddc9c156d5dfd8f9e6d0911942b696f410473dda140d85d7e9",
+      "source_to_crop": [
+        [
+          -0.2547712207005901,
+          -0.9602920927118156,
+          621.9188272067067
+        ],
+        [
+          0.9531741641814474,
+          -0.2528831411498768,
+          -694.3946402135992
+        ],
+        [
+          1.8010355006550551e-9,
+          -1.028011149920638e-9,
+          1
+        ]
+      ],
+      "split": "val",
+      "original_split": "val",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 0,
+          "label": "IC_Fail",
+          "xyxy": [
+            79.99501037597656,
+            29.535423278808594,
+            98.22490692138672,
+            54.08676528930664
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            100.16525268554688,
+            17.366044998168945,
+            148.0767059326172,
+            77.58358001708984
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "evaluation_eligible": false,
+      "historical_camera": true,
+      "review_priority": "normal",
+      "reviewed_utc": "2026-11-16T06:08:29.393Z"
+    },
+    {
+      "id": "val-absent_010929",
+      "image": "images/val-absent_010929.png",
+      "image_sha256": "3d8fb7aedf14ee35b8180667e6fcecd654db085e513f2e9fb45e618baa5d2b95",
+      "width": 164,
+      "height": 84,
+      "state": "ic_missing_terminal_present",
+      "capture_group": "historical-source-run-absent",
+      "source_ancestor_sha256": "5b0afad9e4ea62cdaf32dcee8ba7bb401694e785163d687622d94d141bac3ad4",
+      "source_to_crop": [
+        [
+          -0.9793650266931648,
+          -0.1600885044714681,
+          840.4937860216788
+        ],
+        [
+          0.15896501415853853,
+          -0.9724915066985902,
+          59.41624376457483
+        ],
+        [
+          -2.3645379561496674e-18,
+          8.00387966581145e-18,
+          1
+        ]
+      ],
+      "split": "val",
+      "original_split": "val",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 0,
+          "label": "IC_Fail",
+          "xyxy": [
+            80.98541259765625,
+            29.700925827026367,
+            97.0622329711914,
+            52.489654541015625
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            100.10655212402344,
+            17.527997970581055,
+            144.7145538330078,
+            76.05979919433594
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "evaluation_eligible": false,
+      "historical_camera": true,
+      "review_priority": "normal",
+      "reviewed_utc": "2026-11-16T06:08:38.089Z"
+    },
+    {
+      "id": "val-terminal_absent_004819",
+      "image": "images/val-terminal_absent_004819.png",
+      "image_sha256": "de39641302af6df6e3bafe58e57c823f593d7cddd2118aec8d11ac1bed79f602",
+      "width": 175,
+      "height": 83,
+      "state": "both_missing",
+      "capture_group": "historical-source-run-terminal_absent",
+      "source_ancestor_sha256": "ae9231c1d02b9b7353091e919abd2d83a36b1ba6ac4819ff67d3d96edec5d699",
+      "source_to_crop": [
+        [
+          -0.3177928122164254,
+          -0.9395622429656112,
+          669.5559186541768
+        ],
+        [
+          0.9328938606078916,
+          -0.31553741769618415,
+          -624.4962689029735
+        ],
+        [
+          3.1652009988929283e-19,
+          9.35799019413208e-19,
+          1
+        ]
+      ],
+      "split": "val",
+      "original_split": "val",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 0,
+          "label": "IC_Fail",
+          "xyxy": [
+            59.78422546386719,
+            29.484678268432617,
+            79.1187973022461,
+            55.41780471801758
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        },
+        {
+          "target": "terminal",
+          "class_id": 3,
+          "label": "Terminal_Fail",
+          "xyxy": [
+            10.025431632995605,
+            14.387767791748047,
+            56.540348052978516,
+            66.6904067993164
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "evaluation_eligible": false,
+      "historical_camera": true,
+      "review_priority": "normal",
+      "reviewed_utc": "2026-11-16T06:08:43.744Z"
+    },
+    {
+      "id": "val-terminal_absent_004910",
+      "image": "images/val-terminal_absent_004910.png",
+      "image_sha256": "48ab141c993b9ca11981172f7e94140d7868feec0d97fc77d72c5bfd087ffe71",
+      "width": 165,
+      "height": 82,
+      "state": "both_missing",
+      "capture_group": "historical-source-run-terminal_absent",
+      "source_ancestor_sha256": "5c06bee2585f0b4ca6d1debe5f5ab1df60073d4f43665b40a5f076096785d8c3",
+      "source_to_crop": [
+        [
+          0.20244373106634325,
+          -0.9754088254641334,
+          224.6028682700574
+        ],
+        [
+          0.9627419243121735,
+          0.19981455767733033,
+          -402.17054707458
+        ],
+        [
+          2.06440395786183e-9,
+          8.954979826997681e-10,
+          1
+        ]
+      ],
+      "split": "val",
+      "original_split": "val",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 0,
+          "label": "IC_Fail",
+          "xyxy": [
+            81.3060531616211,
+            27.254240036010742,
+            98.81260681152344,
+            51.8731575012207
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        },
+        {
+          "target": "terminal",
+          "class_id": 3,
+          "label": "Terminal_Fail",
+          "xyxy": [
+            105.07244110107422,
+            16.101848602294922,
+            149.1533203125,
+            65.66778564453125
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "evaluation_eligible": false,
+      "historical_camera": true,
+      "review_priority": "normal",
+      "reviewed_utc": "2026-11-16T06:08:47.217Z"
+    },
+    {
+      "id": "val-terminal_absent_005001",
+      "image": "images/val-terminal_absent_005001.png",
+      "image_sha256": "0e9965df0f25f1e58902be69d44110e8416e26d8ec37381d1258cfbafc968e81",
+      "width": 195,
+      "height": 125,
+      "state": "both_missing",
+      "capture_group": "historical-source-run-terminal_absent",
+      "source_ancestor_sha256": "f8b510a1c9b2322ff555c8b15c2ae8f75c3372c51b6ac5661e1e24bd241be5c0",
+      "source_to_crop": [
+        [
+          0.7448918135460953,
+          -0.6572572536748355,
+          -45.14296814654827
+        ],
+        [
+          0.658060065482366,
+          0.7458011588615349,
+          -809.6004034758707
+        ],
+        [
+          -4.21146009124976e-19,
+          2.1836350936170602e-18,
+          1
+        ]
+      ],
+      "split": "val",
+      "original_split": "val",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 0,
+          "label": "IC_Fail",
+          "xyxy": [
+            86.30471801757812,
+            49.536651611328125,
+            112.67427062988281,
+            75.31631469726562
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        },
+        {
+          "target": "terminal",
+          "class_id": 3,
+          "label": "Terminal_Fail",
+          "xyxy": [
+            35.33522033691406,
+            35.48038101196289,
+            92.0945053100586,
+            91.17095184326172
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "evaluation_eligible": false,
+      "historical_camera": true,
+      "review_priority": "normal",
+      "reviewed_utc": "2026-11-16T06:08:55.121Z"
+    },
+    {
+      "id": "val-terminal_absent_005092",
+      "image": "images/val-terminal_absent_005092.png",
+      "image_sha256": "813cd4ac709bc4cb4ceffc46b019bee0514d49d5663508416dd3aab807514659",
+      "width": 164,
+      "height": 82,
+      "state": "both_missing",
+      "capture_group": "historical-source-run-terminal_absent",
+      "source_ancestor_sha256": "860067fa66f20b5a7eabd258356031b2f1b10aac76011a7b69fc3cbe0ef80d33",
+      "source_to_crop": [
+        [
+          0.9912743183196251,
+          -0.10573524503843702,
+          -550.1599534073368
+        ],
+        [
+          0.10470846849825846,
+          0.9816412472739052,
+          -151.22767464200112
+        ],
+        [
+          1.066943465819569e-18,
+          -1.138064087942623e-19,
+          1
+        ]
+      ],
+      "split": "val",
+      "original_split": "val",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 0,
+          "label": "IC_Fail",
+          "xyxy": [
+            84.8452377319336,
+            29.063669204711914,
+            102.4380111694336,
+            52.09786605834961
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        },
+        {
+          "target": "terminal",
+          "class_id": 3,
+          "label": "Terminal_Fail",
+          "xyxy": [
+            110.24864959716797,
+            18.931888580322266,
+            150.4563446044922,
+            64.41402435302734
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "evaluation_eligible": false,
+      "historical_camera": true,
+      "review_priority": "normal",
+      "reviewed_utc": "2026-11-16T06:08:58.313Z"
+    },
+    {
+      "id": "val-terminal_absent_005183",
+      "image": "images/val-terminal_absent_005183.png",
+      "image_sha256": "2dac4c65dc49bef32c06fc94e0d4e3d9a35e48665a49c1731873f57468349b61",
+      "width": 160,
+      "height": 87,
+      "state": "both_missing",
+      "capture_group": "historical-source-run-terminal_absent",
+      "source_ancestor_sha256": "1aa2914258b7ed117d489fe8a950d546f05323b0ab96c08160ebe9dd859e36e6",
+      "source_to_crop": [
+        [
+          -0.8472357503261058,
+          -0.5177553156301576,
+          700.4531640662644
+        ],
+        [
+          0.5132817828830729,
+          -0.8399154741819236,
+          231.51429071176048
+        ],
+        [
+          9.460345829457393e-10,
+          -2.9361381944187994e-9,
+          1
+        ]
+      ],
+      "split": "val",
+      "original_split": "val",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 0,
+          "label": "IC_Fail",
+          "xyxy": [
+            76.66128540039062,
+            25.450149536132812,
+            100.11922454833984,
+            51.49198532104492
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        },
+        {
+          "target": "terminal",
+          "class_id": 3,
+          "label": "Terminal_Fail",
+          "xyxy": [
+            99.43229675292969,
+            15.195470809936523,
+            148.08062744140625,
+            66.9283447265625
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "evaluation_eligible": false,
+      "historical_camera": true,
+      "review_priority": "normal",
+      "reviewed_utc": "2026-11-16T06:09:00.169Z"
+    },
+    {
+      "id": "val-terminal_absent_005274",
+      "image": "images/val-terminal_absent_005274.png",
+      "image_sha256": "01c9b418d8d82bb9f7c4614cfa43a3ed94b3befb04542735388e31aefc2f47b3",
+      "width": 183,
+      "height": 83,
+      "state": "both_missing",
+      "capture_group": "historical-source-run-terminal_absent",
+      "source_ancestor_sha256": "37c6c8f47ab7beb92eb3d8dd4fd4656cfeedc09ea01644d7a65d4ed644285e59",
+      "source_to_crop": [
+        [
+          -0.38479203318663785,
+          -0.9192247646868669,
+          702.7122787060246
+        ],
+        [
+          0.9064980051126704,
+          -0.37946464781036515,
+          -586.2964688597629
+        ],
+        [
+          3.79441764547188e-18,
+          6.6410641781134794e-18,
+          1
+        ]
+      ],
+      "split": "val",
+      "original_split": "val",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 0,
+          "label": "IC_Fail",
+          "xyxy": [
+            58.88692855834961,
+            30.730915069580078,
+            80.33289337158203,
+            55.51606750488281
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        },
+        {
+          "target": "terminal",
+          "class_id": 3,
+          "label": "Terminal_Fail",
+          "xyxy": [
+            9.013117790222168,
+            14.329914093017578,
+            58.679039001464844,
+            69.3216323852539
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "evaluation_eligible": false,
+      "historical_camera": true,
+      "review_priority": "normal",
+      "reviewed_utc": "2026-11-16T06:09:02.065Z"
+    },
+    {
+      "id": "val-terminal_absent_005365",
+      "image": "images/val-terminal_absent_005365.png",
+      "image_sha256": "e1478ce478de6b90146dd4eded8562e363f36a7f75efaa2bf50955fb252953fe",
+      "width": 165,
+      "height": 83,
+      "state": "both_missing",
+      "capture_group": "historical-source-run-terminal_absent",
+      "source_ancestor_sha256": "625712b316814c37959368e4b31f0b6623742fb7fb4cb440a18361e9cf3e1a7b",
+      "source_to_crop": [
+        [
+          0.16356711624594483,
+          -0.9814019655138487,
+          251.2918766431683
+        ],
+        [
+          0.9749370582414725,
+          0.16248934196562095,
+          -395.1217824000832
+        ],
+        [
+          2.110964424898911e-9,
+          7.237582370916083e-10,
+          1
+        ]
+      ],
+      "split": "val",
+      "original_split": "val",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 0,
+          "label": "IC_Fail",
+          "xyxy": [
+            82.17874908447266,
+            27.8603458404541,
+            98.26178741455078,
+            51.32805633544922
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        },
+        {
+          "target": "terminal",
+          "class_id": 3,
+          "label": "Terminal_Fail",
+          "xyxy": [
+            107.08634948730469,
+            16.763660430908203,
+            147.8339080810547,
+            65.25337219238281
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "evaluation_eligible": false,
+      "historical_camera": true,
+      "review_priority": "normal",
+      "reviewed_utc": "2026-11-16T06:09:04.242Z"
+    },
+    {
+      "id": "val-terminal_absent_005456",
+      "image": "images/val-terminal_absent_005456.png",
+      "image_sha256": "859b2712d54e4b7d2ed211dd92b46b14d9be49ce1c8bb8d08a516d2bd0215f8e",
+      "width": 200,
+      "height": 98,
+      "state": "both_missing",
+      "capture_group": "historical-source-run-terminal_absent",
+      "source_ancestor_sha256": "3bb51ad76afb112b6e714efa7ee524d6f98802de2c3f43d074b047beba2cd46a",
+      "source_to_crop": [
+        [
+          0.7305947583018504,
+          -0.6734181736816817,
+          -46.659978880323536
+        ],
+        [
+          0.667905666798995,
+          0.7246146654241111,
+          -821.2820481339517
+        ],
+        [
+          -1.258766669684217e-10,
+          1.5429322223013283e-9,
+          1
+        ]
+      ],
+      "split": "val",
+      "original_split": "val",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 0,
+          "label": "IC_Fail",
+          "xyxy": [
+            91.24497985839844,
+            41.78491973876953,
+            116.3228530883789,
+            66.10911560058594
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        },
+        {
+          "target": "terminal",
+          "class_id": 3,
+          "label": "Terminal_Fail",
+          "xyxy": [
+            42.16981506347656,
+            30.959156036376953,
+            95.78763580322266,
+            83.51368713378906
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "evaluation_eligible": false,
+      "historical_camera": true,
+      "review_priority": "normal",
+      "reviewed_utc": "2026-11-16T06:09:06.553Z"
+    },
+    {
+      "id": "val-terminal_absent_005546",
+      "image": "images/val-terminal_absent_005546.png",
+      "image_sha256": "2a3628dc8c21f1b7c19e52a7fe21be4daf5c655e0cfc32c76017068a1fb0ecf0",
+      "width": 164,
+      "height": 82,
+      "state": "both_missing",
+      "capture_group": "historical-source-run-terminal_absent",
+      "source_ancestor_sha256": "b84d464e13a36532a136337fbcfc69bb332105ef109425a0d30682959b3e5cae",
+      "source_to_crop": [
+        [
+          0.9552653003824098,
+          -0.2694337360895082,
+          -471.05979408591435
+        ],
+        [
+          0.2692907763646731,
+          0.9547578405222907,
+          -240.46816707562942
+        ],
+        [
+          -7.276538805550898e-10,
+          4.4594784099274354e-10,
+          1
+        ]
+      ],
+      "split": "val",
+      "original_split": "val",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 0,
+          "label": "IC_Fail",
+          "xyxy": [
+            83.39366912841797,
+            28.117156982421875,
+            102.15943145751953,
+            51.99348068237305
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        },
+        {
+          "target": "terminal",
+          "class_id": 3,
+          "label": "Terminal_Fail",
+          "xyxy": [
+            107.44957733154297,
+            16.161638259887695,
+            150.86715698242188,
+            66.07525634765625
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "evaluation_eligible": false,
+      "historical_camera": true,
+      "review_priority": "normal",
+      "reviewed_utc": "2026-11-16T06:09:08.913Z"
+    },
+    {
+      "id": "val-terminal_absent_005637",
+      "image": "images/val-terminal_absent_005637.png",
+      "image_sha256": "7b6e995e896c76722264e2550b4b0f18a142148c971804fb135bb768b6ee5e8b",
+      "width": 184,
+      "height": 120,
+      "state": "both_missing",
+      "capture_group": "historical-source-run-terminal_absent",
+      "source_ancestor_sha256": "3e3a62b06768fe03959ad6bb2402e757f4df4518d598ff43e91477ee73a3e0bf",
+      "source_to_crop": [
+        [
+          -0.9656726474161426,
+          -0.23309332812850236,
+          697.9257345581664
+        ],
+        [
+          0.2321207164945801,
+          -0.9616425000946741,
+          477.15127447070165
+        ],
+        [
+          -2.6478510514212137e-18,
+          2.681335603424506e-18,
+          1
+        ]
+      ],
+      "split": "val",
+      "original_split": "val",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 0,
+          "label": "IC_Fail",
+          "xyxy": [
+            104.97057342529297,
+            59.2216796875,
+            122.8104019165039,
+            83.03523254394531
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        },
+        {
+          "target": "terminal",
+          "class_id": 3,
+          "label": "Terminal_Fail",
+          "xyxy": [
+            127.28241729736328,
+            48.03364181518555,
+            169.9964599609375,
+            95.60347747802734
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "evaluation_eligible": false,
+      "historical_camera": true,
+      "review_priority": "normal",
+      "reviewed_utc": "2026-11-16T06:09:11.152Z"
+    },
+    {
+      "id": "val-terminal_absent_005728",
+      "image": "images/val-terminal_absent_005728.png",
+      "image_sha256": "16aa94358bd56e401a9585f4d997d349c81cbdad7b5873c09885c29a035dcdc0",
+      "width": 163,
+      "height": 84,
+      "state": "both_missing",
+      "capture_group": "historical-source-run-terminal_absent",
+      "source_ancestor_sha256": "ba148de0e09eca21c280008ce3727390d96568c2d3b7c34e2fe5f17ff886ac04",
+      "source_to_crop": [
+        [
+          -0.7035675745564012,
+          -0.7035683008249534,
+          822.2086593925451
+        ],
+        [
+          0.7018735580824212,
+          -0.7018738371578007,
+          -352.60205073240155
+        ],
+        [
+          7.790090082340982e-16,
+          -2.2415704341902164e-9,
+          1
+        ]
+      ],
+      "split": "val",
+      "original_split": "val",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 0,
+          "label": "IC_Fail",
+          "xyxy": [
+            57.43752670288086,
+            29.848661422729492,
+            82.73808288574219,
+            55.088294982910156
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        },
+        {
+          "target": "terminal",
+          "class_id": 3,
+          "label": "Terminal_Fail",
+          "xyxy": [
+            6.6968231201171875,
+            13.726884841918945,
+            61.01909637451172,
+            67.91834259033203
+          ],
+          "proposal_source": "historical VAL label transfer; UNREVIEWED"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "evaluation_eligible": false,
+      "historical_camera": true,
+      "review_priority": "normal",
+      "reviewed_utc": "2026-11-16T06:09:20.304Z"
+    }
+  ],
+  "class_counts": {
+    "IC_Fail": 22,
+    "Terminal_pass": 20,
+    "IC_Pass": 9,
+    "Terminal_Fail": 11
+  },
+  "exported_utc": "2026-11-16T06:09:28.923Z"
+}

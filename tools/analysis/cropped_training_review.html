@@ -1,0 +1,51 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Cropped training-box review — DRAFT</title>
+<style>body{font:15px system-ui;background:#18202a;color:#eee;margin:20px}button,input,select{font:inherit;padding:7px;margin:4px}canvas{background:#333;max-width:100%;touch-action:none;cursor:crosshair}textarea{width:95%;height:55px}.warning{padding:12px;background:#503b15}#status{white-space:pre-wrap;color:#ffdb80}#coordinates{font-family:monospace;white-space:pre-wrap}a{color:#9bd5ff}</style>
+<h1>Cropped training boxes — manual review</h1>
+<p class="warning">These are NEW, UNREVIEWED training-box proposals transferred from the upstream annotations recorded in this pack. Previous review is NOT automatically copied. Changes are NOT automatically saved to a file: click <b>Export review JSON</b> before closing. No training will start from this page.</p>
+<p>Present IC: bound body and its own pins. Present terminal: bound housing, not wires. Missing target: bound the intended empty footprint/pads (terminal holes included). Do not label the header or other components. If glare prevents a reliable annotation, flag the image and explain; do not invent certainty.</p>
+<div><button id="previous">← Previous</button><select id="images"></select><button id="next">Next →</button><span id="progress"></span></div>
+<div><label>Reviewer <input id="reviewer" placeholder="Your name"></label><button id="approve">Mark reviewed</button><button id="flag">Flag uncertain / correction needed</button><button id="pending">Reset pending</button><button id="export">Export review JSON</button><label>Resume export <input id="import" type="file" accept=".json"></label></div>
+<p id="caption"></p><p id="status"></p>
+<div><label>Edit target <select id="target"><option value="0">IC</option><option value="1">Terminal</option></select></label><label><input id="hide" type="checkbox">Hide boxes — original pixels</label><button id="restore">Restore this image's draft</button></div>
+<p>Drag a selected box's corners to resize; drag inside it to move. Rectangles stay axis-aligned. Any box edit resets this image to pending. Class IDs are fixed from the owner-confirmed specimen state. Arrow keys navigate outside text fields.</p>
+<canvas id="canvas" width="1100" height="600"></canvas><p id="coordinates"></p><label>Review notes<textarea id="notes"></textarea></label>
+<p>This pack is an unsplit development pool, not a final training/validation set. Reviewing does not make images training-eligible automatically. Export changes as <code>cropped-training.review-export.json</code>; do not overwrite the previous source-site export.</p>
+<script>
+'use strict';
+const original=/*ANNOTATIONS*/null;
+let data=structuredClone(original),index=0,image=new Image(),view=null,dragging=null,dirty=false,token=0;
+const $=id=>document.getElementById(id),canvas=$('canvas'),ctx=canvas.getContext('2d');
+function row(){return data.annotations[index]}
+function valid(r){return r.boxes.length===2&&r.boxes.every(b=>b.xyxy.length===4&&b.xyxy.every(Number.isFinite)&&b.xyxy[0]>=0&&b.xyxy[1]>=0&&b.xyxy[2]<=r.width&&b.xyxy[3]<=r.height&&b.xyxy[2]-b.xyxy[0]>=1&&b.xyxy[3]-b.xyxy[1]>=1)}
+function invalidate(){row().review_status='pending';row().reviewer=null;row().training_eligible=false;delete row().reviewed_utc;dirty=true}
+function show(){
+ const r=row();$('images').replaceChildren(...data.annotations.map((r,i)=>{const o=document.createElement('option');o.value=i;o.textContent=r.id+' — '+r.review_status;o.selected=i===index;return o}));
+ $('caption').textContent=r.id+' | '+r.state+' | native crop '+r.width+'×'+r.height;
+ $('status').textContent='Status: '+r.review_status+'\n'+r.boxes.map(b=>b.target+': '+b.label+' — '+b.proposal_source).join('\n');
+ $('notes').value=r.review_notes||'';$('progress').textContent=data.annotations.filter(r=>r.review_status==='reviewed').length+'/'+data.annotations.length+' reviewed';
+ const t=++token;image=new Image();image.onload=()=>{if(t===token)draw()};image.onerror=()=>{$('status').textContent+='\nIMAGE MISSING: keep review.html beside images/.'};image.src=r.image;
+}
+function draw(){
+ if(!image.complete||!image.naturalWidth)return;const r=row();let s=Math.min(canvas.width/r.width,canvas.height/r.height),x=(canvas.width-r.width*s)/2,y=(canvas.height-r.height*s)/2;view={s,x,y};
+ ctx.clearRect(0,0,canvas.width,canvas.height);ctx.drawImage(image,x,y,r.width*s,r.height*s);
+ if(!$('hide').checked)r.boxes.forEach((b,i)=>{const [x0,y0,x1,y1]=b.xyxy,c=i===0?'#ffdf00':'#ff5fff';ctx.strokeStyle=c;ctx.fillStyle=c;ctx.lineWidth=i===Number($('target').value)?3:1.5;ctx.strokeRect(x+x0*s,y+y0*s,(x1-x0)*s,(y1-y0)*s);ctx.font='18px system-ui';ctx.fillText(b.label,x+x0*s,Math.max(20,y+y0*s-9));if(i===Number($('target').value))[[x0,y0],[x1,y0],[x1,y1],[x0,y1]].forEach(p=>{ctx.fillRect(x+p[0]*s-5,y+p[1]*s-5,10,10)})});
+ $('coordinates').textContent=r.boxes.map(b=>b.label+': '+JSON.stringify(b.xyxy.map(v=>Math.round(v*100)/100))).join('\n');
+}
+function eventPoint(e){const b=canvas.getBoundingClientRect();return [(e.clientX-b.left)*canvas.width/b.width,(e.clientY-b.top)*canvas.height/b.height]}
+canvas.onpointerdown=e=>{if(!view||$('hide').checked)return;const p=eventPoint(e),v=view,b=row().boxes[Number($('target').value)],q=b.xyxy;let handle=-1,best=18;[[q[0],q[1]],[q[2],q[1]],[q[2],q[3]],[q[0],q[3]]].forEach((pt,i)=>{const d=Math.hypot(v.x+pt[0]*v.s-p[0],v.y+pt[1]*v.s-p[1]);if(d<best){best=d;handle=i}});const px=(p[0]-v.x)/v.s,py=(p[1]-v.y)/v.s;if(handle<0&&!(px>=q[0]&&px<=q[2]&&py>=q[1]&&py<=q[3]))return;dragging={handle,box:Number($('target').value),start:[px,py],original:[...q]};canvas.setPointerCapture(e.pointerId)};
+canvas.onpointermove=e=>{if(!dragging)return;const p=eventPoint(e),r=row(),v=view,px=Math.max(0,Math.min(r.width,(p[0]-v.x)/v.s)),py=Math.max(0,Math.min(r.height,(p[1]-v.y)/v.s));let q=[...dragging.original];
+ if(dragging.handle<0){const dx=Math.max(-q[0],Math.min(r.width-q[2],px-dragging.start[0])),dy=Math.max(-q[1],Math.min(r.height-q[3],py-dragging.start[1]));q=[q[0]+dx,q[1]+dy,q[2]+dx,q[3]+dy]}
+ else {if([0,3].includes(dragging.handle))q[0]=Math.min(px,q[2]-1);else q[2]=Math.max(px,q[0]+1);if([0,1].includes(dragging.handle))q[1]=Math.min(py,q[3]-1);else q[3]=Math.max(py,q[1]+1)}
+ r.boxes[dragging.box].xyxy=q;invalidate();draw();};
+canvas.onpointerup=canvas.onpointercancel=()=>{if(dragging){dragging=null;show()}};
+function navigate(delta){index=(index+delta+data.annotations.length)%data.annotations.length;show()}
+$('previous').onclick=()=>navigate(-1);$('next').onclick=()=>navigate(1);$('images').onchange=e=>{index=Number(e.target.value);show()};$('target').onchange=draw;$('hide').onchange=draw;
+$('notes').oninput=()=>{row().review_notes=$('notes').value;dirty=true};
+$('approve').onclick=()=>{const name=$('reviewer').value.trim();if(!name)return alert('Enter reviewer name.');if(!valid(row()))return alert('Invalid box size/bounds.');row().review_status='reviewed';row().reviewer=name;row().reviewed_utc=new Date().toISOString();row().training_eligible=false;dirty=true;show()};
+$('flag').onclick=()=>{invalidate();row().review_status='needs_correction';row().reviewer=$('reviewer').value.trim()||null;show()};$('pending').onclick=()=>{invalidate();show()};$('restore').onclick=()=>{if(confirm('Discard edits and restore this image\'s initial draft boxes?')){data.annotations[index]=structuredClone(original.annotations[index]);dirty=true;show()}};
+$('export').onclick=()=>{data.exported_utc=new Date().toISOString();data.approved_images=data.annotations.filter(r=>r.review_status==='reviewed').length;data.status='Training-box human review export; per-image review required; NOT a finalized training dataset';data.training_eligible=false;const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='cropped-training.review-export.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),5000);dirty=false};
+$('import').onchange=async e=>{try{const v=JSON.parse(await e.target.files[0].text());if(v.schema!==original.schema||JSON.stringify(v.classes)!==JSON.stringify(original.classes)||v.source_review_sha256!==original.source_review_sha256||v.hybrid_results_sha256!==original.hybrid_results_sha256||v.annotations.length!==original.annotations.length)throw Error('Pack identity/schema differs');v.annotations.forEach((r,i)=>{const o=original.annotations[i];for(const k of ['id','image','image_sha256','width','height','state','capture_group','split'])if(r[k]!==o[k])throw Error('Source/state differs: '+r.id);if(!valid(r))throw Error('Invalid boxes: '+r.id);r.boxes.forEach((b,j)=>{if(b.target!==o.boxes[j].target||b.class_id!==o.boxes[j].class_id||b.label!==o.boxes[j].label)throw Error('Target/class differs: '+r.id)});r.training_eligible=false});v.training_eligible=false;data=v;dirty=true;show()}catch(err){alert('Import refused: '+err.message)}};
+document.onkeydown=e=>{if(['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName))return;if(e.key==='ArrowRight')navigate(1);if(e.key==='ArrowLeft')navigate(-1)};
+window.onbeforeunload=e=>{if(dirty){e.preventDefault();e.returnValue='Export review JSON before leaving.'}};
+show();
+</script></html>

@@ -1,0 +1,12 @@
+{
+  "decoded_frames": 570,
+  "metadata_results": 479,
+  "matched_at_arrival": 468,
+  "rtp_sequence_gaps": 0,
+  "host_errors": [],
+  "buffered_frames": 90,
+  "max_host_frame_gap_seconds": 1.0309999999990396,
+  "decoded_arrival_fps": 30.070817038370166,
+  "p99_host_frame_gap_seconds": 0.09400000000096043,
+  "elapsed_seconds": 32.15599999999904
+}

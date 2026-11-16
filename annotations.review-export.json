@@ -1,0 +1,4148 @@
+{
+  "schema": "portable-pose-sites-draft/v1",
+  "status": "Human review export; inspect per-image status. NOT a training export.",
+  "class_contract": [
+    "IC_Fail",
+    "Terminal_pass",
+    "IC_Pass",
+    "Terminal_Fail"
+  ],
+  "board_corner_order": [
+    "header_top",
+    "terminal_top",
+    "terminal_bottom",
+    "header_bottom"
+  ],
+  "coordinate_system": "original image pixel x,y; clockwise image-coordinate winding",
+  "site_contract": "expected mounting footprint for each target, also when component is absent; NOT tight visible-body boxes",
+  "source_manifest_sha256": "a24617e6d7b4c29426f8f80a0d7e160b3cc5a4d2e46355220df2bd56d2ef4bf8",
+  "proposal_results_sha256": "a234a4c58a7cf335fa6b9cd3c768cc03db600a3972352dc40771a34cb58611cb",
+  "manual_overrides_sha256": "91c775ceb20ec57187d8048e24f19426814869f96f8ee627b7f02d6f7a9e2ab2",
+  "builder_sha256": "fbc4f6286fefcb655f606c8797729bfbd6e9dcd73170f8c5c1fc0bdd41209d09",
+  "split_policy": "All existing images are development-only. Do not split adjacent images/rotations into train and test. New independent captures required for validation.",
+  "coverage": {
+    "both_missing": 40,
+    "both_present": 2,
+    "ic_missing_terminal_present": 0,
+    "approved_geometry": 42
+  },
+  "annotations": [
+    {
+      "id": "missing-40",
+      "image": "images/missing-40.png",
+      "source_image_sha256": "e06fdfe87367004bbc09140f402141315323827cfba3e7c490f6e533d4c7412a",
+      "source_path": "C:\\Users\\DELL\\Desktop\\d-meter\\IC_TERMINAL_TRAIN\\live-false-pass-20261115\\comparison\\source-40.png",
+      "width": 1280,
+      "height": 720,
+      "frame_id": 40,
+      "capture_group": "both-missing-periodic-probe-20261115",
+      "split": "development_only_not_held_out",
+      "state": "both_missing",
+      "state_provenance": "owner-confirmed specimen state inherited from source manifest; not individual site geometry approval",
+      "board_quad": [
+        [
+          780.5905151367188,
+          255.17910766601562
+        ],
+        [
+          630.4365844726562,
+          147.17361450195312
+        ],
+        [
+          673.8816528320312,
+          86.7744369506836
+        ],
+        [
+          824.0355834960938,
+          194.77993774414062
+        ]
+      ],
+      "orientation": {
+        "header_center": [
+          802.3130493164062,
+          224.97952270507812
+        ],
+        "terminal_end_center": [
+          652.1591186523438,
+          116.97402572631836
+        ],
+        "header_to_terminal_degrees_clockwise_from_image_x": 215.72740779884418
+      },
+      "sites": {
+        "IC": {
+          "polygon": [
+            [
+              712.9828886922201,
+              182.07735603094102
+            ],
+            [
+              694.3525383885701,
+              168.8291069261233
+            ],
+            [
+              716.70895875295,
+              141.0905853629112
+            ],
+            [
+              735.7533168411255,
+              154.75284225225448
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 0,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        },
+        "terminal": {
+          "polygon": [
+            [
+              672.9522094726562,
+              170.42311096191406
+            ],
+            [
+              635.3068455123902,
+              143.9886398545901
+            ],
+            [
+              671.8558757019043,
+              96.27223371982575
+            ],
+            [
+              709.446044921875,
+              119.68779754638672
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 3,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        }
+      },
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_priority": "normal",
+      "proposal_method": "unreliable colour-experiment proposal",
+      "notes": "Machine-seeded; not independently verified. Review substrate edges, orientation and both sites.",
+      "training_eligible": false,
+      "geometry_independently_reviewed": true,
+      "reviewed_utc": "2026-11-15T11:46:15.607Z"
+    },
+    {
+      "id": "missing-69",
+      "image": "images/missing-69.png",
+      "source_image_sha256": "86eecc317ce24a083a7f43d8a14be47875b8365694a175bce72bfe8104e67971",
+      "source_path": "C:\\Users\\DELL\\Desktop\\d-meter\\IC_TERMINAL_TRAIN\\live-false-pass-20261115\\comparison\\source-69.png",
+      "width": 1280,
+      "height": 720,
+      "frame_id": 69,
+      "capture_group": "both-missing-periodic-probe-20261115",
+      "split": "development_only_not_held_out",
+      "state": "both_missing",
+      "state_provenance": "owner-confirmed specimen state inherited from source manifest; not individual site geometry approval",
+      "board_quad": [
+        [
+          718.2512817382812,
+          169.670166015625
+        ],
+        [
+          543.0236206054688,
+          131.47952270507812
+        ],
+        [
+          558.1670532226562,
+          61.997955322265625
+        ],
+        [
+          733.3947143554688,
+          100.1885986328125
+        ]
+      ],
+      "orientation": {
+        "header_center": [
+          725.822998046875,
+          134.92938232421875
+        ],
+        "terminal_end_center": [
+          550.5953369140625,
+          96.73873901367188
+        ],
+        "header_to_terminal_degrees_clockwise_from_image_x": 192.29526617873907
+      },
+      "sites": {
+        "IC": {
+          "polygon": [
+            [
+              629.7023628234863,
+              129.85082890510557
+            ],
+            [
+              609.371206665039,
+              125.15902363777161
+            ],
+            [
+              617.1908821105957,
+              93.56753483772277
+            ],
+            [
+              637.2092512512207,
+              99.51048817634583
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 0,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        },
+        "terminal": {
+          "polygon": [
+            [
+              589.7943115234375,
+              135.85057067871094
+            ],
+            [
+              544.0162249755859,
+              127.03574574470521
+            ],
+            [
+              559.9683628845215,
+              70.73408253669739
+            ],
+            [
+              602.5147705078125,
+              77.48604583740234
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 3,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        }
+      },
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_priority": "normal",
+      "proposal_method": "unreliable colour-experiment proposal",
+      "notes": "Machine-seeded; not independently verified. Review substrate edges, orientation and both sites.",
+      "training_eligible": false,
+      "geometry_independently_reviewed": true,
+      "reviewed_utc": "2026-11-15T11:47:09.942Z"
+    },
+    {
+      "id": "missing-98",
+      "image": "images/missing-98.png",
+      "source_image_sha256": "2f496b19e230ffe655e2aa790d9ac1179bd9f0fb9cc5cb2b8f1db6437615802b",
+      "source_path": "C:\\Users\\DELL\\Desktop\\d-meter\\IC_TERMINAL_TRAIN\\live-false-pass-20261115\\comparison\\source-98.png",
+      "width": 1280,
+      "height": 720,
+      "frame_id": 98,
+      "capture_group": "both-missing-periodic-probe-20261115",
+      "split": "development_only_not_held_out",
+      "state": "both_missing",
+      "state_provenance": "owner-confirmed specimen state inherited from source manifest; not individual site geometry approval",
+      "board_quad": [
+        [
+          628.9747924804688,
+          118.63326263427734
+        ],
+        [
+          459.39495849609375,
+          150.12664794921875
+        ],
+        [
+          452.06699717203776,
+          86.2525312225024
+        ],
+        [
+          616.8159790039062,
+          53.162757873535156
+        ]
+      ],
+      "orientation": {
+        "header_center": [
+          622.8953857421875,
+          85.89801025390625
+        ],
+        "terminal_end_center": [
+          455.73097783406575,
+          118.18958958586057
+        ],
+        "header_to_terminal_degrees_clockwise_from_image_x": 169.0666936886688
+      },
+      "sites": {
+        "IC": {
+          "polygon": [
+            [
+              539.0742431259155,
+              116.92627216895421
+            ],
+            [
+              516.0689374160767,
+              120.7604897872607
+            ],
+            [
+              513.4144790649414,
+              90.08674884080887
+            ],
+            [
+              535.5349653244018,
+              86.2525312225024
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 0,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        },
+        "terminal": {
+          "polygon": [
+            [
+              502.51300048828125,
+              136.7007293701172
+            ],
+            [
+              458.5349121348063,
+              143.76579549709956
+            ],
+            [
+              453.6304194132487,
+              92.15132755835852
+            ],
+            [
+              492.2995910644531,
+              81.70550537109375
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 3,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        }
+      },
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_priority": "normal",
+      "proposal_method": "unreliable colour-experiment proposal",
+      "notes": "Machine-seeded; not independently verified. Review substrate edges, orientation and both sites.",
+      "training_eligible": false,
+      "geometry_independently_reviewed": true,
+      "reviewed_utc": "2026-11-15T11:47:39.350Z"
+    },
+    {
+      "id": "missing-127",
+      "image": "images/missing-127.png",
+      "source_image_sha256": "42f358bf6433972ab6fb16aecbb29f84bda227d358583515854db16c7322cd56",
+      "source_path": "C:\\Users\\DELL\\Desktop\\d-meter\\IC_TERMINAL_TRAIN\\live-false-pass-20261115\\comparison\\source-127.png",
+      "width": 1280,
+      "height": 720,
+      "frame_id": 127,
+      "capture_group": "both-missing-periodic-probe-20261115",
+      "split": "development_only_not_held_out",
+      "state": "both_missing",
+      "state_provenance": "owner-confirmed specimen state inherited from source manifest; not individual site geometry approval",
+      "board_quad": [
+        [
+          537.7669067382812,
+          106.48428344726562
+        ],
+        [
+          394.255126953125,
+          195.0341033935547
+        ],
+        [
+          365.5089955647786,
+          141.56297496159868
+        ],
+        [
+          505.62921142578125,
+          54.39903259277344
+        ]
+      ],
+      "orientation": {
+        "header_center": [
+          521.6980590820312,
+          80.44165802001953
+        ],
+        "terminal_end_center": [
+          379.8820612589518,
+          168.29853917757669
+        ],
+        "header_to_terminal_degrees_clockwise_from_image_x": 148.2212390526858
+      },
+      "sites": {
+        "IC": {
+          "polygon": [
+            [
+              463.39569091796875,
+              133.675048828125
+            ],
+            [
+              433.2582092285156,
+              152.2705078125
+            ],
+            [
+              417.8321228027344,
+              127.26959228515625
+            ],
+            [
+              447.9695739746094,
+              108.67412567138672
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 0,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        },
+        "terminal": {
+          "polygon": [
+            [
+              428.9971618652344,
+              167.84432983398438
+            ],
+            [
+              390.3008666992188,
+              190.1902727762858
+            ],
+            [
+              369.0955505371094,
+              145.4798235575358
+            ],
+            [
+              402.0014953613281,
+              124.09273529052734
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 3,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        }
+      },
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_priority": "normal",
+      "proposal_method": "unreliable colour-experiment proposal",
+      "notes": "Machine-seeded; not independently verified. Review substrate edges, orientation and both sites.",
+      "training_eligible": false,
+      "geometry_independently_reviewed": true,
+      "reviewed_utc": "2026-11-15T11:48:19.321Z"
+    },
+    {
+      "id": "missing-156",
+      "image": "images/missing-156.png",
+      "source_image_sha256": "7691adf9b9ff01e932e5dbf3c1a283f648799badd81a6033fc0e5a0d8900972f",
+      "source_path": "C:\\Users\\DELL\\Desktop\\d-meter\\IC_TERMINAL_TRAIN\\live-false-pass-20261115\\comparison\\source-156.png",
+      "width": 1280,
+      "height": 720,
+      "frame_id": 156,
+      "capture_group": "both-missing-periodic-probe-20261115",
+      "split": "development_only_not_held_out",
+      "state": "both_missing",
+      "state_provenance": "owner-confirmed specimen state inherited from source manifest; not individual site geometry approval",
+      "board_quad": [
+        [
+          452.1707763671875,
+          128.53659057617188
+        ],
+        [
+          348.56103515625,
+          258.0487976074219
+        ],
+        [
+          307.9472339630127,
+          219.63083159208298
+        ],
+        [
+          406.4390869140625,
+          91.95122528076172
+        ]
+      ],
+      "orientation": {
+        "header_center": [
+          429.304931640625,
+          110.2439079284668
+        ],
+        "terminal_end_center": [
+          328.2541345596313,
+          238.83981459975243
+        ],
+        "header_to_terminal_degrees_clockwise_from_image_x": 128.16029976288416
+      },
+      "sites": {
+        "IC": {
+          "polygon": [
+            [
+              385.0578066253662,
+              185.99749670743944
+            ],
+            [
+              372.7529280090332,
+              202.40400152921677
+            ],
+            [
+              352.24479698181153,
+              184.76700884580612
+            ],
+            [
+              366.1903260803223,
+              168.36050402402878
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 0,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        },
+        "terminal": {
+          "polygon": [
+            [
+              371.8410339355469,
+              221.44879150390625
+            ],
+            [
+              346.0722589238485,
+              253.42971035718918
+            ],
+            [
+              312.7084154891968,
+              223.00590451002122
+            ],
+            [
+              333.4264221191406,
+              190.7170867919922
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 3,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        }
+      },
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_priority": "normal",
+      "proposal_method": "unreliable colour-experiment proposal",
+      "notes": "Machine-seeded; not independently verified. Review substrate edges, orientation and both sites.",
+      "training_eligible": false,
+      "geometry_independently_reviewed": true,
+      "reviewed_utc": "2026-11-15T11:48:46.110Z"
+    },
+    {
+      "id": "missing-185",
+      "image": "images/missing-185.png",
+      "source_image_sha256": "74706ab1f3855f81ef572a21a98f33267ff1b3f5d94e798857266a5f0c5eb432",
+      "source_path": "C:\\Users\\DELL\\Desktop\\d-meter\\IC_TERMINAL_TRAIN\\live-false-pass-20261115\\comparison\\source-185.png",
+      "width": 1280,
+      "height": 720,
+      "frame_id": 185,
+      "capture_group": "both-missing-periodic-probe-20261115",
+      "split": "development_only_not_held_out",
+      "state": "both_missing",
+      "state_provenance": "owner-confirmed specimen state inherited from source manifest; not individual site geometry approval",
+      "board_quad": [
+        [
+          378.98992149045137,
+          180.42893063218855
+        ],
+        [
+          328.8,
+          334.47749999999996
+        ],
+        [
+          278.6,
+          318.6375
+        ],
+        [
+          324.3247375,
+          165.26462161458332
+        ]
+      ],
+      "orientation": {
+        "header_center": [
+          351.65732949522567,
+          172.84677612338595
+        ],
+        "terminal_end_center": [
+          303.70000000000005,
+          326.5575
+        ],
+        "header_to_terminal_degrees_clockwise_from_image_x": 107.32778034805676
+      },
+      "sites": {
+        "IC": {
+          "polygon": [
+            [
+              336.239990234375,
+              255.6800079345703
+            ],
+            [
+              328.2218653361002,
+              274.86739802360535
+            ],
+            [
+              306.154665629069,
+              267.9713981151581
+            ],
+            [
+              309.8399963378906,
+              247.04000854492188
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 0,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        },
+        "terminal": {
+          "polygon": [
+            [
+              335.57759857177734,
+              292.3372644583384
+            ],
+            [
+              326.38293202718097,
+              331.8743306001027
+            ],
+            [
+              279.48,
+              318.1975
+            ],
+            [
+              290.5237325032552,
+              280.38419795036316
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 3,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        }
+      },
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_priority": "high",
+      "proposal_method": "assistant manual proposal from source/grid",
+      "notes": "Assistant hand-proposed from enlarged source with coordinate grid. Glare/occlusion makes some substrate corners inferred. Both site polygons projected, not independently traced. HIGH PRIORITY: review corners and both sites.",
+      "training_eligible": false,
+      "geometry_independently_reviewed": true,
+      "reviewed_utc": "2026-11-15T12:01:14.022Z"
+    },
+    {
+      "id": "missing-214",
+      "image": "images/missing-214.png",
+      "source_image_sha256": "2c29143ff8f92610a32bed30da230cb51fe8fe53378d8ac310f62af8b32b6d92",
+      "source_path": "C:\\Users\\DELL\\Desktop\\d-meter\\IC_TERMINAL_TRAIN\\live-false-pass-20261115\\comparison\\source-214.png",
+      "width": 1280,
+      "height": 720,
+      "frame_id": 214,
+      "capture_group": "both-missing-periodic-probe-20261115",
+      "split": "development_only_not_held_out",
+      "state": "both_missing",
+      "state_provenance": "owner-confirmed specimen state inherited from source manifest; not individual site geometry approval",
+      "board_quad": [
+        [
+          325.27912521362305,
+          257.68030913352965
+        ],
+        [
+          334.17184356689455,
+          417.32577671368915
+        ],
+        [
+          282.9328473409017,
+          418.5961650498708
+        ],
+        [
+          272.85823515679044,
+          261.3312029762556
+        ]
+      ],
+      "orientation": {
+        "header_center": [
+          299.06868018520674,
+          259.50575605489263
+        ],
+        "terminal_end_center": [
+          308.5523454538981,
+          417.96097088178
+        ],
+        "header_to_terminal_degrees_clockwise_from_image_x": 86.57488977831008
+      },
+      "sites": {
+        "IC": {
+          "polygon": [
+            [
+              316.67462158203125,
+              340.4235534667969
+            ],
+            [
+              316.38806081951464,
+              359.730212264805
+            ],
+            [
+              291.02298286957745,
+              363.22884370617567
+            ],
+            [
+              290.017578125,
+              342.34368896484375
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 0,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        },
+        "terminal": {
+          "polygon": [
+            [
+              326.44662621345526,
+              378.0980273320009
+            ],
+            [
+              327.75861300396923,
+              413.5216706758787
+            ],
+            [
+              283.15106212649346,
+              416.582973187078
+            ],
+            [
+              281.8390753359795,
+              380.72200091302886
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 3,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        }
+      },
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_priority": "high",
+      "proposal_method": "assistant manual proposal from source/grid",
+      "notes": "Assistant hand-proposed from enlarged source with coordinate grid. Glare/occlusion makes some substrate corners inferred. Both site polygons projected, not independently traced. HIGH PRIORITY: review corners and both sites.",
+      "training_eligible": false,
+      "geometry_independently_reviewed": true,
+      "reviewed_utc": "2026-11-15T12:01:16.038Z"
+    },
+    {
+      "id": "missing-243",
+      "image": "images/missing-243.png",
+      "source_image_sha256": "ee8c3d49ab17e8bc063c99eb274cd1b9aec5b5499e81c42f0e3599fb138ba5e7",
+      "source_path": "C:\\Users\\DELL\\Desktop\\d-meter\\IC_TERMINAL_TRAIN\\live-false-pass-20261115\\comparison\\source-243.png",
+      "width": 1280,
+      "height": 720,
+      "frame_id": 243,
+      "capture_group": "both-missing-periodic-probe-20261115",
+      "split": "development_only_not_held_out",
+      "state": "both_missing",
+      "state_provenance": "owner-confirmed specimen state inherited from source manifest; not individual site geometry approval",
+      "board_quad": [
+        [
+          307.50836181640625,
+          350.55023193359375
+        ],
+        [
+          368.01824951171875,
+          496.98419189453125
+        ],
+        [
+          319.43048095703125,
+          517.061767578125
+        ],
+        [
+          258.92059326171875,
+          370.6278076171875
+        ]
+      ],
+      "orientation": {
+        "header_center": [
+          283.2144775390625,
+          360.5890197753906
+        ],
+        "terminal_end_center": [
+          343.724365234375,
+          507.0229797363281
+        ],
+        "header_to_terminal_degrees_clockwise_from_image_x": 67.54845792711717
+      },
+      "sites": {
+        "IC": {
+          "polygon": [
+            [
+              325.33140614827477,
+              429.2095867474874
+            ],
+            [
+              333.5484573364258,
+              448.5196570396423
+            ],
+            [
+              309.7190088907878,
+              459.61267614364624
+            ],
+            [
+              300.68025258382164,
+              442.7677212079366
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 0,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        },
+        "terminal": {
+          "polygon": [
+            [
+              348.3986511230469,
+              460.517578125
+            ],
+            [
+              367.23836720784504,
+              496.5894064903259
+            ],
+            [
+              320.71321553548177,
+              515.3383829943339
+            ],
+            [
+              307.5849304199219,
+              477.3827209472656
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 3,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        }
+      },
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_priority": "high",
+      "proposal_method": "assistant manual proposal from source/grid",
+      "notes": "HIGH PRIORITY: individual enlarged source/canonical review disproves earlier reversal claim. Original orientation retained, NOT flipped. Blur/glare remains. Geometry and projected sites still require independent review.",
+      "training_eligible": false,
+      "geometry_independently_reviewed": true,
+      "reviewed_utc": "2026-11-15T12:01:17.782Z"
+    },
+    {
+      "id": "missing-272",
+      "image": "images/missing-272.png",
+      "source_image_sha256": "3ad447f02c99b63419c9caa79a8c3ba92dc4b088e99c299dfecb149481f09fd1",
+      "source_path": "C:\\Users\\DELL\\Desktop\\d-meter\\IC_TERMINAL_TRAIN\\live-false-pass-20261115\\comparison\\source-272.png",
+      "width": 1280,
+      "height": 720,
+      "frame_id": 272,
+      "capture_group": "both-missing-periodic-probe-20261115",
+      "split": "development_only_not_held_out",
+      "state": "both_missing",
+      "state_provenance": "owner-confirmed specimen state inherited from source manifest; not individual site geometry approval",
+      "board_quad": [
+        [
+          318.4248962402344,
+          436.71405029296875
+        ],
+        [
+          424.9485168457031,
+          554.7537231445312
+        ],
+        [
+          384.8357238769531,
+          590.9530639648438
+        ],
+        [
+          278.3121032714844,
+          472.91339111328125
+        ]
+      ],
+      "orientation": {
+        "header_center": [
+          298.3684997558594,
+          454.813720703125
+        ],
+        "terminal_end_center": [
+          404.8921203613281,
+          572.8533935546875
+        ],
+        "header_to_terminal_degrees_clockwise_from_image_x": 47.93566986214722
+      },
+      "sites": {
+        "IC": {
+          "polygon": [
+            [
+              356.9964294433594,
+              500.42413330078125
+            ],
+            [
+              379.36639404296875,
+              525.2124633789062
+            ],
+            [
+              360.11224365234375,
+              542.588134765625
+            ],
+            [
+              337.7423095703125,
+              517.7998046875
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 0,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        },
+        "terminal": {
+          "polygon": [
+            [
+              390.95786051432293,
+              523.9107146962484
+            ],
+            [
+              422.1897290039062,
+              556.3137782541911
+            ],
+            [
+              388.4022021484375,
+              585.6560146713257
+            ],
+            [
+              360.3486022949219,
+              557.3668212890625
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 3,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        }
+      },
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_priority": "high",
+      "proposal_method": "assistant manual proposal from source/grid",
+      "notes": "HIGH PRIORITY: individual enlarged source/canonical review disproves earlier reversal claim. Original orientation retained, NOT flipped. Blur/glare remains. Geometry and projected sites still require independent review.",
+      "training_eligible": false,
+      "geometry_independently_reviewed": true,
+      "reviewed_utc": "2026-11-15T12:01:24.430Z"
+    },
+    {
+      "id": "missing-301",
+      "image": "images/missing-301.png",
+      "source_image_sha256": "18d0928e8f93d41b12e7f686663dbdc4247f19790acda9a220bae3be00644268",
+      "source_path": "C:\\Users\\DELL\\Desktop\\d-meter\\IC_TERMINAL_TRAIN\\live-false-pass-20261115\\comparison\\source-301.png",
+      "width": 1280,
+      "height": 720,
+      "frame_id": 301,
+      "capture_group": "both-missing-periodic-probe-20261115",
+      "split": "development_only_not_held_out",
+      "state": "both_missing",
+      "state_provenance": "owner-confirmed specimen state inherited from source manifest; not individual site geometry approval",
+      "board_quad": [
+        [
+          359.06982421875,
+          515.9495849609375
+        ],
+        [
+          499.6130645751953,
+          586.6768977737427
+        ],
+        [
+          475.89447021484375,
+          641.118896484375
+        ],
+        [
+          332.7340087890625,
+          566.426513671875
+        ]
+      ],
+      "orientation": {
+        "header_center": [
+          345.90191650390625,
+          541.1880493164062
+        ],
+        "terminal_end_center": [
+          487.7537673950195,
+          613.8978971290588
+        ],
+        "header_to_terminal_degrees_clockwise_from_image_x": 27.138586099075667
+      },
+      "sites": {
+        "IC": {
+          "polygon": [
+            [
+              420.2809307861328,
+              564.4502223587036
+            ],
+            [
+              441.4817596435547,
+              575.0506367874145
+            ],
+            [
+              431.56524291992184,
+              602.0645961380005
+            ],
+            [
+              408.9966186523437,
+              591.1222328567505
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 0,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        },
+        "terminal": {
+          "polygon": [
+            [
+              462.9017028808594,
+              575.2601318359375
+            ],
+            [
+              495.69844482421877,
+              592.2097195053101
+            ],
+            [
+              478.78474182128906,
+              635.0117434310913
+            ],
+            [
+              440.77960205078125,
+              617.6607055664062
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 3,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        }
+      },
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_priority": "normal",
+      "proposal_method": "unreliable colour-experiment proposal",
+      "notes": "Machine-seeded; not independently verified. Review substrate edges, orientation and both sites.",
+      "training_eligible": false,
+      "geometry_independently_reviewed": true,
+      "reviewed_utc": "2026-11-15T12:01:26.727Z"
+    },
+    {
+      "id": "missing-330",
+      "image": "images/missing-330.png",
+      "source_image_sha256": "039a14268fbac01e5202419a752d7fe52932d481397153315951c8cd078b53cb",
+      "source_path": "C:\\Users\\DELL\\Desktop\\d-meter\\IC_TERMINAL_TRAIN\\live-false-pass-20261115\\comparison\\source-330.png",
+      "width": 1280,
+      "height": 720,
+      "frame_id": 330,
+      "capture_group": "both-missing-periodic-probe-20261115",
+      "split": "development_only_not_held_out",
+      "state": "both_missing",
+      "state_provenance": "owner-confirmed specimen state inherited from source manifest; not individual site geometry approval",
+      "board_quad": [
+        [
+          428.2102355957031,
+          580.3021240234375
+        ],
+        [
+          588.6610343424479,
+          591.6266021474203
+        ],
+        [
+          586.8892822265625,
+          654.4200439453125
+        ],
+        [
+          423.4273376464844,
+          641.6827392578125
+        ]
+      ],
+      "orientation": {
+        "header_center": [
+          425.81878662109375,
+          610.992431640625
+        ],
+        "terminal_end_center": [
+          587.7751582845052,
+          623.0233230463664
+        ],
+        "header_to_terminal_degrees_clockwise_from_image_x": 4.248400577281075
+      },
+      "sites": {
+        "IC": {
+          "polygon": [
+            [
+              504.666767985026,
+              603.4423093414307
+            ],
+            [
+              527.7844559733073,
+              604.4697621409098
+            ],
+            [
+              529.3256351725261,
+              633.7521669260661
+            ],
+            [
+              504.40990478515624,
+              632.724714126587
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 0,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        },
+        "terminal": {
+          "polygon": [
+            [
+              542.9393847656249,
+              596.5070029449463
+            ],
+            [
+              588.1473079427084,
+              597.5344557444255
+            ],
+            [
+              586.6061287434895,
+              648.650232518514
+            ],
+            [
+              545.2511535644531,
+              646.3384637196859
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 3,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        }
+      },
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_priority": "normal",
+      "proposal_method": "unreliable colour-experiment proposal",
+      "notes": "Machine-seeded; not independently verified. Review substrate edges, orientation and both sites.",
+      "training_eligible": false,
+      "geometry_independently_reviewed": true,
+      "reviewed_utc": "2026-11-15T12:01:28.903Z"
+    },
+    {
+      "id": "missing-359",
+      "image": "images/missing-359.png",
+      "source_image_sha256": "4ce475eb8a6025fc9dcb16f54e5250e86616811ad6a69ac1cf90b30592663b08",
+      "source_path": "C:\\Users\\DELL\\Desktop\\d-meter\\IC_TERMINAL_TRAIN\\live-false-pass-20261115\\comparison\\source-359.png",
+      "width": 1280,
+      "height": 720,
+      "frame_id": 359,
+      "capture_group": "both-missing-periodic-probe-20261115",
+      "split": "development_only_not_held_out",
+      "state": "both_missing",
+      "state_provenance": "owner-confirmed specimen state inherited from source manifest; not individual site geometry approval",
+      "board_quad": [
+        [
+          513.9000244140625,
+          613.7000122070312
+        ],
+        [
+          673.2000732421875,
+          560.6000366210938
+        ],
+        [
+          694.2000732421875,
+          623.6000366210938
+        ],
+        [
+          534.9000244140625,
+          676.7000122070312
+        ]
+      ],
+      "orientation": {
+        "header_center": [
+          524.4000244140625,
+          645.2000122070312
+        ],
+        "terminal_end_center": [
+          683.7000732421875,
+          592.1000366210938
+        ],
+        "header_to_terminal_degrees_clockwise_from_image_x": 341.5650643486639
+      },
+      "sites": {
+        "IC": {
+          "polygon": [
+            [
+              595.4820092773438,
+              605.5154114659628
+            ],
+            [
+              619.3408396402995,
+              597.0177458572388
+            ],
+            [
+              631.7605047607422,
+              626.7595754877726
+            ],
+            [
+              606.5943412272136,
+              635.5840743891398
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 0,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        },
+        "terminal": {
+          "polygon": [
+            [
+              629.4726717122396,
+              584.2712474441528
+            ],
+            [
+              669.6731667073568,
+              567.2759162267049
+            ],
+            [
+              693.5319970703125,
+              620.2229096349081
+            ],
+            [
+              651.10205078125,
+              632.3660278320312
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 3,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        }
+      },
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_priority": "normal",
+      "proposal_method": "unreliable colour-experiment proposal",
+      "notes": "Machine-seeded; not independently verified. Review substrate edges, orientation and both sites.",
+      "training_eligible": false,
+      "geometry_independently_reviewed": true,
+      "reviewed_utc": "2026-11-15T11:50:09.751Z"
+    },
+    {
+      "id": "missing-388",
+      "image": "images/missing-388.png",
+      "source_image_sha256": "8712645273e117b2f109f94af418f634bf74a5246a0fe2018207db8938e35ada",
+      "source_path": "C:\\Users\\DELL\\Desktop\\d-meter\\IC_TERMINAL_TRAIN\\live-false-pass-20261115\\comparison\\source-388.png",
+      "width": 1280,
+      "height": 720,
+      "frame_id": 388,
+      "capture_group": "both-missing-periodic-probe-20261115",
+      "split": "development_only_not_held_out",
+      "state": "both_missing",
+      "state_provenance": "owner-confirmed specimen state inherited from source manifest; not individual site geometry approval",
+      "board_quad": [
+        [
+          609.5416259765625,
+          613.4813232421875
+        ],
+        [
+          737.5081787109375,
+          495.5514221191406
+        ],
+        [
+          786.2669677734375,
+          548.4599609375
+        ],
+        [
+          658.3004150390625,
+          666.389892578125
+        ]
+      ],
+      "orientation": {
+        "header_center": [
+          633.9210205078125,
+          639.9356079101562
+        ],
+        "terminal_end_center": [
+          761.8875732421875,
+          522.0056915283203
+        ],
+        "header_to_terminal_degrees_clockwise_from_image_x": 317.3373165076313
+      },
+      "sites": {
+        "IC": {
+          "polygon": [
+            [
+              684.5092582702637,
+              565.8419620990753
+            ],
+            [
+              701.2318229675293,
+              551.2097179889679
+            ],
+            [
+              729.2421188354492,
+              576.711629152298
+            ],
+            [
+              709.5931053161621,
+              594.2703220844269
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 0,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        },
+        "terminal": {
+          "polygon": [
+            [
+              707.9208488464355,
+              533.2329609394073
+            ],
+            [
+              740.1117858886719,
+              499.36976742744446
+            ],
+            [
+              782.7543258666992,
+              543.2664997577667
+            ],
+            [
+              749.094970703125,
+              574.8890380859375
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 3,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        }
+      },
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_priority": "normal",
+      "proposal_method": "unreliable colour-experiment proposal",
+      "notes": "Machine-seeded; not independently verified. Review substrate edges, orientation and both sites.",
+      "training_eligible": false,
+      "geometry_independently_reviewed": true,
+      "reviewed_utc": "2026-11-15T11:50:43.021Z"
+    },
+    {
+      "id": "missing-417",
+      "image": "images/missing-417.png",
+      "source_image_sha256": "80ec37302a2e3e999a17e043bec839678c3f7f6b37a8a7dfbb2fbf94a845c04a",
+      "source_path": "C:\\Users\\DELL\\Desktop\\d-meter\\IC_TERMINAL_TRAIN\\live-false-pass-20261115\\comparison\\source-417.png",
+      "width": 1280,
+      "height": 720,
+      "frame_id": 417,
+      "capture_group": "both-missing-periodic-probe-20261115",
+      "split": "development_only_not_held_out",
+      "state": "both_missing",
+      "state_provenance": "owner-confirmed specimen state inherited from source manifest; not individual site geometry approval",
+      "board_quad": [
+        [
+          701.027099609375,
+          570.8377685546875
+        ],
+        [
+          772.26708984375,
+          406.9857482910156
+        ],
+        [
+          841.26708984375,
+          436.9857482910156
+        ],
+        [
+          770.027099609375,
+          600.8377685546875
+        ]
+      ],
+      "orientation": {
+        "header_center": [
+          735.527099609375,
+          585.8377685546875
+        ],
+        "terminal_end_center": [
+          806.76708984375,
+          421.9857482910156
+        ],
+        "header_to_terminal_degrees_clockwise_from_image_x": 293.4985602130157
+      },
+      "sites": {
+        "IC": {
+          "polygon": [
+            [
+              751.7374877929688,
+              503.2658386230469
+            ],
+            [
+              761.439507039388,
+              473.24603740374243
+            ],
+            [
+              797.4966897074381,
+              487.39505845069885
+            ],
+            [
+              784.8574829101562,
+              517.6658325195312
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 0,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        },
+        "terminal": {
+          "polygon": [
+            [
+              759.2647094726562,
+              451.9872741699219
+            ],
+            [
+              775.3254388427735,
+              411.20363109588624
+            ],
+            [
+              834.9231324768066,
+              433.9939144992828
+            ],
+            [
+              817.2246704101562,
+              477.1872863769531
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 3,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        }
+      },
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_priority": "normal",
+      "proposal_method": "unreliable colour-experiment proposal",
+      "notes": "Machine-seeded; not independently verified. Review substrate edges, orientation and both sites.",
+      "training_eligible": false,
+      "geometry_independently_reviewed": true,
+      "reviewed_utc": "2026-11-15T11:51:15.310Z"
+    },
+    {
+      "id": "missing-446",
+      "image": "images/missing-446.png",
+      "source_image_sha256": "afe19772ebe4fbaff7dd7ca14b21c41db0de2f9bd7fe440d0c4a94325bba7f04",
+      "source_path": "C:\\Users\\DELL\\Desktop\\d-meter\\IC_TERMINAL_TRAIN\\live-false-pass-20261115\\comparison\\source-446.png",
+      "width": 1280,
+      "height": 720,
+      "frame_id": 446,
+      "capture_group": "both-missing-periodic-probe-20261115",
+      "split": "development_only_not_held_out",
+      "state": "both_missing",
+      "state_provenance": "owner-confirmed specimen state inherited from source manifest; not individual site geometry approval",
+      "board_quad": [
+        [
+          770,
+          494
+        ],
+        [
+          770,
+          312
+        ],
+        [
+          845,
+          312
+        ],
+        [
+          845,
+          494
+        ]
+      ],
+      "orientation": {
+        "header_center": [
+          807.5,
+          494
+        ],
+        "terminal_end_center": [
+          807.5,
+          312
+        ],
+        "header_to_terminal_degrees_clockwise_from_image_x": 270
+      },
+      "sites": {
+        "IC": {
+          "polygon": [
+            [
+              786.5833036180815,
+              403.6445694263677
+            ],
+            [
+              786.1446733574761,
+              378.2040143112613
+            ],
+            [
+              828.2531783755833,
+              378.2040143112613
+            ],
+            [
+              827.8145481149779,
+              403.2059391657624
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 0,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        },
+        "terminal": {
+          "polygon": [
+            [
+              776,
+              359.32000732421875
+            ],
+            [
+              775.6323995971679,
+              310.82184363683064
+            ],
+            [
+              841.0849323527018,
+              312.2046436246236
+            ],
+            [
+              839,
+              359.32000732421875
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 3,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        }
+      },
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_priority": "normal",
+      "proposal_method": "unreliable colour-experiment proposal",
+      "notes": "Machine-seeded; not independently verified. Review substrate edges, orientation and both sites.",
+      "training_eligible": false,
+      "geometry_independently_reviewed": true,
+      "reviewed_utc": "2026-11-15T11:51:34.254Z"
+    },
+    {
+      "id": "missing-475",
+      "image": "images/missing-475.png",
+      "source_image_sha256": "7b3773bd01b6a7fc8375fbe4382da7b39bfaee861335534243bd361431358a2b",
+      "source_path": "C:\\Users\\DELL\\Desktop\\d-meter\\IC_TERMINAL_TRAIN\\live-false-pass-20261115\\comparison\\source-475.png",
+      "width": 1280,
+      "height": 720,
+      "frame_id": 475,
+      "capture_group": "both-missing-periodic-probe-20261115",
+      "split": "development_only_not_held_out",
+      "state": "both_missing",
+      "state_provenance": "owner-confirmed specimen state inherited from source manifest; not individual site geometry approval",
+      "board_quad": [
+        [
+          801.9481811523438,
+          391.42535400390625
+        ],
+        [
+          726.6972045898438,
+          220.49810791015625
+        ],
+        [
+          796.8856811523438,
+          189.5975341796875
+        ],
+        [
+          872.1366577148438,
+          360.5247802734375
+        ]
+      ],
+      "orientation": {
+        "header_center": [
+          837.0424194335938,
+          375.9750671386719
+        ],
+        "terminal_end_center": [
+          761.7914428710938,
+          205.04782104492188
+        ],
+        "header_to_terminal_degrees_clockwise_from_image_x": 246.23843397652854
+      },
+      "sites": {
+        "IC": {
+          "polygon": [
+            [
+              781.5792372639974,
+              298.408494459788
+            ],
+            [
+              769.8364114379883,
+              273.98341674168904
+            ],
+            [
+              805.0648889160157,
+              259.42231271743776
+            ],
+            [
+              816.3380017089844,
+              282.90796436945595
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 0,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        },
+        "terminal": {
+          "polygon": [
+            [
+              751.8775634765625,
+              262.4671325683594
+            ],
+            [
+              733.66535349528,
+              217.91028858820596
+            ],
+            [
+              790.7228433227539,
+              194.95627440770465
+            ],
+            [
+              810.8358764648438,
+              236.5106658935547
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 3,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        }
+      },
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_priority": "normal",
+      "proposal_method": "unreliable colour-experiment proposal",
+      "notes": "Machine-seeded; not independently verified. Review substrate edges, orientation and both sites.",
+      "training_eligible": false,
+      "geometry_independently_reviewed": true,
+      "reviewed_utc": "2026-11-15T11:52:00.366Z"
+    },
+    {
+      "id": "missing-504",
+      "image": "images/missing-504.png",
+      "source_image_sha256": "155b3f5f288df29d47559ceee57b80de38df2c51223af276ba862b59274a2a1b",
+      "source_path": "C:\\Users\\DELL\\Desktop\\d-meter\\IC_TERMINAL_TRAIN\\live-false-pass-20261115\\comparison\\source-504.png",
+      "width": 1280,
+      "height": 720,
+      "frame_id": 504,
+      "capture_group": "both-missing-periodic-probe-20261115",
+      "split": "development_only_not_held_out",
+      "state": "both_missing",
+      "state_provenance": "owner-confirmed specimen state inherited from source manifest; not individual site geometry approval",
+      "board_quad": [
+        [
+          791.4981689453125,
+          284.4584655761719
+        ],
+        [
+          655.1463623046875,
+          159.01480102539062
+        ],
+        [
+          706.1689453125,
+          103.5555191040039
+        ],
+        [
+          842.520751953125,
+          228.99917602539062
+        ]
+      ],
+      "orientation": {
+        "header_center": [
+          817.0094604492188,
+          256.72882080078125
+        ],
+        "terminal_end_center": [
+          680.6576538085938,
+          131.28516006469727
+        ],
+        "header_to_terminal_degrees_clockwise_from_image_x": 222.61405565707628
+      },
+      "sites": {
+        "IC": {
+          "polygon": [
+            [
+              733.857202949524,
+              206.97060749292373
+            ],
+            [
+              715.1591584523519,
+              187.40288650751114
+            ],
+            [
+              741.684291343689,
+              163.05194483677548
+            ],
+            [
+              760.8171740849813,
+              179.5757981133461
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 0,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        },
+        "terminal": {
+          "polygon": [
+            [
+              694.6796264648438,
+              187.1934051513672
+            ],
+            [
+              660.2878390884399,
+              155.14660343408585
+            ],
+            [
+              700.8710762405395,
+              109.39714470148087
+            ],
+            [
+              737.5386352539062,
+              140.60760498046875
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 3,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        }
+      },
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_priority": "normal",
+      "proposal_method": "unreliable colour-experiment proposal",
+      "notes": "Machine-seeded; not independently verified. Review substrate edges, orientation and both sites.",
+      "training_eligible": false,
+      "geometry_independently_reviewed": true,
+      "reviewed_utc": "2026-11-15T11:52:16.159Z"
+    },
+    {
+      "id": "missing-533",
+      "image": "images/missing-533.png",
+      "source_image_sha256": "ec8890edd4d73ea7df7decb84ec513492a5db2839cfbd89490b6313e4f3306a0",
+      "source_path": "C:\\Users\\DELL\\Desktop\\d-meter\\IC_TERMINAL_TRAIN\\live-false-pass-20261115\\comparison\\source-533.png",
+      "width": 1280,
+      "height": 720,
+      "frame_id": 533,
+      "capture_group": "both-missing-periodic-probe-20261115",
+      "split": "development_only_not_held_out",
+      "state": "both_missing",
+      "state_provenance": "owner-confirmed specimen state inherited from source manifest; not individual site geometry approval",
+      "board_quad": [
+        [
+          734.8643798828125,
+          186.80384826660156
+        ],
+        [
+          562.8304443359375,
+          131.64791870117188
+        ],
+        [
+          584.843505859375,
+          62.98801040649414
+        ],
+        [
+          756.87744140625,
+          118.14393615722656
+        ]
+      ],
+      "orientation": {
+        "header_center": [
+          745.8709106445312,
+          152.47389221191406
+        ],
+        "terminal_end_center": [
+          573.8369750976562,
+          97.31796455383301
+        ],
+        "header_to_terminal_degrees_clockwise_from_image_x": 197.77640848153786
+      },
+      "sites": {
+        "IC": {
+          "polygon": [
+            [
+              653.6122736295065,
+              139.77873166362446
+            ],
+            [
+              628.8146800231933,
+              132.3054842754205
+            ],
+            [
+              641.3833233578999,
+              102.07280165950458
+            ],
+            [
+              665.5015308380127,
+              109.54604904770851
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 0,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        },
+        "terminal": {
+          "polygon": [
+            [
+              609.3203125,
+              140.49566650390625
+            ],
+            [
+              564.5003003565471,
+              125.17192995031675
+            ],
+            [
+              583.5231118901571,
+              72.17981210668881
+            ],
+            [
+              627.811279296875,
+              82.82134246826172
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 3,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        }
+      },
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_priority": "normal",
+      "proposal_method": "unreliable colour-experiment proposal",
+      "notes": "Machine-seeded; not independently verified. Review substrate edges, orientation and both sites.",
+      "training_eligible": false,
+      "geometry_independently_reviewed": true,
+      "reviewed_utc": "2026-11-15T11:52:44.966Z"
+    },
+    {
+      "id": "missing-562",
+      "image": "images/missing-562.png",
+      "source_image_sha256": "9fd44881c118514c7f160d568b797f07123bdbc4c60920b4be6611f739d30c90",
+      "source_path": "C:\\Users\\DELL\\Desktop\\d-meter\\IC_TERMINAL_TRAIN\\live-false-pass-20261115\\comparison\\source-562.png",
+      "width": 1280,
+      "height": 720,
+      "frame_id": 562,
+      "capture_group": "both-missing-periodic-probe-20261115",
+      "split": "development_only_not_held_out",
+      "state": "both_missing",
+      "state_provenance": "owner-confirmed specimen state inherited from source manifest; not individual site geometry approval",
+      "board_quad": [
+        [
+          648.0137939453125,
+          125.63014221191406
+        ],
+        [
+          473.2568912696838,
+          144.26796913266182
+        ],
+        [
+          471.8783751678467,
+          78.09919624447822
+        ],
+        [
+          640.9288330078125,
+          58.32329177856445
+        ]
+      ],
+      "orientation": {
+        "header_center": [
+          644.4713134765625,
+          91.97671699523926
+        ],
+        "terminal_end_center": [
+          472.56763321876525,
+          111.18358268857003
+        ],
+        "header_to_terminal_degrees_clockwise_from_image_x": 173.6247611320365
+      },
+      "sites": {
+        "IC": {
+          "polygon": [
+            [
+              557.443181032447,
+              117.83824047934972
+            ],
+            [
+              532.2749049670756,
+              120.60398510191801
+            ],
+            [
+              532.2749049670756,
+              86.30875178207123
+            ],
+            [
+              557.1666065701902,
+              85.20245393304391
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 0,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        },
+        "terminal": {
+          "polygon": [
+            [
+              517.3398840052068,
+              131.943538054448
+            ],
+            [
+              473.85887707747816,
+              137.47502729958458
+            ],
+            [
+              473.16240636231106,
+              84.37273054627342
+            ],
+            [
+              516.2335861561795,
+              78.28809237662318
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 3,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        }
+      },
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_priority": "normal",
+      "proposal_method": "unreliable colour-experiment proposal",
+      "notes": "Machine-seeded; not independently verified. Review substrate edges, orientation and both sites.",
+      "training_eligible": false,
+      "geometry_independently_reviewed": true,
+      "reviewed_utc": "2026-11-15T11:53:10.478Z"
+    },
+    {
+      "id": "missing-591",
+      "image": "images/missing-591.png",
+      "source_image_sha256": "fcbca76d6eebb08de2490023307708a1d5ed6035e3b295d576e7d1274cbe26c9",
+      "source_path": "C:\\Users\\DELL\\Desktop\\d-meter\\IC_TERMINAL_TRAIN\\live-false-pass-20261115\\comparison\\source-591.png",
+      "width": 1280,
+      "height": 720,
+      "frame_id": 591,
+      "capture_group": "both-missing-periodic-probe-20261115",
+      "split": "development_only_not_held_out",
+      "state": "both_missing",
+      "state_provenance": "owner-confirmed specimen state inherited from source manifest; not individual site geometry approval",
+      "board_quad": [
+        [
+          550.1819458007812,
+          106.14619445800781
+        ],
+        [
+          402.05157470703125,
+          187.72525024414062
+        ],
+        [
+          375.4254781405131,
+          132.1413529018561
+        ],
+        [
+          520.3515014648438,
+          51.9803581237793
+        ]
+      ],
+      "orientation": {
+        "header_center": [
+          535.2667236328125,
+          79.06327629089355
+        ],
+        "terminal_end_center": [
+          388.7385264237722,
+          159.93330157299835
+        ],
+        "header_to_terminal_degrees_clockwise_from_image_x": 151.1053603942346
+      },
+      "sites": {
+        "IC": {
+          "polygon": [
+            [
+              468.1085867945353,
+              133.08965225259465
+            ],
+            [
+              444.7362234814962,
+              145.6747709596157
+            ],
+            [
+              431.7915299542745,
+              116.90878534356753
+            ],
+            [
+              454.08516880671186,
+              104.68324145674706
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 0,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        },
+        "terminal": {
+          "polygon": [
+            [
+              438.1790466308594,
+              162.18142700195312
+            ],
+            [
+              400.4436321258545,
+              183.72000019749007
+            ],
+            [
+              378.33131742477417,
+              136.5001118282477
+            ],
+            [
+              413.1214599609375,
+              116.68212890625
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 3,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        }
+      },
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_priority": "normal",
+      "proposal_method": "unreliable colour-experiment proposal",
+      "notes": "Machine-seeded; not independently verified. Review substrate edges, orientation and both sites.",
+      "training_eligible": false,
+      "geometry_independently_reviewed": true,
+      "reviewed_utc": "2026-11-15T11:53:32.638Z"
+    },
+    {
+      "id": "missing-620",
+      "image": "images/missing-620.png",
+      "source_image_sha256": "d8eadbf3e0c6457c66319816584e41b279ba446a6278330d5db0a83ea8cf8448",
+      "source_path": "C:\\Users\\DELL\\Desktop\\d-meter\\IC_TERMINAL_TRAIN\\live-false-pass-20261115\\comparison\\source-620.png",
+      "width": 1280,
+      "height": 720,
+      "frame_id": 620,
+      "capture_group": "both-missing-periodic-probe-20261115",
+      "split": "development_only_not_held_out",
+      "state": "both_missing",
+      "state_provenance": "owner-confirmed specimen state inherited from source manifest; not individual site geometry approval",
+      "board_quad": [
+        [
+          455.6224365234375,
+          126.99787139892578
+        ],
+        [
+          349.98516845703125,
+          254.64288330078125
+        ],
+        [
+          304.858154296875,
+          217.29638671875
+        ],
+        [
+          410.49542236328125,
+          89.65135955810547
+        ]
+      ],
+      "orientation": {
+        "header_center": [
+          433.0589294433594,
+          108.32461547851562
+        ],
+        "terminal_end_center": [
+          327.4216613769531,
+          235.96963500976562
+        ],
+        "header_to_terminal_degrees_clockwise_from_image_x": 129.61069104350332
+      },
+      "sites": {
+        "IC": {
+          "polygon": [
+            [
+              391.8454274368286,
+              180.6452649092674
+            ],
+            [
+              375.5126591873169,
+              201.06122522115706
+            ],
+            [
+              353.87174125671385,
+              181.461903321743
+            ],
+            [
+              371.02114791870116,
+              162.67921983480454
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 0,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        },
+        "terminal": {
+          "polygon": [
+            [
+              373.8406982421875,
+              218.46746826171875
+            ],
+            [
+              346.4078005218506,
+              254.28737581014633
+            ],
+            [
+              311.8148630142212,
+              219.84390870809554
+            ],
+            [
+              335.9339904785156,
+              187.09640502929688
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 3,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        }
+      },
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_priority": "normal",
+      "proposal_method": "unreliable colour-experiment proposal",
+      "notes": "Machine-seeded; not independently verified. Review substrate edges, orientation and both sites.",
+      "training_eligible": false,
+      "geometry_independently_reviewed": true,
+      "reviewed_utc": "2026-11-15T11:53:51.998Z"
+    },
+    {
+      "id": "missing-649",
+      "image": "images/missing-649.png",
+      "source_image_sha256": "95358910ce5889c69346e1c5cadecbfdf2dbe797f04b25ef5906386d12a074b1",
+      "source_path": "C:\\Users\\DELL\\Desktop\\d-meter\\IC_TERMINAL_TRAIN\\live-false-pass-20261115\\comparison\\source-649.png",
+      "width": 1280,
+      "height": 720,
+      "frame_id": 649,
+      "capture_group": "both-missing-periodic-probe-20261115",
+      "split": "development_only_not_held_out",
+      "state": "both_missing",
+      "state_provenance": "owner-confirmed specimen state inherited from source manifest; not individual site geometry approval",
+      "board_quad": [
+        [
+          375,
+          184
+        ],
+        [
+          326.8165757751465,
+          340.44015204429627
+        ],
+        [
+          273.8869638061523,
+          321.6609120845794
+        ],
+        [
+          320,
+          168
+        ]
+      ],
+      "orientation": {
+        "header_center": [
+          347.5,
+          176
+        ],
+        "terminal_end_center": [
+          300.3517697906494,
+          331.05053206443785
+        ],
+        "header_to_terminal_degrees_clockwise_from_image_x": 106.91362470286475
+      },
+      "sites": {
+        "IC": {
+          "polygon": [
+            [
+              336.67510986328125,
+              256.9986877441406
+            ],
+            [
+              329.3934879962444,
+              284.0132731332094
+            ],
+            [
+              302.8872720315933,
+              275.177867811659
+            ],
+            [
+              310.498046875,
+              249.09495544433594
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 0,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        },
+        "terminal": {
+          "polygon": [
+            [
+              332.03485107421875,
+              306.6042175292969
+            ],
+            [
+              323.660891418457,
+              338.60803107261654
+            ],
+            [
+              278.26537002563475,
+              320.2868213558197
+            ],
+            [
+              286.45916748046875,
+              292.5386047363281
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 3,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        }
+      },
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_priority": "high",
+      "proposal_method": "assistant manual proposal from source/grid",
+      "notes": "Assistant hand-proposed from enlarged source with coordinate grid. Glare/occlusion makes some substrate corners inferred. Both site polygons projected, not independently traced. HIGH PRIORITY: review corners and both sites.",
+      "training_eligible": false,
+      "geometry_independently_reviewed": true,
+      "reviewed_utc": "2026-11-15T11:54:12.039Z"
+    },
+    {
+      "id": "missing-678",
+      "image": "images/missing-678.png",
+      "source_image_sha256": "6a450a0363f11976008049edd3471cc5d91b253fe279b0d242fc5892b8baa1dc",
+      "source_path": "C:\\Users\\DELL\\Desktop\\d-meter\\IC_TERMINAL_TRAIN\\live-false-pass-20261115\\comparison\\source-678.png",
+      "width": 1280,
+      "height": 720,
+      "frame_id": 678,
+      "capture_group": "both-missing-periodic-probe-20261115",
+      "split": "development_only_not_held_out",
+      "state": "both_missing",
+      "state_provenance": "owner-confirmed specimen state inherited from source manifest; not individual site geometry approval",
+      "board_quad": [
+        [
+          327,
+          268
+        ],
+        [
+          338.5931142171224,
+          425.99239549636843
+        ],
+        [
+          282.9934397379557,
+          427.29551286697387
+        ],
+        [
+          270,
+          274
+        ]
+      ],
+      "orientation": {
+        "header_center": [
+          298.5,
+          271
+        ],
+        "terminal_end_center": [
+          310.79327697753905,
+          426.6439541816711
+        ],
+        "header_to_terminal_degrees_clockwise_from_image_x": 85.48396416294435
+      },
+      "sites": {
+        "IC": {
+          "polygon": [
+            [
+              317.1122741699219,
+              344.86865234375
+            ],
+            [
+              318.14051390600207,
+              370.7048761628568
+            ],
+            [
+              290.2227040715218,
+              373.8954830010831
+            ],
+            [
+              289.7530212402344,
+              347.30584716796875
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 0,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        },
+        "terminal": {
+          "polygon": [
+            [
+              328.66893310546874,
+              384.0738748931885
+            ],
+            [
+              331.6719006347656,
+              424.82843421936036
+            ],
+            [
+              288.2059092203776,
+              425.5580230394999
+            ],
+            [
+              284.05341552734376,
+              387.07684242248536
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 3,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        }
+      },
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_priority": "high",
+      "proposal_method": "assistant manual proposal from source/grid",
+      "notes": "HIGH PRIORITY: original colour fit covered only the lower substrate, not a reversed board. Assistant manually extended proposal to full substrate using enlarged source/grid. Glare obscures parts. Sites projected, unreviewed.",
+      "training_eligible": false,
+      "geometry_independently_reviewed": true,
+      "reviewed_utc": "2026-11-15T11:54:50.038Z"
+    },
+    {
+      "id": "missing-707",
+      "image": "images/missing-707.png",
+      "source_image_sha256": "9891d14608b889ad054ca6006ef8fccc48b292697b8d3573882809ee103bcd9b",
+      "source_path": "C:\\Users\\DELL\\Desktop\\d-meter\\IC_TERMINAL_TRAIN\\live-false-pass-20261115\\comparison\\source-707.png",
+      "width": 1280,
+      "height": 720,
+      "frame_id": 707,
+      "capture_group": "both-missing-periodic-probe-20261115",
+      "split": "development_only_not_held_out",
+      "state": "both_missing",
+      "state_provenance": "owner-confirmed specimen state inherited from source manifest; not individual site geometry approval",
+      "board_quad": [
+        [
+          304.614990234375,
+          356.27215576171875
+        ],
+        [
+          373.65008544921875,
+          504.6976318359375
+        ],
+        [
+          326.17608642578125,
+          526.778564453125
+        ],
+        [
+          257.1409912109375,
+          378.35308837890625
+        ]
+      ],
+      "orientation": {
+        "header_center": [
+          280.87799072265625,
+          367.3126220703125
+        ],
+        "terminal_end_center": [
+          349.9130859375,
+          515.7380981445312
+        ],
+        "header_to_terminal_degrees_clockwise_from_image_x": 65.05609788991899
+      },
+      "sites": {
+        "IC": {
+          "polygon": [
+            [
+              327.0332079060872,
+              436.5074887021383
+            ],
+            [
+              338.5252685546875,
+              461.4582824707031
+            ],
+            [
+              315.73773193359375,
+              472.05712890625
+            ],
+            [
+              302.274882405599,
+              449.10382974624633
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 0,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        },
+        "terminal": {
+          "polygon": [
+            [
+              351.9030456542969,
+              467.87347412109375
+            ],
+            [
+              371.2024325561523,
+              507.8312751579285
+            ],
+            [
+              328.3362776692708,
+              524.6818760108947
+            ],
+            [
+              312.0248718261719,
+              486.4214782714844
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 3,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        }
+      },
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_priority": "normal",
+      "proposal_method": "unreliable colour-experiment proposal",
+      "notes": "Machine-seeded; not independently verified. Review substrate edges, orientation and both sites.",
+      "training_eligible": false,
+      "geometry_independently_reviewed": true,
+      "reviewed_utc": "2026-11-15T11:55:02.623Z"
+    },
+    {
+      "id": "missing-736",
+      "image": "images/missing-736.png",
+      "source_image_sha256": "8759ca72aaf9d98dea6452bf2cfedd7f8c2503eef5144773d31b9d9b2fc3b074",
+      "source_path": "C:\\Users\\DELL\\Desktop\\d-meter\\IC_TERMINAL_TRAIN\\live-false-pass-20261115\\comparison\\source-736.png",
+      "width": 1280,
+      "height": 720,
+      "frame_id": 736,
+      "capture_group": "both-missing-periodic-probe-20261115",
+      "split": "development_only_not_held_out",
+      "state": "both_missing",
+      "state_provenance": "owner-confirmed specimen state inherited from source manifest; not individual site geometry approval",
+      "board_quad": [
+        [
+          325.87249755859375,
+          456.0288391113281
+        ],
+        [
+          440.95794677734375,
+          565.3600463867188
+        ],
+        [
+          403.43231201171875,
+          604.8606567382812
+        ],
+        [
+          288.34686279296875,
+          495.5295104980469
+        ]
+      ],
+      "orientation": {
+        "header_center": [
+          307.10968017578125,
+          475.7791748046875
+        ],
+        "terminal_end_center": [
+          422.19512939453125,
+          585.1103515625
+        ],
+        "header_to_terminal_degrees_clockwise_from_image_x": 43.53119928561415
+      },
+      "sites": {
+        "IC": {
+          "polygon": [
+            [
+              371.53465794881186,
+              519.3130334631602
+            ],
+            [
+              389.8412033589681,
+              534.9498743343354
+            ],
+            [
+              371.9160443115235,
+              557.451669734319
+            ],
+            [
+              353.22811253865564,
+              542.5776015885671
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 0,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        },
+        "terminal": {
+          "polygon": [
+            [
+              408.03369140625,
+              540.093994140625
+            ],
+            [
+              436.3703396097819,
+              566.6049424393972
+            ],
+            [
+              405.40708587646486,
+              599.5832074133555
+            ],
+            [
+              376.5121765136719,
+              573.2745361328125
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 3,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        }
+      },
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_priority": "normal",
+      "proposal_method": "unreliable colour-experiment proposal",
+      "notes": "Machine-seeded; not independently verified. Review substrate edges, orientation and both sites.",
+      "training_eligible": false,
+      "geometry_independently_reviewed": true,
+      "reviewed_utc": "2026-11-15T11:55:33.886Z"
+    },
+    {
+      "id": "missing-765",
+      "image": "images/missing-765.png",
+      "source_image_sha256": "bf02f8d78c82391816d92c0c319ceffb9c1c4b8c0704bdd86fdde4dc88e0c159",
+      "source_path": "C:\\Users\\DELL\\Desktop\\d-meter\\IC_TERMINAL_TRAIN\\live-false-pass-20261115\\comparison\\source-765.png",
+      "width": 1280,
+      "height": 720,
+      "frame_id": 765,
+      "capture_group": "both-missing-periodic-probe-20261115",
+      "split": "development_only_not_held_out",
+      "state": "both_missing",
+      "state_provenance": "owner-confirmed specimen state inherited from source manifest; not individual site geometry approval",
+      "board_quad": [
+        [
+          372.30712890625,
+          532.8289184570312
+        ],
+        [
+          523.8931274414062,
+          595.3147583007812
+        ],
+        [
+          501.78692626953125,
+          648.9426879882812
+        ],
+        [
+          350.200927734375,
+          586.4568481445312
+        ]
+      ],
+      "orientation": {
+        "header_center": [
+          361.2540283203125,
+          559.6428833007812
+        ],
+        "terminal_end_center": [
+          512.8400268554688,
+          622.1287231445312
+        ],
+        "header_to_terminal_degrees_clockwise_from_image_x": 22.40213230145548
+      },
+      "sites": {
+        "IC": {
+          "polygon": [
+            [
+              439.636015625,
+              575.4622723897298
+            ],
+            [
+              462.5159554036459,
+              585.9216734313965
+            ],
+            [
+              451.07598551432295,
+              615.338738861084
+            ],
+            [
+              431.13775227864585,
+              608.1479006449382
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 0,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        },
+        "terminal": {
+          "polygon": [
+            [
+              482.7122802734375,
+              583.3587036132812
+            ],
+            [
+              517.5205094401042,
+              597.4113142522176
+            ],
+            [
+              505.0550915527344,
+              644.6486872990927
+            ],
+            [
+              464.14306640625,
+              628.4061279296875
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 3,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        }
+      },
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_priority": "normal",
+      "proposal_method": "unreliable colour-experiment proposal",
+      "notes": "Machine-seeded; not independently verified. Review substrate edges, orientation and both sites.",
+      "training_eligible": false,
+      "geometry_independently_reviewed": true,
+      "reviewed_utc": "2026-11-15T11:55:52.822Z"
+    },
+    {
+      "id": "missing-794",
+      "image": "images/missing-794.png",
+      "source_image_sha256": "c738e7210b83e9bf12fa554631fddacdce0c15414cca0f4e454b87011f73131c",
+      "source_path": "C:\\Users\\DELL\\Desktop\\d-meter\\IC_TERMINAL_TRAIN\\live-false-pass-20261115\\comparison\\source-794.png",
+      "width": 1280,
+      "height": 720,
+      "frame_id": 794,
+      "capture_group": "both-missing-periodic-probe-20261115",
+      "split": "development_only_not_held_out",
+      "state": "both_missing",
+      "state_provenance": "owner-confirmed specimen state inherited from source manifest; not individual site geometry approval",
+      "board_quad": [
+        [
+          443.99993896484375,
+          589.9999389648438
+        ],
+        [
+          605.1599389648437,
+          588.7308764648437
+        ],
+        [
+          608.9999389648438,
+          650.9999389648438
+        ],
+        [
+          443.99993896484375,
+          650.9999389648438
+        ]
+      ],
+      "orientation": {
+        "header_center": [
+          443.99993896484375,
+          620.4999389648438
+        ],
+        "terminal_end_center": [
+          607.0799389648437,
+          619.8654077148437
+        ],
+        "header_to_terminal_degrees_clockwise_from_image_x": 359.7770678248198
+      },
+      "sites": {
+        "IC": {
+          "polygon": [
+            [
+              519.8999633789062,
+              605.8599243164062
+            ],
+            [
+              548.0549389648438,
+              605.1808764648438
+            ],
+            [
+              550.4049389648437,
+              637.3758764648437
+            ],
+            [
+              524.0849389648438,
+              637.8458764648437
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 0,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        },
+        "terminal": {
+          "polygon": [
+            [
+              559.5699389648437,
+              595.5458764648438
+            ],
+            [
+              605.3949389648437,
+              595.3108764648438
+            ],
+            [
+              608.6849389648437,
+              647.2458764648437
+            ],
+            [
+              566.3849389648437,
+              648.6558764648438
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 3,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        }
+      },
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_priority": "normal",
+      "proposal_method": "unreliable colour-experiment proposal",
+      "notes": "Machine-seeded; not independently verified. Review substrate edges, orientation and both sites.",
+      "training_eligible": false,
+      "geometry_independently_reviewed": true,
+      "reviewed_utc": "2026-11-15T11:56:20.558Z"
+    },
+    {
+      "id": "missing-823",
+      "image": "images/missing-823.png",
+      "source_image_sha256": "ca1493a767a1ecf36f8d40c49c07c5c88e89369031d5abbe284a92f293e4be84",
+      "source_path": "C:\\Users\\DELL\\Desktop\\d-meter\\IC_TERMINAL_TRAIN\\live-false-pass-20261115\\comparison\\source-823.png",
+      "width": 1280,
+      "height": 720,
+      "frame_id": 823,
+      "capture_group": "both-missing-periodic-probe-20261115",
+      "split": "development_only_not_held_out",
+      "state": "both_missing",
+      "state_provenance": "owner-confirmed specimen state inherited from source manifest; not individual site geometry approval",
+      "board_quad": [
+        [
+          532.0782470703125,
+          616.4913330078125
+        ],
+        [
+          687.5262451171875,
+          550.2347412109375
+        ],
+        [
+          713.987548828125,
+          612.31689453125
+        ],
+        [
+          558.53955078125,
+          678.573486328125
+        ]
+      ],
+      "orientation": {
+        "header_center": [
+          545.3088989257812,
+          647.5324096679688
+        ],
+        "terminal_end_center": [
+          700.7568969726562,
+          581.2758178710938
+        ],
+        "header_to_terminal_degrees_clockwise_from_image_x": 336.9148451045338
+      },
+      "sites": {
+        "IC": {
+          "polygon": [
+            [
+              611.3694907633463,
+              600.6081839370728
+            ],
+            [
+              636.0624304199218,
+              590.1745474624634
+            ],
+            [
+              650.669521484375,
+              621.4754568862916
+            ],
+            [
+              627.0199454752604,
+              632.2568812433879
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 0,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        },
+        "terminal": {
+          "polygon": [
+            [
+              644.7571274820964,
+              577.3063958104451
+            ],
+            [
+              686.1438854980469,
+              557.8302743911743
+            ],
+            [
+              712.9173168945313,
+              607.0471518325805
+            ],
+            [
+              671.4541625976562,
+              624.5770263671875
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 3,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        }
+      },
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_priority": "normal",
+      "proposal_method": "unreliable colour-experiment proposal",
+      "notes": "Machine-seeded; not independently verified. Review substrate edges, orientation and both sites.",
+      "training_eligible": false,
+      "geometry_independently_reviewed": true,
+      "reviewed_utc": "2026-11-15T11:56:40.646Z"
+    },
+    {
+      "id": "missing-852",
+      "image": "images/missing-852.png",
+      "source_image_sha256": "d9efca649c3e8f93be791290184c43890bf4606c22765e31cb277317b6216a9a",
+      "source_path": "C:\\Users\\DELL\\Desktop\\d-meter\\IC_TERMINAL_TRAIN\\live-false-pass-20261115\\comparison\\source-852.png",
+      "width": 1280,
+      "height": 720,
+      "frame_id": 852,
+      "capture_group": "both-missing-periodic-probe-20261115",
+      "split": "development_only_not_held_out",
+      "state": "both_missing",
+      "state_provenance": "owner-confirmed specimen state inherited from source manifest; not individual site geometry approval",
+      "board_quad": [
+        [
+          628.2460327148438,
+          607.638427734375
+        ],
+        [
+          746.8591918945312,
+          480.34619140625
+        ],
+        [
+          800.0801391601562,
+          529.9383544921875
+        ],
+        [
+          681.4669799804688,
+          657.2305908203125
+        ]
+      ],
+      "orientation": {
+        "header_center": [
+          654.8565063476562,
+          632.4345092773438
+        ],
+        "terminal_end_center": [
+          773.4696655273438,
+          505.14227294921875
+        ],
+        "header_to_terminal_degrees_clockwise_from_image_x": 312.9786203548913
+      },
+      "sites": {
+        "IC": {
+          "polygon": [
+            [
+              696.6455078125,
+              561.9779663085938
+            ],
+            [
+              716.2882287597656,
+              537.9726282310486
+            ],
+            [
+              743.9137710571289,
+              561.6516644859314
+            ],
+            [
+              725.9352435302734,
+              584.015198726654
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 0,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        },
+        "terminal": {
+          "polygon": [
+            [
+              718.4807321166992,
+              523.9406067466736
+            ],
+            [
+              749.1757791137695,
+              486.22954900741576
+            ],
+            [
+              796.3223962402344,
+              525.4659075037638
+            ],
+            [
+              764.9830322265625,
+              559.0669555664062
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 3,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        }
+      },
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_priority": "normal",
+      "proposal_method": "unreliable colour-experiment proposal",
+      "notes": "Machine-seeded; not independently verified. Review substrate edges, orientation and both sites.",
+      "training_eligible": false,
+      "geometry_independently_reviewed": true,
+      "reviewed_utc": "2026-11-15T11:56:57.782Z"
+    },
+    {
+      "id": "missing-881",
+      "image": "images/missing-881.png",
+      "source_image_sha256": "5dd88bbb217a9e82a1b55719a2e57b2b1f441bcae7f6366e56ef805ff36bd891",
+      "source_path": "C:\\Users\\DELL\\Desktop\\d-meter\\IC_TERMINAL_TRAIN\\live-false-pass-20261115\\comparison\\source-881.png",
+      "width": 1280,
+      "height": 720,
+      "frame_id": 881,
+      "capture_group": "both-missing-periodic-probe-20261115",
+      "split": "development_only_not_held_out",
+      "state": "both_missing",
+      "state_provenance": "owner-confirmed specimen state inherited from source manifest; not individual site geometry approval",
+      "board_quad": [
+        [
+          715.2250366210938,
+          559.6826171875
+        ],
+        [
+          774.4199829101562,
+          390.0660400390625
+        ],
+        [
+          845.5966186523438,
+          414.90618896484375
+        ],
+        [
+          786.4016723632812,
+          584.522705078125
+        ]
+      ],
+      "orientation": {
+        "header_center": [
+          750.8133544921875,
+          572.1026611328125
+        ],
+        "terminal_end_center": [
+          810.00830078125,
+          402.4861145019531
+        ],
+        "header_to_terminal_degrees_clockwise_from_image_x": 289.23861738021355
+      },
+      "sites": {
+        "IC": {
+          "polygon": [
+            [
+              760.9606323242188,
+              488.117431640625
+            ],
+            [
+              769.6178366088867,
+              455.6704331302643
+            ],
+            [
+              807.27961034139,
+              469.01890989621484
+            ],
+            [
+              796.7915214538574,
+              497.14605736732483
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 0,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        },
+        "terminal": {
+          "polygon": [
+            [
+              764.7234497070312,
+              436.153564453125
+            ],
+            [
+              779.1524628702799,
+              393.6953624312083
+            ],
+            [
+              839.8990356445313,
+              411.73302196502686
+            ],
+            [
+              824.5117797851562,
+              457.019287109375
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 3,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        }
+      },
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_priority": "normal",
+      "proposal_method": "unreliable colour-experiment proposal",
+      "notes": "Machine-seeded; not independently verified. Review substrate edges, orientation and both sites.",
+      "training_eligible": false,
+      "geometry_independently_reviewed": true,
+      "reviewed_utc": "2026-11-15T11:57:08.096Z"
+    },
+    {
+      "id": "missing-910",
+      "image": "images/missing-910.png",
+      "source_image_sha256": "6f1d0ba4a23cebec3cc9faea649683b4442294a27875ca0dd4e6c4b37e8f32ab",
+      "source_path": "C:\\Users\\DELL\\Desktop\\d-meter\\IC_TERMINAL_TRAIN\\live-false-pass-20261115\\comparison\\source-910.png",
+      "width": 1280,
+      "height": 720,
+      "frame_id": 910,
+      "capture_group": "both-missing-periodic-probe-20261115",
+      "split": "development_only_not_held_out",
+      "state": "both_missing",
+      "state_provenance": "owner-confirmed specimen state inherited from source manifest; not individual site geometry approval",
+      "board_quad": [
+        [
+          779.0895385742188,
+          474.8409118652344
+        ],
+        [
+          763.5160522460938,
+          291.2956237792969
+        ],
+        [
+          840.0138549804688,
+          284.8049011230469
+        ],
+        [
+          855.5873413085938,
+          468.3501892089844
+        ]
+      ],
+      "orientation": {
+        "header_center": [
+          817.3384399414062,
+          471.5955505371094
+        ],
+        "terminal_end_center": [
+          801.7649536132812,
+          288.0502624511719
+        ],
+        "header_to_terminal_degrees_clockwise_from_image_x": 265.1501726072873
+      },
+      "sites": {
+        "IC": {
+          "polygon": [
+            [
+              790.574994913737,
+              383.7890604019165
+            ],
+            [
+              788.3246948242188,
+              357.2355193456014
+            ],
+            [
+              824.7795562744141,
+              354.5351592381795
+            ],
+            [
+              828.8300964355469,
+              379.2884602228801
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 0,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        },
+        "terminal": {
+          "polygon": [
+            [
+              773.6849975585938,
+              338.4981384277344
+            ],
+            [
+              770.4091146850586,
+              291.18113489151
+            ],
+            [
+              834.3541998291016,
+              285.4971273231506
+            ],
+            [
+              837.943115234375,
+              333.0459289550781
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 3,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        }
+      },
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_priority": "normal",
+      "proposal_method": "unreliable colour-experiment proposal",
+      "notes": "Machine-seeded; not independently verified. Review substrate edges, orientation and both sites.",
+      "training_eligible": false,
+      "geometry_independently_reviewed": true,
+      "reviewed_utc": "2026-11-15T11:57:25.919Z"
+    },
+    {
+      "id": "missing-939",
+      "image": "images/missing-939.png",
+      "source_image_sha256": "fab05c1b48c79665c847467c766039467f134159c4b36ea45be7f968968b3724",
+      "source_path": "C:\\Users\\DELL\\Desktop\\d-meter\\IC_TERMINAL_TRAIN\\live-false-pass-20261115\\comparison\\source-939.png",
+      "width": 1280,
+      "height": 720,
+      "frame_id": 939,
+      "capture_group": "both-missing-periodic-probe-20261115",
+      "split": "development_only_not_held_out",
+      "state": "both_missing",
+      "state_provenance": "owner-confirmed specimen state inherited from source manifest; not individual site geometry approval",
+      "board_quad": [
+        [
+          803.6307983398438,
+          364.3538818359375
+        ],
+        [
+          711.2000122070312,
+          202.6000518798828
+        ],
+        [
+          777.4307250976562,
+          164.75389099121094
+        ],
+        [
+          869.8615112304688,
+          326.50775146484375
+        ]
+      ],
+      "orientation": {
+        "header_center": [
+          836.7461547851562,
+          345.4308166503906
+        ],
+        "terminal_end_center": [
+          744.3153686523438,
+          183.67697143554688
+        ],
+        "header_to_terminal_degrees_clockwise_from_image_x": 240.2551140465242
+      },
+      "sites": {
+        "IC": {
+          "polygon": [
+            [
+              773.2540088653565,
+              278.4465109586716
+            ],
+            [
+              758.3420093536376,
+              247.22451198101044
+            ],
+            [
+              792.3600082397461,
+              230.91451251506805
+            ],
+            [
+              808.6700077056885,
+              255.61251170635222
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 0,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        },
+        "terminal": {
+          "polygon": [
+            [
+              740.5304565429688,
+              241.62835693359375
+            ],
+            [
+              716.8735860443115,
+              200.63953376611073
+            ],
+            [
+              770.599344736735,
+              166.86306154727936
+            ],
+            [
+              796.1642456054688,
+              209.83758544921875
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 3,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        }
+      },
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_priority": "normal",
+      "proposal_method": "unreliable colour-experiment proposal",
+      "notes": "Machine-seeded; not independently verified. Review substrate edges, orientation and both sites.",
+      "training_eligible": false,
+      "geometry_independently_reviewed": true,
+      "reviewed_utc": "2026-11-15T11:57:42.846Z"
+    },
+    {
+      "id": "missing-968",
+      "image": "images/missing-968.png",
+      "source_image_sha256": "e9053ece09f63c162922f41dbb1713a3ea2ff04195db4a633bb8147f89d8ad88",
+      "source_path": "C:\\Users\\DELL\\Desktop\\d-meter\\IC_TERMINAL_TRAIN\\live-false-pass-20261115\\comparison\\source-968.png",
+      "width": 1280,
+      "height": 720,
+      "frame_id": 968,
+      "capture_group": "both-missing-periodic-probe-20261115",
+      "split": "development_only_not_held_out",
+      "state": "both_missing",
+      "state_provenance": "owner-confirmed specimen state inherited from source manifest; not individual site geometry approval",
+      "board_quad": [
+        [
+          780.891357421875,
+          256.5772399902344
+        ],
+        [
+          632.02294921875,
+          147.703369140625
+        ],
+        [
+          676.1300048828125,
+          87.39363861083984
+        ],
+        [
+          824.9984130859375,
+          196.26751708984375
+        ]
+      ],
+      "orientation": {
+        "header_center": [
+          802.9448852539062,
+          226.42237854003906
+        ],
+        "terminal_end_center": [
+          654.0764770507812,
+          117.54850387573242
+        ],
+        "header_to_terminal_degrees_clockwise_from_image_x": 216.17961146776997
+      },
+      "sites": {
+        "IC": {
+          "polygon": [
+            [
+              723.8796997070312,
+              190.81472778320312
+            ],
+            [
+              692.6173706054688,
+              167.9512176513672
+            ],
+            [
+              713.7887573242188,
+              139.00254821777344
+            ],
+            [
+              745.0510864257812,
+              161.86605834960938
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 0,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        },
+        "terminal": {
+          "polygon": [
+            [
+              674.25732421875,
+              171.185791015625
+            ],
+            [
+              635.5211206817627,
+              144.23513026714323
+            ],
+            [
+              671.3178213500977,
+              94.04316333293914
+            ],
+            [
+              711.3072509765625,
+              120.52562713623047
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 3,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        }
+      },
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_priority": "normal",
+      "proposal_method": "unreliable colour-experiment proposal",
+      "notes": "Machine-seeded; not independently verified. Review substrate edges, orientation and both sites.",
+      "training_eligible": false,
+      "geometry_independently_reviewed": true,
+      "reviewed_utc": "2026-11-15T11:57:53.550Z"
+    },
+    {
+      "id": "missing-997",
+      "image": "images/missing-997.png",
+      "source_image_sha256": "40593fdf70945f9c146661cc88aca7ad247a9feaf0d0021fc37a65ccf8aecd55",
+      "source_path": "C:\\Users\\DELL\\Desktop\\d-meter\\IC_TERMINAL_TRAIN\\live-false-pass-20261115\\comparison\\source-997.png",
+      "width": 1280,
+      "height": 720,
+      "frame_id": 997,
+      "capture_group": "both-missing-periodic-probe-20261115",
+      "split": "development_only_not_held_out",
+      "state": "both_missing",
+      "state_provenance": "owner-confirmed specimen state inherited from source manifest; not individual site geometry approval",
+      "board_quad": [
+        [
+          712.9347534179688,
+          165.5034942626953
+        ],
+        [
+          537.5065307617188,
+          131.5496368408203
+        ],
+        [
+          550.9568481445312,
+          62.0561637878418
+        ],
+        [
+          726.3850708007812,
+          96.01002502441406
+        ]
+      ],
+      "orientation": {
+        "header_center": [
+          719.659912109375,
+          130.7567596435547
+        ],
+        "terminal_end_center": [
+          544.231689453125,
+          96.80290031433105
+        ],
+        "header_to_terminal_degrees_clockwise_from_image_x": 190.95406572315858
+      },
+      "sites": {
+        "IC": {
+          "polygon": [
+            [
+              635.73486328125,
+              131.81642150878906
+            ],
+            [
+              598.8948974609375,
+              124.68611145019531
+            ],
+            [
+              605.35107421875,
+              91.32923889160156
+            ],
+            [
+              642.1909790039062,
+              98.45954895019531
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 0,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        },
+        "terminal": {
+          "polygon": [
+            [
+              580.9750661277772,
+              133.59596253593764
+            ],
+            [
+              538.6652412986755,
+              126.25806931694348
+            ],
+            [
+              551.0120021502177,
+              71.22387017448743
+            ],
+            [
+              598.0968169720968,
+              77.03303563952446
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 3,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        }
+      },
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_priority": "normal",
+      "proposal_method": "unreliable colour-experiment proposal",
+      "notes": "Machine-seeded; not independently verified. Review substrate edges, orientation and both sites.",
+      "training_eligible": false,
+      "geometry_independently_reviewed": true,
+      "reviewed_utc": "2026-11-15T11:58:05.775Z"
+    },
+    {
+      "id": "missing-1026",
+      "image": "images/missing-1026.png",
+      "source_image_sha256": "b59f3e072ff2e25fd79f2c675733eea7c947ea178d5fa3199a0aec731778edee",
+      "source_path": "C:\\Users\\DELL\\Desktop\\d-meter\\IC_TERMINAL_TRAIN\\live-false-pass-20261115\\comparison\\source-1026.png",
+      "width": 1280,
+      "height": 720,
+      "frame_id": 1026,
+      "capture_group": "both-missing-periodic-probe-20261115",
+      "split": "development_only_not_held_out",
+      "state": "both_missing",
+      "state_provenance": "owner-confirmed specimen state inherited from source manifest; not individual site geometry approval",
+      "board_quad": [
+        [
+          615.5892333984375,
+          114.39912414550781
+        ],
+        [
+          448.59326171875,
+          155.41567993164062
+        ],
+        [
+          438.51118133544924,
+          93.69955539226532
+        ],
+        [
+          599.9149169921875,
+          50.58229064941406
+        ]
+      ],
+      "orientation": {
+        "header_center": [
+          607.7520751953125,
+          82.49070739746094
+        ],
+        "terminal_end_center": [
+          443.5522215270996,
+          124.55761766195297
+        ],
+        "header_to_terminal_degrees_clockwise_from_image_x": 165.63026726650935
+      },
+      "sites": {
+        "IC": {
+          "polygon": [
+            [
+              527.755746383667,
+              118.03595164775848
+            ],
+            [
+              499.6266174316406,
+              125.287841796875
+            ],
+            [
+              495.10184761047367,
+              92.15927714824677
+            ],
+            [
+              521.5946334075927,
+              85.07399722576142
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 0,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        },
+        "terminal": {
+          "polygon": [
+            [
+              488.4161964416504,
+              139.29179141521453
+            ],
+            [
+              446.212572555542,
+              149.14957217693328
+            ],
+            [
+              439.34377517700193,
+              98.01233447551728
+            ],
+            [
+              481.33091651916504,
+              86.61427546977997
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 3,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        }
+      },
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_priority": "normal",
+      "proposal_method": "unreliable colour-experiment proposal",
+      "notes": "Machine-seeded; not independently verified. Review substrate edges, orientation and both sites.",
+      "training_eligible": false,
+      "geometry_independently_reviewed": true,
+      "reviewed_utc": "2026-11-15T11:58:24.638Z"
+    },
+    {
+      "id": "missing-1055",
+      "image": "images/missing-1055.png",
+      "source_image_sha256": "08e1e7cd66844295c48904d24ea6ab388d0e515a3e32870564a4e6f0e80f1906",
+      "source_path": "C:\\Users\\DELL\\Desktop\\d-meter\\IC_TERMINAL_TRAIN\\live-false-pass-20261115\\comparison\\source-1055.png",
+      "width": 1280,
+      "height": 720,
+      "frame_id": 1055,
+      "capture_group": "both-missing-periodic-probe-20261115",
+      "split": "development_only_not_held_out",
+      "state": "both_missing",
+      "state_provenance": "owner-confirmed specimen state inherited from source manifest; not individual site geometry approval",
+      "board_quad": [
+        [
+          512.1272583007812,
+          110.0700454711914
+        ],
+        [
+          378.76593017578125,
+          211.32583618164062
+        ],
+        [
+          346.61914861043294,
+          159.91627542893093
+        ],
+        [
+          473.6261119715373,
+          61.699365626176196
+        ]
+      ],
+      "orientation": {
+        "header_center": [
+          492.87668513615927,
+          85.8847055486838
+        ],
+        "terminal_end_center": [
+          362.6925393931071,
+          185.62105580528578
+        ],
+        "header_to_terminal_degrees_clockwise_from_image_x": 142.54364321642748
+      },
+      "sites": {
+        "IC": {
+          "polygon": [
+            [
+              441.2967224121094,
+              144.1561737060547
+            ],
+            [
+              413.29083251953125,
+              165.41989135742188
+            ],
+            [
+              395.7813415527344,
+              142.3585968017578
+            ],
+            [
+              423.7872009277344,
+              121.0948715209961
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 0,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        },
+        "terminal": {
+          "polygon": [
+            [
+              410.5216064453125,
+              181.15579223632812
+            ],
+            [
+              377.41531162261964,
+              208.01982003450394
+            ],
+            [
+              349.8122875213623,
+              165.20102006196976
+            ],
+            [
+              381.697191619873,
+              138.73121644258498
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 3,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        }
+      },
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_priority": "normal",
+      "proposal_method": "unreliable colour-experiment proposal",
+      "notes": "Machine-seeded; not independently verified. Review substrate edges, orientation and both sites.",
+      "training_eligible": false,
+      "geometry_independently_reviewed": true,
+      "reviewed_utc": "2026-11-15T11:58:40.374Z"
+    },
+    {
+      "id": "missing-1084",
+      "image": "images/missing-1084.png",
+      "source_image_sha256": "bd4c60de256f931a47329eb9c76a69f2e2249ec65610ed02cca4aeef05becb10",
+      "source_path": "C:\\Users\\DELL\\Desktop\\d-meter\\IC_TERMINAL_TRAIN\\live-false-pass-20261115\\comparison\\source-1084.png",
+      "width": 1280,
+      "height": 720,
+      "frame_id": 1084,
+      "capture_group": "both-missing-periodic-probe-20261115",
+      "split": "development_only_not_held_out",
+      "state": "both_missing",
+      "state_provenance": "owner-confirmed specimen state inherited from source manifest; not individual site geometry approval",
+      "board_quad": [
+        [
+          416.5052795410156,
+          148.83920288085938
+        ],
+        [
+          341.0788269042969,
+          281.4069519042969
+        ],
+        [
+          291.7664489746094,
+          253.3498992919922
+        ],
+        [
+          367.1929016113281,
+          120.78216552734375
+        ]
+      ],
+      "orientation": {
+        "header_center": [
+          391.8490905761719,
+          134.81068420410156
+        ],
+        "terminal_end_center": [
+          316.4226379394531,
+          267.37842559814453
+        ],
+        "header_to_terminal_degrees_clockwise_from_image_x": 119.6383768593056
+      },
+      "sites": {
+        "IC": {
+          "polygon": [
+            [
+              362.4538507080078,
+              215.05580934206645
+            ],
+            [
+              349.62052876790364,
+              235.1078748734792
+            ],
+            [
+              325.9590914408366,
+              222.6755942440033
+            ],
+            [
+              337.18824813842775,
+              202.22248740196227
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 0,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        },
+        "terminal": {
+          "polygon": [
+            [
+              354.03198318481446,
+              251.95160991986592
+            ],
+            [
+              336.00659617106123,
+              280.7228350893656
+            ],
+            [
+              294.4947253417969,
+              253.33441284815473
+            ],
+            [
+              312.72472819010414,
+              227.0870486609141
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 3,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        }
+      },
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_priority": "high",
+      "proposal_method": "assistant manual proposal from source/grid",
+      "notes": "HIGH PRIORITY: individual enlarged source/canonical review disproves earlier reversal claim. Original orientation retained, NOT flipped. Blur/glare remains. Geometry and projected sites still require independent review.",
+      "training_eligible": false,
+      "geometry_independently_reviewed": true,
+      "reviewed_utc": "2026-11-15T11:59:07.662Z"
+    },
+    {
+      "id": "missing-1113",
+      "image": "images/missing-1113.png",
+      "source_image_sha256": "46eb54ee03d7fba31ac543a72f9c564b5bbfb8f82b55927bcc0f643485e9664d",
+      "source_path": "C:\\Users\\DELL\\Desktop\\d-meter\\IC_TERMINAL_TRAIN\\live-false-pass-20261115\\comparison\\source-1113.png",
+      "width": 1280,
+      "height": 720,
+      "frame_id": 1113,
+      "capture_group": "both-missing-periodic-probe-20261115",
+      "split": "development_only_not_held_out",
+      "state": "both_missing",
+      "state_provenance": "owner-confirmed specimen state inherited from source manifest; not individual site geometry approval",
+      "board_quad": [
+        [
+          349,
+          213
+        ],
+        [
+          324,
+          377
+        ],
+        [
+          269,
+          369
+        ],
+        [
+          293,
+          205
+        ]
+      ],
+      "orientation": {
+        "header_center": [
+          321,
+          209
+        ],
+        "terminal_end_center": [
+          296.5,
+          373
+        ],
+        "header_to_terminal_degrees_clockwise_from_image_x": 98.49659487923691
+      },
+      "sites": {
+        "IC": {
+          "polygon": [
+            [
+              324.20000213623047,
+              291.20125213623044
+            ],
+            [
+              321.96000427246094,
+              313.60125640869137
+            ],
+            [
+              293.68,
+              310.5212521362305
+            ],
+            [
+              297.6000042724609,
+              288.12124786376955
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 0,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        },
+        "terminal": {
+          "polygon": [
+            [
+              325.9914855957031,
+              334.2738952636719
+            ],
+            [
+              322.80236892700196,
+              372.33956723213197
+            ],
+            [
+              276.46,
+              365.26125
+            ],
+            [
+              279.5759582519531,
+              327.5534973144531
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 3,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        }
+      },
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_priority": "high",
+      "proposal_method": "assistant manual proposal from source/grid",
+      "notes": "Assistant hand-proposed from enlarged source with coordinate grid. Glare/occlusion makes some substrate corners inferred. Both site polygons projected, not independently traced. HIGH PRIORITY: review corners and both sites.",
+      "training_eligible": false,
+      "geometry_independently_reviewed": true,
+      "reviewed_utc": "2026-11-15T11:59:41.823Z"
+    },
+    {
+      "id": "missing-1142",
+      "image": "images/missing-1142.png",
+      "source_image_sha256": "88f52cde4caa3eb8b277eb6e449d234f0ef5aea152727a30a2e8d0bc36498b68",
+      "source_path": "C:\\Users\\DELL\\Desktop\\d-meter\\IC_TERMINAL_TRAIN\\live-false-pass-20261115\\comparison\\source-1142.png",
+      "width": 1280,
+      "height": 720,
+      "frame_id": 1142,
+      "capture_group": "both-missing-periodic-probe-20261115",
+      "split": "development_only_not_held_out",
+      "state": "both_missing",
+      "state_provenance": "owner-confirmed specimen state inherited from source manifest; not individual site geometry approval",
+      "board_quad": [
+        [
+          312.8055419921875,
+          299.1844177246094
+        ],
+        [
+          344.92333984375,
+          457.4793395996094
+        ],
+        [
+          294.6871337890625,
+          467.6722106933594
+        ],
+        [
+          262.5693359375,
+          309.3772888183594
+        ]
+      ],
+      "orientation": {
+        "header_center": [
+          287.68743896484375,
+          304.2808532714844
+        ],
+        "terminal_end_center": [
+          319.80523681640625,
+          462.5757751464844
+        ],
+        "header_to_terminal_degrees_clockwise_from_image_x": 78.530473972339
+      },
+      "sites": {
+        "IC": {
+          "polygon": [
+            [
+              316.2902844238281,
+              384.4982206630707
+            ],
+            [
+              321.06311050415036,
+              404.023418264389
+            ],
+            [
+              295.89730026245115,
+              409.6640309047699
+            ],
+            [
+              289.3889010620117,
+              390.57272658348086
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 0,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        },
+        "terminal": {
+          "polygon": [
+            [
+              332.5538024902344,
+              417.1380920410156
+            ],
+            [
+              341.7423419189453,
+              457.58754057884215
+            ],
+            [
+              299.3684465026855,
+              466.5040505886078
+            ],
+            [
+              290.35540771484375,
+              425.7001037597656
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 3,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        }
+      },
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_priority": "normal",
+      "proposal_method": "unreliable colour-experiment proposal",
+      "notes": "Machine-seeded; not independently verified. Review substrate edges, orientation and both sites.",
+      "training_eligible": false,
+      "geometry_independently_reviewed": true,
+      "reviewed_utc": "2026-11-15T11:59:59.078Z"
+    },
+    {
+      "id": "missing-1171",
+      "image": "images/missing-1171.png",
+      "source_image_sha256": "2a15cca2a61699bd9fca2b09d7e7430e204a708849201bd0af3a9f27ea968428",
+      "source_path": "C:\\Users\\DELL\\Desktop\\d-meter\\IC_TERMINAL_TRAIN\\live-false-pass-20261115\\comparison\\source-1171.png",
+      "width": 1280,
+      "height": 720,
+      "frame_id": 1171,
+      "capture_group": "both-missing-periodic-probe-20261115",
+      "split": "development_only_not_held_out",
+      "state": "both_missing",
+      "state_provenance": "owner-confirmed specimen state inherited from source manifest; not individual site geometry approval",
+      "board_quad": [
+        [
+          308.406005859375,
+          391.26519775390625
+        ],
+        [
+          392.1639404296875,
+          526.2085571289062
+        ],
+        [
+          347.23260498046875,
+          554.0969848632812
+        ],
+        [
+          263.47467041015625,
+          419.15362548828125
+        ]
+      ],
+      "orientation": {
+        "header_center": [
+          285.9403381347656,
+          405.20941162109375
+        ],
+        "terminal_end_center": [
+          369.6982727050781,
+          540.1527709960938
+        ],
+        "header_to_terminal_degrees_clockwise_from_image_x": 58.17255729389325
+      },
+      "sites": {
+        "IC": {
+          "polygon": [
+            [
+              339.9549001057943,
+              462.21994892756146
+            ],
+            [
+              351.26772816975915,
+              483.16963052749634
+            ],
+            [
+              328.22307840983075,
+              499.9293758074443
+            ],
+            [
+              315.2342758178711,
+              481.91264963150024
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 0,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        },
+        "terminal": {
+          "polygon": [
+            [
+              366.7923583984375,
+              493.3543701171875
+            ],
+            [
+              390.21916422526044,
+              526.4329191843669
+            ],
+            [
+              350.01074727376306,
+              550.6276052792867
+            ],
+            [
+              329.050048828125,
+              516.7806396484375
+            ]
+          ],
+          "presence": "missing",
+          "legacy_class_id": 3,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        }
+      },
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_priority": "normal",
+      "proposal_method": "unreliable colour-experiment proposal",
+      "notes": "Machine-seeded; not independently verified. Review substrate edges, orientation and both sites.",
+      "training_eligible": false,
+      "geometry_independently_reviewed": true,
+      "reviewed_utc": "2026-11-15T12:00:13.831Z"
+    },
+    {
+      "id": "present-20",
+      "image": "images/present-20.png",
+      "source_image_sha256": "de3da22c8181827ab6c02b23f14e149d7f39bd29b203baee32e536b22bd75835",
+      "source_path": "C:\\Users\\DELL\\Desktop\\d-meter\\IC_TERMINAL_TRAIN\\good-part-20261115-probe\\source-20.png",
+      "width": 1280,
+      "height": 720,
+      "frame_id": null,
+      "capture_group": "both-present-probe-20261115",
+      "split": "development_only_not_held_out",
+      "state": "both_present",
+      "state_provenance": "owner-confirmed specimen state inherited from source manifest; not individual site geometry approval",
+      "board_quad": [
+        [
+          340.39354498748776,
+          639.386283164374
+        ],
+        [
+          242,
+          528
+        ],
+        [
+          284,
+          498
+        ],
+        [
+          375,
+          610
+        ]
+      ],
+      "orientation": {
+        "header_center": [
+          357.6967724937439,
+          624.6931415821871
+        ],
+        "terminal_end_center": [
+          263,
+          513
+        ],
+        "header_to_terminal_degrees_clockwise_from_image_x": 229.7077288882609
+      },
+      "sites": {
+        "IC": {
+          "polygon": [
+            [
+              297.24582979176836,
+              582.8478977355003
+            ],
+            [
+              282.73927037251786,
+              562.3899293237369
+            ],
+            [
+              302.82527572224933,
+              543.0478500980695
+            ],
+            [
+              319.1916504516601,
+              563.505818509833
+            ]
+          ],
+          "presence": "present",
+          "legacy_class_id": 2,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        },
+        "terminal": {
+          "polygon": [
+            [
+              255.58596684417722,
+              568.7133013782819
+            ],
+            [
+              225.28494812011718,
+              546.3103952026368
+            ],
+            [
+              271.6990155029297,
+              496.82216278076174
+            ],
+            [
+              304.005126953125,
+              529.2066040039062
+            ]
+          ],
+          "presence": "present",
+          "legacy_class_id": 1,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        }
+      },
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_priority": "high",
+      "proposal_method": "assistant manual proposal from source/grid",
+      "notes": "Assistant hand-proposed from enlarged source with coordinate grid. Glare/occlusion makes some substrate corners inferred. Both site polygons projected, not independently traced. HIGH PRIORITY: review corners and both sites.",
+      "training_eligible": false,
+      "geometry_independently_reviewed": true,
+      "reviewed_utc": "2026-11-15T12:00:48.023Z"
+    },
+    {
+      "id": "present-21",
+      "image": "images/present-21.png",
+      "source_image_sha256": "4cef663805e4359bb382227e2d21fb32ac7f0b2b8f25ddcbbc2cb7904000b78e",
+      "source_path": "C:\\Users\\DELL\\Desktop\\d-meter\\IC_TERMINAL_TRAIN\\good-part-20261115-probe\\source-21.png",
+      "width": 1280,
+      "height": 720,
+      "frame_id": null,
+      "capture_group": "both-present-probe-20261115",
+      "split": "development_only_not_held_out",
+      "state": "both_present",
+      "state_provenance": "owner-confirmed specimen state inherited from source manifest; not individual site geometry approval",
+      "board_quad": [
+        [
+          345.0365100097656,
+          645.8098314666747
+        ],
+        [
+          242,
+          530
+        ],
+        [
+          284,
+          500
+        ],
+        [
+          381.0724597014109,
+          614.6201883349338
+        ]
+      ],
+      "orientation": {
+        "header_center": [
+          363.05448485558827,
+          630.2150099008043
+        ],
+        "terminal_end_center": [
+          263,
+          515
+        ],
+        "header_to_terminal_degrees_clockwise_from_image_x": 229.02844944742893
+      },
+      "sites": {
+        "IC": {
+          "polygon": [
+            [
+              301.2954406738281,
+              580.147216796875
+            ],
+            [
+              282.3784484863281,
+              557.5118408203125
+            ],
+            [
+              302.69464111328125,
+              543.1111450195312
+            ],
+            [
+              321.712158203125,
+              565.7464599609375
+            ]
+          ],
+          "presence": "present",
+          "legacy_class_id": 2,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        },
+        "terminal": {
+          "polygon": [
+            [
+              259.5196143628438,
+              574.0370188536564
+            ],
+            [
+              229.17545392862954,
+              549.3006107888777
+            ],
+            [
+              274.97986940333044,
+              499.8277946593205
+            ],
+            [
+              304.00830078125,
+              530.182373046875
+            ]
+          ],
+          "presence": "present",
+          "legacy_class_id": 1,
+          "geometry_source": "provisional template projection; footprint, not tight component-body box"
+        }
+      },
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_priority": "high",
+      "proposal_method": "assistant manual proposal from source/grid",
+      "notes": "Assistant hand-proposed from enlarged source with coordinate grid. Glare/occlusion makes some substrate corners inferred. Both site polygons projected, not independently traced. HIGH PRIORITY: review corners and both sites.",
+      "training_eligible": false,
+      "geometry_independently_reviewed": true,
+      "reviewed_utc": "2026-11-15T12:01:03.630Z"
+    }
+  ],
+  "exported_utc": "2026-11-15T12:01:33.216Z"
+}

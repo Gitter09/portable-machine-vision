@@ -1,0 +1,3005 @@
+{
+  "schema": "portable-cropped-training-boxes/v1",
+  "status": "Training-box human review export; per-image review required; NOT a finalized training dataset",
+  "classes": [
+    "IC_Fail",
+    "Terminal_pass",
+    "IC_Pass",
+    "Terminal_Fail"
+  ],
+  "coordinate_contract": "xyxy native crop pixels; axis-aligned boxes",
+  "source_review_sha256": null,
+  "upstream_annotation_kind": "historical train labels, not fresh human source-site approval",
+  "hybrid_results_sha256": "c2e44a4a75aa4eb0682982f896c06a1134bf2db87a7ea62035b356225af1acff",
+  "builder_sha256": "f9202fb79b23004471fad2841d34427fca815ba266c5d61c0e4d78c8f6ed3927",
+  "hybrid_helper_sha256": "137a1f0b1c40ed825a93eb8181440267f26c70426fe615c66484fc88d47789f6",
+  "box_helper_sha256": "ad485169669462776edeb3bd62e405bffeeaaac9b83cf0a2b7956fdd97d30552",
+  "split_policy": "Original train-only membership preserved; new dataset unsplit, group by source recording/capture, not adjacent frames",
+  "class_counts": {
+    "IC_Fail": 16,
+    "Terminal_pass": 48,
+    "IC_Pass": 32,
+    "Terminal_Fail": 0
+  },
+  "approved_images": 48,
+  "training_eligible": false,
+  "annotations": [
+    {
+      "id": "hist-present_005017",
+      "image": "images/hist-present_005017.png",
+      "image_sha256": "a5e37dc465db088684b7853927b0a5f5dcb859a49949d1b138711e92f4e90ee5",
+      "width": 169,
+      "height": 99,
+      "state": "both_present",
+      "capture_group": "historical-source-run-present",
+      "source_ancestor_sha256": "4ebfe81cc6b3b712054c31a495d6ea307a0fea372d2af8cfc7ca50d1d1d41857",
+      "source_to_crop": [
+        [
+          0.34050281800615156,
+          -0.9363829033808894,
+          97.06677497429705
+        ],
+        [
+          0.9320814434524826,
+          0.33893900045026465,
+          -869.6934649984602
+        ],
+        [
+          -7.019339650326667e-10,
+          -5.882879081933847e-10,
+          1
+        ]
+      ],
+      "split": "historical_train_candidate_pool_unsplit",
+      "original_split": "train",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 2,
+          "label": "IC_Pass",
+          "xyxy": [
+            57.0583381652832,
+            34.07764434814453,
+            86.7568588256836,
+            65.46115112304688
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            11.261431694030762,
+            24.530961990356445,
+            64.43089294433594,
+            88.48924255371094
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "review_priority": "normal",
+      "historical_camera": true,
+      "reviewed_utc": "2026-11-15T15:27:30.885Z"
+    },
+    {
+      "id": "hist-present_004124",
+      "image": "images/hist-present_004124.png",
+      "image_sha256": "8c73658bc8ae27a347841fb55ebba61692e18ded3399660869f7034d39b2357c",
+      "width": 171,
+      "height": 111,
+      "state": "both_present",
+      "capture_group": "historical-source-run-present",
+      "source_ancestor_sha256": "c0ae724d5b7be047edfac8e861d4da76d148eb6f903a2d617bc2524da377987f",
+      "source_to_crop": [
+        [
+          0.545576917760165,
+          -0.8309548130497604,
+          -93.34519920682682
+        ],
+        [
+          0.8297267002413041,
+          0.544770102231379,
+          -854.3428343413182
+        ],
+        [
+          -1.0829308541714272e-18,
+          -1.6147053442822246e-18,
+          1
+        ]
+      ],
+      "split": "historical_train_candidate_pool_unsplit",
+      "original_split": "train",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 2,
+          "label": "IC_Pass",
+          "xyxy": [
+            55.66771697998047,
+            39.9775276184082,
+            88.2017593383789,
+            74.25035858154297
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            8.84948444366455,
+            34.52393341064453,
+            69.10131072998047,
+            100.1005859375
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "review_priority": "normal",
+      "historical_camera": true,
+      "reviewed_utc": "2026-11-15T15:27:35.669Z"
+    },
+    {
+      "id": "hist-present_005876",
+      "image": "images/hist-present_005876.png",
+      "image_sha256": "7b407f8229ff90851bc4cc42bd6a4851407e83254bf6839b28f5a7fb95ed51a0",
+      "width": 164,
+      "height": 94,
+      "state": "both_present",
+      "capture_group": "historical-source-run-present",
+      "source_ancestor_sha256": "399dbbf1c11f818b39dbaf76edd3610e1a5e81d14bde19342d58564ef87de023",
+      "source_to_crop": [
+        [
+          0.8072605350091121,
+          -0.5830208001866813,
+          -323.43112396030585
+        ],
+        [
+          0.5766710843014424,
+          0.7984684461932673,
+          -787.0561774894823
+        ],
+        [
+          -6.207809488544547e-10,
+          1.8743526310450866e-9,
+          1
+        ]
+      ],
+      "split": "historical_train_candidate_pool_unsplit",
+      "original_split": "train",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 2,
+          "label": "IC_Pass",
+          "xyxy": [
+            55.897499084472656,
+            27.788373947143555,
+            89.8816909790039,
+            60.1404914855957
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            6.667765140533447,
+            17.549680709838867,
+            71.30175018310547,
+            85.57838439941406
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "review_priority": "normal",
+      "historical_camera": true,
+      "reviewed_utc": "2026-11-15T15:27:40.173Z"
+    },
+    {
+      "id": "hist-present_004948",
+      "image": "images/hist-present_004948.png",
+      "image_sha256": "a6c9a0ebab22eae12bc44f1af3e01b9136ed5a9cfd5e436d1f424ba2610e2957",
+      "width": 164,
+      "height": 94,
+      "state": "both_present",
+      "capture_group": "historical-source-run-present",
+      "source_ancestor_sha256": "5245e2550de79114a9497a8e24bb5027f206b0f6a524e9906763ca9afa0ccc7b",
+      "source_to_crop": [
+        [
+          0.9623054928280518,
+          -0.2566147980874811,
+          -530.7830257056603
+        ],
+        [
+          0.2557099245739177,
+          0.9589116620028595,
+          -628.7018832031779
+        ],
+        [
+          -1.141832914727597e-18,
+          -6.58370714490123e-19,
+          1
+        ]
+      ],
+      "split": "historical_train_candidate_pool_unsplit",
+      "original_split": "train",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 2,
+          "label": "IC_Pass",
+          "xyxy": [
+            59.14645004272461,
+            31.9846134185791,
+            86.77583312988281,
+            56.63357925415039
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            14.634252548217773,
+            20.689041137695312,
+            62.736175537109375,
+            82.29109954833984
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "review_priority": "normal",
+      "historical_camera": true,
+      "reviewed_utc": "2026-11-15T15:27:44.620Z"
+    },
+    {
+      "id": "hist-present_005842",
+      "image": "images/hist-present_005842.png",
+      "image_sha256": "9e0eb614ce8d91ff03ca80df3e447dd3e6b75b74c38981c99677bd41bfd36b92",
+      "width": 164,
+      "height": 94,
+      "state": "both_present",
+      "capture_group": "historical-source-run-present",
+      "source_ancestor_sha256": "d167fea2621859da2471b047db0a9f1c9d93f223924b3d9fc774c6456b9a4f3b",
+      "source_to_crop": [
+        [
+          0.9830442985146789,
+          -0.1563930218332887,
+          -577.3185647399508
+        ],
+        [
+          0.1554548501279484,
+          0.9771455098141298,
+          -567.6580861820408
+        ],
+        [
+          9.21558057923176e-19,
+          -1.4661052510140969e-19,
+          1
+        ]
+      ],
+      "split": "historical_train_candidate_pool_unsplit",
+      "original_split": "train",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 2,
+          "label": "IC_Pass",
+          "xyxy": [
+            60.76576232910156,
+            30.441410064697266,
+            84.66265869140625,
+            58.277896881103516
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            16.398914337158203,
+            20.359817504882812,
+            60.381141662597656,
+            81.49744415283203
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "review_priority": "normal",
+      "historical_camera": true,
+      "reviewed_utc": "2026-11-15T15:27:46.708Z"
+    },
+    {
+      "id": "hist-present_005361",
+      "image": "images/hist-present_005361.png",
+      "image_sha256": "e89409417ecf2441ba973d28ecddb42ba201d7c3510d564e3e06cb1d9b53d260",
+      "width": 170,
+      "height": 114,
+      "state": "both_present",
+      "capture_group": "historical-source-run-present",
+      "source_ancestor_sha256": "e235172cc374fd183089c75f1f6d07a3164a361698f5a52fa6bdafbef94dd80f",
+      "source_to_crop": [
+        [
+          -0.9343050850051685,
+          -0.33302027684845553,
+          886.2726825414251
+        ],
+        [
+          0.3333830007183852,
+          -0.9353240456429636,
+          323.4792923874593
+        ],
+        [
+          -1.219066081781132e-9,
+          -9.955156499091402e-10,
+          1
+        ]
+      ],
+      "split": "historical_train_candidate_pool_unsplit",
+      "original_split": "train",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 2,
+          "label": "IC_Pass",
+          "xyxy": [
+            76.01531219482422,
+            36.87604904174805,
+            103.40826416015625,
+            68.77767944335938
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            96.85057830810547,
+            10.882939338684082,
+            150.95668029785156,
+            74.60669708251953
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "review_priority": "normal",
+      "historical_camera": true,
+      "reviewed_utc": "2026-11-15T15:27:48.806Z"
+    },
+    {
+      "id": "hist-present_004467",
+      "image": "images/hist-present_004467.png",
+      "image_sha256": "479d8b166b12a98ca63e0cf4ddf8ea6285ffcf55cddb265ebb4a3b253cd405e6",
+      "width": 169,
+      "height": 116,
+      "state": "both_present",
+      "capture_group": "historical-source-run-present",
+      "source_ancestor_sha256": "824fdbab948826e869e37de4e78e5a79a5a8c7126365c4831b03bfd7bb39f90f",
+      "source_to_crop": [
+        [
+          -0.9036130214110025,
+          -0.4135172547944071,
+          899.8013540166952
+        ],
+        [
+          0.41354182717237714,
+          -0.9036664841165494,
+          259.44681766260805
+        ],
+        [
+          -2.4334508679689568e-18,
+          5.317544963210509e-18,
+          1
+        ]
+      ],
+      "split": "historical_train_candidate_pool_unsplit",
+      "original_split": "train",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 2,
+          "label": "IC_Pass",
+          "xyxy": [
+            75.84931945800781,
+            37.73118209838867,
+            105.69799041748047,
+            70.06658172607422
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            96.27256774902344,
+            10.759363174438477,
+            151.73541259765625,
+            75.60638427734375
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "review_priority": "normal",
+      "historical_camera": true,
+      "reviewed_utc": "2026-11-15T15:27:50.733Z"
+    },
+    {
+      "id": "hist-present_004880",
+      "image": "images/hist-present_004880.png",
+      "image_sha256": "b94d759923e28259ba78b4624a2e0d47eed10eae749f9adc39498477515f17d7",
+      "width": 196,
+      "height": 127,
+      "state": "both_present",
+      "capture_group": "historical-source-run-present",
+      "source_ancestor_sha256": "39e330bd8ba2e738ab744f58392ec312746662ec12054d70443e3aa019a57a6a",
+      "source_to_crop": [
+        [
+          -0.6512780418374993,
+          -0.7536215832438351,
+          873.4744382931511
+        ],
+        [
+          0.7528328776059406,
+          -0.6505964901467002,
+          -37.493784568500665
+        ],
+        [
+          -6.116381398435894e-19,
+          2.812818520210686e-18,
+          1
+        ]
+      ],
+      "split": "historical_train_candidate_pool_unsplit",
+      "original_split": "train",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 2,
+          "label": "IC_Pass",
+          "xyxy": [
+            103.32649993896484,
+            48.6931037902832,
+            133.2068328857422,
+            78.1249771118164
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            119.3676986694336,
+            20.27543830871582,
+            183.8908233642578,
+            82.90000915527344
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "review_priority": "normal",
+      "historical_camera": true,
+      "reviewed_utc": "2026-11-15T15:27:52.773Z"
+    },
+    {
+      "id": "hist-present_005326",
+      "image": "images/hist-present_005326.png",
+      "image_sha256": "76286df4d5dae54e881fd6a01a38d044af74b5b746a45c5902ea27f51b2feb74",
+      "width": 195,
+      "height": 126,
+      "state": "both_present",
+      "capture_group": "historical-source-run-present",
+      "source_ancestor_sha256": "aa22bf32cf648555a63e2d7760e09e44f37fe4bcd80efd95b533f2d694513421",
+      "source_to_crop": [
+        [
+          -0.6808303947533181,
+          -0.728775952441929,
+          870.9552153747936
+        ],
+        [
+          0.7243520507324701,
+          -0.6766969749677575,
+          -3.4305838704951452
+        ],
+        [
+          -2.4824902200072026e-9,
+          -1.690732116316454e-10,
+          1
+        ]
+      ],
+      "split": "historical_train_candidate_pool_unsplit",
+      "original_split": "train",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 2,
+          "label": "IC_Pass",
+          "xyxy": [
+            99.56646728515625,
+            50.68873596191406,
+            131.3696746826172,
+            82.12541198730469
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            117.52269744873047,
+            24.42500114440918,
+            182.7845458984375,
+            88.39859008789062
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "review_priority": "normal",
+      "historical_camera": true,
+      "reviewed_utc": "2026-11-15T15:27:56.173Z"
+    },
+    {
+      "id": "hist-present_004845",
+      "image": "images/hist-present_004845.png",
+      "image_sha256": "3cd9c5ea87ac78a0f2a498b70d1545cf721e15f3c963da66eb2f2bdb2c9abd24",
+      "width": 178,
+      "height": 104,
+      "state": "both_present",
+      "capture_group": "historical-source-run-present",
+      "source_ancestor_sha256": "8ba4ec529da9eb305eac2f034e5379c3bfad15c2de22c43d08fa16b7bb6b68c6",
+      "source_to_crop": [
+        [
+          -0.317441483875522,
+          -0.9432540386042687,
+          666.1797389561411
+        ],
+        [
+          0.9346140198048769,
+          -0.314533528562345,
+          -271.7687362881079
+        ],
+        [
+          -2.6171474813044052e-9,
+          1.9865320206074158e-9,
+          1
+        ]
+      ],
+      "split": "historical_train_candidate_pool_unsplit",
+      "original_split": "train",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 2,
+          "label": "IC_Pass",
+          "xyxy": [
+            78.45572662353516,
+            35.884037017822266,
+            103.5884017944336,
+            65.15742492675781
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            99.43412780761719,
+            10.802791595458984,
+            152.44439697265625,
+            74.06153106689453
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "review_priority": "normal",
+      "historical_camera": true,
+      "reviewed_utc": "2026-11-15T15:27:58.749Z"
+    },
+    {
+      "id": "hist-present_004399",
+      "image": "images/hist-present_004399.png",
+      "image_sha256": "2ec4a7754ef4c43da30167b79f0bf770951386b55f2224fdbd289a0656c46c95",
+      "width": 185,
+      "height": 105,
+      "state": "both_present",
+      "capture_group": "historical-source-run-present",
+      "source_ancestor_sha256": "d1efe71af60ce04c2e63a0913621e3e9bfcbb2ccbf36c1e8e3972038543b8fb9",
+      "source_to_crop": [
+        [
+          -0.25532447961753746,
+          -0.9636447156601392,
+          633.176977268771
+        ],
+        [
+          0.9596069778722043,
+          -0.2542546046059725,
+          -305.7981449412529
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "split": "historical_train_candidate_pool_unsplit",
+      "original_split": "train",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 2,
+          "label": "IC_Pass",
+          "xyxy": [
+            77.9507827758789,
+            35.817020416259766,
+            103.84893035888672,
+            65.9015121459961
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            101.08184051513672,
+            12.765883445739746,
+            150.05322265625,
+            72.89535522460938
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "review_priority": "normal",
+      "historical_camera": true,
+      "reviewed_utc": "2026-11-15T15:28:00.142Z"
+    },
+    {
+      "id": "hist-present_004811",
+      "image": "images/hist-present_004811.png",
+      "image_sha256": "fcfb969815a444b7037adc342bcbdbd01f61c793bea747144578f3a4cc8958d8",
+      "width": 190,
+      "height": 98,
+      "state": "both_present",
+      "capture_group": "historical-source-run-present",
+      "source_ancestor_sha256": "b83c03c2dbdca024ffba681bd404947294a6c841c23f78c4b12d459663f2952f",
+      "source_to_crop": [
+        [
+          0.11559285106419775,
+          -0.9877941277458634,
+          388.9414983512472
+        ],
+        [
+          0.9794271901664153,
+          0.11461374263263922,
+          -437.905402904519
+        ],
+        [
+          1.5184087650714026e-18,
+          1.7768602352247906e-19,
+          1
+        ]
+      ],
+      "split": "historical_train_candidate_pool_unsplit",
+      "original_split": "train",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 2,
+          "label": "IC_Pass",
+          "xyxy": [
+            81.29715728759766,
+            35.19712448120117,
+            102.52405548095703,
+            62.833984375
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            106.99993896484375,
+            13.960575103759766,
+            149.0421142578125,
+            70.27955627441406
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "review_priority": "normal",
+      "historical_camera": true,
+      "reviewed_utc": "2026-11-15T15:28:02.045Z"
+    },
+    {
+      "id": "hist-present_004364",
+      "image": "images/hist-present_004364.png",
+      "image_sha256": "7904789d808e05d9feef033a314da8aaa066bfe48d438f606821b5c4857f021d",
+      "width": 195,
+      "height": 98,
+      "state": "both_present",
+      "capture_group": "historical-source-run-present",
+      "source_ancestor_sha256": "50f923c1ff7eb0e5f86c2681a2d6a7e8420186665729d29eef9bbcbf6bc73bea",
+      "source_to_crop": [
+        [
+          0.19474623799055524,
+          -0.9737305695896992,
+          330.9874292497906
+        ],
+        [
+          0.973566173374489,
+          0.19471304856597504,
+          -458.04643620974196
+        ],
+        [
+          -3.677302820719363e-19,
+          3.750198744164878e-18,
+          1
+        ]
+      ],
+      "split": "historical_train_candidate_pool_unsplit",
+      "original_split": "train",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 2,
+          "label": "IC_Pass",
+          "xyxy": [
+            79.363525390625,
+            33.797000885009766,
+            104.4954605102539,
+            64.24430084228516
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            103.70526123046875,
+            13.357942581176758,
+            150.27281188964844,
+            72.73817443847656
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "review_priority": "normal",
+      "historical_camera": true,
+      "reviewed_utc": "2026-11-15T15:28:04.365Z"
+    },
+    {
+      "id": "hist-present_006151",
+      "image": "images/hist-present_006151.png",
+      "image_sha256": "274486695244cb577cb2e89ed427303f3e925c582cd5db41df4cf08c62a47ac2",
+      "width": 193,
+      "height": 97,
+      "state": "both_present",
+      "capture_group": "historical-source-run-present",
+      "source_ancestor_sha256": "b7b472b1cc3c2e5cc2b8c731298311a31b30ba422b4eca6eb901467111f59e6e",
+      "source_to_crop": [
+        [
+          0.30903686165885,
+          -0.9477130424204742,
+          250.85843100379384
+        ],
+        [
+          0.9441386084716803,
+          0.3078711057951652,
+          -475.0834894460485
+        ],
+        [
+          3.5776359673865915e-10,
+          2.2901012820297235e-9,
+          1
+        ]
+      ],
+      "split": "historical_train_candidate_pool_unsplit",
+      "original_split": "train",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 2,
+          "label": "IC_Pass",
+          "xyxy": [
+            78.43547821044922,
+            33.68585968017578,
+            106.38330078125,
+            64.93824005126953
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            101.51908111572266,
+            10.851326942443848,
+            153.3362579345703,
+            75.07784271240234
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "review_priority": "normal",
+      "historical_camera": true,
+      "reviewed_utc": "2026-11-15T15:28:06.517Z"
+    },
+    {
+      "id": "hist-present_004777",
+      "image": "images/hist-present_004777.png",
+      "image_sha256": "cb88fe2cda6f694ba09f499fa003618cc1b3f2854c1bf39e596c4ddaf0803e2a",
+      "width": 167,
+      "height": 94,
+      "state": "both_present",
+      "capture_group": "historical-source-run-present",
+      "source_ancestor_sha256": "48466b1c6be9faa5ae841e9fe101afad9f89670107edf8afe88f643f8ae6e5c8",
+      "source_to_crop": [
+        [
+          0.5554820592106763,
+          -0.8277767143378817,
+          46.12033020252227
+        ],
+        [
+          0.8256211250544532,
+          0.5540354720151791,
+          -475.52075942090426
+        ],
+        [
+          1.8131734896468488e-9,
+          -7.426237104510045e-10,
+          1
+        ]
+      ],
+      "split": "historical_train_candidate_pool_unsplit",
+      "original_split": "train",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 2,
+          "label": "IC_Pass",
+          "xyxy": [
+            76.89698028564453,
+            33.58168411254883,
+            108.32090759277344,
+            66.18672180175781
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            99.16114044189453,
+            9.423701286315918,
+            159.35028076171875,
+            74.36116790771484
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "review_priority": "normal",
+      "historical_camera": true,
+      "reviewed_utc": "2026-11-15T15:28:10.189Z"
+    },
+    {
+      "id": "hist-present_004330",
+      "image": "images/hist-present_004330.png",
+      "image_sha256": "4fb89131cbe5b3d2333b58590a5059bdd14df42d7f0b33cec7dce3f11a9feddc",
+      "width": 166,
+      "height": 94,
+      "state": "both_present",
+      "capture_group": "historical-source-run-present",
+      "source_ancestor_sha256": "4a299a598649051675c4e1deb4cb268c82d1b3e3fa8affca4578b8aaa4f23e03",
+      "source_to_crop": [
+        [
+          0.6147898445099033,
+          -0.777897657021361,
+          -10.295749176266998
+        ],
+        [
+          0.7776314729114839,
+          0.6145800730622505,
+          -463.86470437974526
+        ],
+        [
+          -3.80316065381759e-9,
+          9.032193823724029e-10,
+          1
+        ]
+      ],
+      "split": "historical_train_candidate_pool_unsplit",
+      "original_split": "train",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 2,
+          "label": "IC_Pass",
+          "xyxy": [
+            75.86848449707031,
+            33.466705322265625,
+            107.77157592773438,
+            66.45125579833984
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            96.08174896240234,
+            10.091612815856934,
+            158.5556182861328,
+            75.38772583007812
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "review_priority": "normal",
+      "historical_camera": true,
+      "reviewed_utc": "2026-11-15T15:28:12.861Z"
+    },
+    {
+      "id": "hist-present_006117",
+      "image": "images/hist-present_006117.png",
+      "image_sha256": "46e256d402de393a997d11359bbcf167029372242cf3f70136a678f5cf175291",
+      "width": 188,
+      "height": 94,
+      "state": "both_present",
+      "capture_group": "historical-source-run-present",
+      "source_ancestor_sha256": "e4d781b235fdff104cfcc4a3e071eeb8709a6ce3b7da6e62b6eb09c50ef38b0a",
+      "source_to_crop": [
+        [
+          0.6892928967913224,
+          -0.7192620401346735,
+          -77.47461006142392
+        ],
+        [
+          0.7177475980031158,
+          0.6878414144145547,
+          -447.429948428039
+        ],
+        [
+          3.6959968201708705e-11,
+          8.681622640111462e-10,
+          1
+        ]
+      ],
+      "split": "historical_train_candidate_pool_unsplit",
+      "original_split": "train",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 2,
+          "label": "IC_Pass",
+          "xyxy": [
+            76.37618255615234,
+            34.76425552368164,
+            107.46206665039062,
+            65.91356658935547
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            97.905517578125,
+            12.868277549743652,
+            158.25717163085938,
+            73.65119934082031
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "review_priority": "normal",
+      "historical_camera": true,
+      "reviewed_utc": "2026-11-15T15:28:15.245Z"
+    },
+    {
+      "id": "hist-present_004742",
+      "image": "images/hist-present_004742.png",
+      "image_sha256": "ad190132b45e8f50bed81aa011e5317000fb4868799e38886ec7492601c590be",
+      "width": 183,
+      "height": 95,
+      "state": "both_present",
+      "capture_group": "historical-source-run-present",
+      "source_ancestor_sha256": "55832167a67b5370b4b27115914d3eb7a94a9fd4e5a67b8b2e49f6a4f3e18d90",
+      "source_to_crop": [
+        [
+          0.8813983803252418,
+          -0.45702128762611277,
+          -288.65405034742054
+        ],
+        [
+          0.45674845020879984,
+          0.8808718813268237,
+          -336.99485096917334
+        ],
+        [
+          2.872493904154828e-9,
+          2.0251833191733162e-9,
+          1
+        ]
+      ],
+      "split": "historical_train_candidate_pool_unsplit",
+      "original_split": "train",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 2,
+          "label": "IC_Pass",
+          "xyxy": [
+            76.9536361694336,
+            33.63667297363281,
+            107.7225570678711,
+            66.75794219970703
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            96.64913940429688,
+            14.569107055664062,
+            160.09054565429688,
+            71.21650695800781
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "review_priority": "normal",
+      "historical_camera": true,
+      "reviewed_utc": "2026-11-15T15:28:18.365Z"
+    },
+    {
+      "id": "hist-present_004296",
+      "image": "images/hist-present_004296.png",
+      "image_sha256": "6e788fa7d8712448ee759592048dafc34938b093c43fd8771d4638186dba06b4",
+      "width": 177,
+      "height": 95,
+      "state": "both_present",
+      "capture_group": "historical-source-run-present",
+      "source_ancestor_sha256": "89975a684c378519f99561dde6520c0f52480c0d810e7cfd553d568acb4647ff",
+      "source_to_crop": [
+        [
+          0.9093468654372635,
+          -0.3953681747231887,
+          -327.5121421693488
+        ],
+        [
+          0.39370915661022365,
+          0.9055304872254314,
+          -303.8931200851384
+        ],
+        [
+          2.949591121651195e-9,
+          2.1334092918046367e-9,
+          1
+        ]
+      ],
+      "split": "historical_train_candidate_pool_unsplit",
+      "original_split": "train",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 2,
+          "label": "IC_Pass",
+          "xyxy": [
+            78.64584350585938,
+            37.12731170654297,
+            105.95950317382812,
+            66.61407470703125
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            96.44042205810547,
+            18.32979393005371,
+            159.40821838378906,
+            71.59552764892578
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "review_priority": "normal",
+      "historical_camera": true,
+      "reviewed_utc": "2026-11-15T15:28:20.063Z"
+    },
+    {
+      "id": "hist-present_006082",
+      "image": "images/hist-present_006082.png",
+      "image_sha256": "6a846f334bfdbf5edd1e27aa6b7b3a9991ae8f659ea58a5fe947d7251fc3bc69",
+      "width": 179,
+      "height": 99,
+      "state": "both_present",
+      "capture_group": "historical-source-run-present",
+      "source_ancestor_sha256": "6e4feef1111e0ba8ca3936076d93d452c43183c45ffe1ac199a292944eff988a",
+      "source_to_crop": [
+        [
+          0.9425764164521626,
+          -0.3113871179721996,
+          -376.11947940444213
+        ],
+        [
+          0.3093982199189422,
+          0.9365566331631213,
+          -254.52385773540985
+        ],
+        [
+          -2.0407938714226973e-9,
+          -2.7516730438814414e-9,
+          1
+        ]
+      ],
+      "split": "historical_train_candidate_pool_unsplit",
+      "original_split": "train",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 2,
+          "label": "IC_Pass",
+          "xyxy": [
+            79.49008178710938,
+            40.085968017578125,
+            107.03978729248047,
+            71.12271881103516
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            95.2557601928711,
+            22.91396713256836,
+            160.43289184570312,
+            75.77144622802734
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "review_priority": "normal",
+      "historical_camera": true,
+      "reviewed_utc": "2026-11-15T15:28:22.924Z"
+    },
+    {
+      "id": "hist-present_004708",
+      "image": "images/hist-present_004708.png",
+      "image_sha256": "2ab4ea5db9549fe115633511557c6dffbcdddca887d759ae11e01c8440e7b0ed",
+      "width": 165,
+      "height": 95,
+      "state": "both_present",
+      "capture_group": "historical-source-run-present",
+      "source_ancestor_sha256": "4a40ab34551245b87fc088c9e85bc1cacd1507d26bdd7d1d3c8680531ec30be5",
+      "source_to_crop": [
+        [
+          -0.9936029132083504,
+          -0.009033157385369426,
+          677.872759114202
+        ],
+        [
+          0.009001104510139074,
+          -0.9901231438477083,
+          159.5455198269048
+        ],
+        [
+          8.827383988142604e-19,
+          3.6592081617934824e-18,
+          1
+        ]
+      ],
+      "split": "historical_train_candidate_pool_unsplit",
+      "original_split": "train",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 2,
+          "label": "IC_Pass",
+          "xyxy": [
+            61.629669189453125,
+            29.837175369262695,
+            82.57330322265625,
+            54.91701889038086
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            18.00295639038086,
+            21.62346839904785,
+            53.88532638549805,
+            77.78622436523438
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "review_priority": "normal",
+      "historical_camera": true,
+      "reviewed_utc": "2026-11-15T15:28:25.268Z"
+    },
+    {
+      "id": "hist-present_005601",
+      "image": "images/hist-present_005601.png",
+      "image_sha256": "714373774338f38629636ad4268d53ce63808a16e436da41794ca0d78c9f704a",
+      "width": 166,
+      "height": 105,
+      "state": "both_present",
+      "capture_group": "historical-source-run-present",
+      "source_ancestor_sha256": "4323491b11257842c9ab7819e7a71f8ca4889c16497fde6b3e92f0d558774687",
+      "source_to_crop": [
+        [
+          -0.9932750021710973,
+          -0.04318545513326703,
+          689.9091532424268
+        ],
+        [
+          0.043016296105426836,
+          -0.9893719878391841,
+          136.9353720424262
+        ],
+        [
+          -8.098348262495484e-21,
+          4.924962285499468e-18,
+          1
+        ]
+      ],
+      "split": "historical_train_candidate_pool_unsplit",
+      "original_split": "train",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 2,
+          "label": "IC_Pass",
+          "xyxy": [
+            60.79432678222656,
+            29.27994155883789,
+            84.18634796142578,
+            56.42244338989258
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            18.869430541992188,
+            21.30254554748535,
+            55.01015853881836,
+            78.63169860839844
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "review_priority": "normal",
+      "historical_camera": true,
+      "reviewed_utc": "2026-11-15T15:28:27.941Z"
+    },
+    {
+      "id": "hist-present_006048",
+      "image": "images/hist-present_006048.png",
+      "image_sha256": "5228bdcfb2d1560f6cc51399823714f78ed06ba997c222a5c2ff81f2a71607d8",
+      "width": 166,
+      "height": 105,
+      "state": "both_present",
+      "capture_group": "historical-source-run-present",
+      "source_ancestor_sha256": "7fb947a6943ff2596505da0241097de30601b71c9a10baa5a12d1d1d62e24c72",
+      "source_to_crop": [
+        [
+          -0.9841687732687698,
+          -0.14375500720488132,
+          715.9120863951478
+        ],
+        [
+          0.14305034759990526,
+          -0.9793442042275937,
+          68.25815913750981
+        ],
+        [
+          -2.096918773294041e-10,
+          -6.259384410363227e-11,
+          1
+        ]
+      ],
+      "split": "historical_train_candidate_pool_unsplit",
+      "original_split": "train",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 2,
+          "label": "IC_Pass",
+          "xyxy": [
+            60.614959716796875,
+            29.85129737854004,
+            84.81888580322266,
+            56.48748016357422
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            15.609516143798828,
+            19.298213958740234,
+            59.381561279296875,
+            79.64041137695312
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "review_priority": "normal",
+      "historical_camera": true,
+      "reviewed_utc": "2026-11-15T15:28:29.412Z"
+    },
+    {
+      "id": "hist-present_005567",
+      "image": "images/hist-present_005567.png",
+      "image_sha256": "cf78694dce393cfde3f570011a7228c7439915efe2a36b5ba72489bccbb86aae",
+      "width": 165,
+      "height": 94,
+      "state": "both_present",
+      "capture_group": "historical-source-run-present",
+      "source_ancestor_sha256": "447f254d14675c1b26705de5344eeb99d31f1a1e3169d04ce864f496c25e37eb",
+      "source_to_crop": [
+        [
+          -0.8648151700609679,
+          -0.48429602951885875,
+          747.630863310549
+        ],
+        [
+          0.4858393246972324,
+          -0.8675699737749093,
+          -193.7995939855084
+        ],
+        [
+          -8.057804068222237e-19,
+          -4.512365386267059e-19,
+          1
+        ]
+      ],
+      "split": "historical_train_candidate_pool_unsplit",
+      "original_split": "train",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 2,
+          "label": "IC_Pass",
+          "xyxy": [
+            55.58938980102539,
+            28.519210815429688,
+            89.50907897949219,
+            59.9436149597168
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            4.823578834533691,
+            22.61604881286621,
+            67.45902252197266,
+            78.65243530273438
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "review_priority": "normal",
+      "historical_camera": true,
+      "reviewed_utc": "2026-11-15T15:28:31.573Z"
+    },
+    {
+      "id": "hist-present_004227",
+      "image": "images/hist-present_004227.png",
+      "image_sha256": "aaec55333b5a0407a12793c3a14dd6300fa4780facd1ab1559249590de279451",
+      "width": 165,
+      "height": 94,
+      "state": "both_present",
+      "capture_group": "historical-source-run-present",
+      "source_ancestor_sha256": "9b272f84e23523f7462a1ce115a2f508b5cf2b18a236993cd18901af450ac97b",
+      "source_to_crop": [
+        [
+          -0.8354487329085805,
+          -0.5376647503271254,
+          745.2677081305151
+        ],
+        [
+          0.5361194624955227,
+          -0.8330477325553959,
+          -237.36284247624624
+        ],
+        [
+          -2.039487932464194e-10,
+          -4.480997800982476e-10,
+          1
+        ]
+      ],
+      "split": "historical_train_candidate_pool_unsplit",
+      "original_split": "train",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 2,
+          "label": "IC_Pass",
+          "xyxy": [
+            54.862152099609375,
+            25.4334716796875,
+            90.62511444091797,
+            62.54551315307617
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            5.960780620574951,
+            17.538715362548828,
+            67.24922943115234,
+            83.55352020263672
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "review_priority": "normal",
+      "historical_camera": true,
+      "reviewed_utc": "2026-11-15T15:28:34.509Z"
+    },
+    {
+      "id": "hist-present_006013",
+      "image": "images/hist-present_006013.png",
+      "image_sha256": "e19a1539d46e2dd79b0ee8f647578319116e0344ee3ceff2e4277266058d5897",
+      "width": 165,
+      "height": 94,
+      "state": "both_present",
+      "capture_group": "historical-source-run-present",
+      "source_ancestor_sha256": "bf60f515bd3c404c727dd2bb3305b499d34db620a4cd960119efd15f92cb4995",
+      "source_to_crop": [
+        [
+          -0.8076783057657375,
+          -0.5786349723509923,
+          740.1793979734184
+        ],
+        [
+          0.5779067320241624,
+          -0.8066617323784154,
+          -273.50983292223555
+        ],
+        [
+          -7.931682341720517e-11,
+          -2.3348524565036207e-10,
+          1
+        ]
+      ],
+      "split": "historical_train_candidate_pool_unsplit",
+      "original_split": "train",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 2,
+          "label": "IC_Pass",
+          "xyxy": [
+            57.857086181640625,
+            27.55949592590332,
+            87.85857391357422,
+            58.84993362426758
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            5.916335105895996,
+            16.541011810302734,
+            68.68961334228516,
+            84.08035278320312
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "review_priority": "normal",
+      "historical_camera": true,
+      "reviewed_utc": "2026-11-15T15:28:37.509Z"
+    },
+    {
+      "id": "hist-present_005532",
+      "image": "images/hist-present_005532.png",
+      "image_sha256": "5a0f350e7d8f44ac9382b96f92987f295308ba93587b7e7c9b4dce99154db93e",
+      "width": 172,
+      "height": 94,
+      "state": "both_present",
+      "capture_group": "historical-source-run-present",
+      "source_ancestor_sha256": "4ccbab12a6d112a4bdfb95bcdb7cdbbd81065356ee8edb53a28fbd1f98ea1ec1",
+      "source_to_crop": [
+        [
+          -0.5410975413373365,
+          -0.8324572089633261,
+          646.5556100317635
+        ],
+        [
+          0.8317238581814158,
+          -0.540620503423643,
+          -526.2042455062361
+        ],
+        [
+          -9.591225354392834e-11,
+          2.1590640555472548e-10,
+          1
+        ]
+      ],
+      "split": "historical_train_candidate_pool_unsplit",
+      "original_split": "train",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 2,
+          "label": "IC_Pass",
+          "xyxy": [
+            56.43044662475586,
+            28.108678817749023,
+            87.46654510498047,
+            60.4886474609375
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            7.783899307250977,
+            18.711442947387695,
+            66.33978271484375,
+            83.0322036743164
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "review_priority": "normal",
+      "historical_camera": true,
+      "reviewed_utc": "2026-11-15T15:28:40.357Z"
+    },
+    {
+      "id": "hist-present_004193",
+      "image": "images/hist-present_004193.png",
+      "image_sha256": "1b555ddea4a84c8ccfabe2cbb424c5691bdc66830e50164810d9747f4786d7f1",
+      "width": 171,
+      "height": 94,
+      "state": "both_present",
+      "capture_group": "historical-source-run-present",
+      "source_ancestor_sha256": "6838c863172e8c56be4dfa9757b875d18931c3b1d893cdf6d5905b31b70f075e",
+      "source_to_crop": [
+        [
+          -0.5096822947453308,
+          -0.8552299012645578,
+          633.2497313247898
+        ],
+        [
+          0.8511659882265671,
+          -0.5072605089232397,
+          -549.440813555812
+        ],
+        [
+          -5.043994551104597e-18,
+          -3.244494813280502e-18,
+          1
+        ]
+      ],
+      "split": "historical_train_candidate_pool_unsplit",
+      "original_split": "train",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 2,
+          "label": "IC_Pass",
+          "xyxy": [
+            54.73843765258789,
+            27.282777786254883,
+            88.56824493408203,
+            62.22797775268555
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            6.235285758972168,
+            18.24604034423828,
+            66.43168640136719,
+            84.927978515625
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "review_priority": "normal",
+      "historical_camera": true,
+      "reviewed_utc": "2026-11-15T15:28:42.293Z"
+    },
+    {
+      "id": "hist-present_005979",
+      "image": "images/hist-present_005979.png",
+      "image_sha256": "536e7b72ea558f31106014674ee16828045170efadcf2afff2d3739a3e61288e",
+      "width": 170,
+      "height": 94,
+      "state": "both_present",
+      "capture_group": "historical-source-run-present",
+      "source_ancestor_sha256": "018e9b070b5ddcddb8182b40cf16967e93ed40e3ccbb6db1d94115cccc5c31c1",
+      "source_to_crop": [
+        [
+          -0.4587885045760906,
+          -0.8822859335448793,
+          607.9953529867614
+        ],
+        [
+          0.8781221117528665,
+          -0.45662316752805576,
+          -583.183930599026
+        ],
+        [
+          -5.487824165794751e-10,
+          7.822541928217753e-10,
+          1
+        ]
+      ],
+      "split": "historical_train_candidate_pool_unsplit",
+      "original_split": "train",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 2,
+          "label": "IC_Pass",
+          "xyxy": [
+            57.28867721557617,
+            28.20136070251465,
+            87.38813781738281,
+            60.12314987182617
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            7.821103572845459,
+            17.65538787841797,
+            66.14759826660156,
+            83.8291015625
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "review_priority": "normal",
+      "historical_camera": true,
+      "reviewed_utc": "2026-11-15T15:28:43.693Z"
+    },
+    {
+      "id": "hist-present_005051",
+      "image": "images/hist-present_005051.png",
+      "image_sha256": "91f095afe9bd6ca5aca733beb49edd5a21ee6e1a75e0a4fcc57b7cd7779bbdd2",
+      "width": 163,
+      "height": 94,
+      "state": "both_present",
+      "capture_group": "historical-source-run-present",
+      "source_ancestor_sha256": "b1906008dc34b34997046e539328b56ebd5d566293b08ad49344368f6ff4d0ab",
+      "source_to_crop": [
+        [
+          -0.1320950421112681,
+          -0.9824555857119079,
+          425.06598742765175
+        ],
+        [
+          0.9825745754046086,
+          -0.1321111908830535,
+          -756.7711705122679
+        ],
+        [
+          -1.0514013396954529e-18,
+          -8.020792627894304e-19,
+          1
+        ]
+      ],
+      "split": "historical_train_candidate_pool_unsplit",
+      "original_split": "train",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 2,
+          "label": "IC_Pass",
+          "xyxy": [
+            58.57926940917969,
+            29.679128646850586,
+            82.59056091308594,
+            60.608055114746094
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            16.875410079956055,
+            21.843454360961914,
+            57.57001495361328,
+            80.20654296875
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "review_priority": "normal",
+      "historical_camera": true,
+      "reviewed_utc": "2026-11-15T15:28:46.053Z"
+    },
+    {
+      "id": "hist-present_005498",
+      "image": "images/hist-present_005498.png",
+      "image_sha256": "26985e1bce69da2a4e2cfd137a1a0e17df847fff9cb14fcfb21a2cef9aeaf341",
+      "width": 163,
+      "height": 94,
+      "state": "both_present",
+      "capture_group": "historical-source-run-present",
+      "source_ancestor_sha256": "06f548d482e418ff1de37d3d0f71309e0ecf2ab93ca64eec2d66c31c604ca5a0",
+      "source_to_crop": [
+        [
+          -0.098132433905453,
+          -0.9895005857651308,
+          404.6608433080497
+        ],
+        [
+          0.98684590262196,
+          -0.09786925462765954,
+          -770.6000730558742
+        ],
+        [
+          -4.654163922261844e-19,
+          4.6157023485611703e-20,
+          1
+        ]
+      ],
+      "split": "historical_train_candidate_pool_unsplit",
+      "original_split": "train",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 2,
+          "label": "IC_Pass",
+          "xyxy": [
+            60.90038299560547,
+            29.85843849182129,
+            80.61351776123047,
+            59.51959228515625
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            17.454172134399414,
+            21.364147186279297,
+            56.445152282714844,
+            79.85293579101562
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "review_priority": "normal",
+      "historical_camera": true,
+      "reviewed_utc": "2026-11-15T15:28:47.749Z"
+    },
+    {
+      "id": "hist-present_005945",
+      "image": "images/hist-present_005945.png",
+      "image_sha256": "b7d3ed83d55ed65c4d45a26b6b979e2a63fd498a4945378de8f41d7b00ad1ee6",
+      "width": 173,
+      "height": 93,
+      "state": "both_present",
+      "capture_group": "historical-source-run-present",
+      "source_ancestor_sha256": "93c83c649074391df18dd73734e20bd1fef4cc9870caf7c04b17eed97f4d21d9",
+      "source_to_crop": [
+        [
+          -0.01594917846981601,
+          -0.9968252832268645,
+          354.8877441720722
+        ],
+        [
+          0.9849698460834685,
+          -0.01575991482854097,
+          -794.7346185808165
+        ],
+        [
+          1.893058441225499e-9,
+          -6.05945993427169e-11,
+          1
+        ]
+      ],
+      "split": "historical_train_candidate_pool_unsplit",
+      "original_split": "train",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 2,
+          "label": "IC_Pass",
+          "xyxy": [
+            60.534881591796875,
+            32.814517974853516,
+            80.95557403564453,
+            56.25878143310547
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            19.76256561279297,
+            24.591520309448242,
+            55.14119338989258,
+            78.1383056640625
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "review_priority": "normal",
+      "historical_camera": true,
+      "reviewed_utc": "2026-11-15T15:28:49.541Z"
+    },
+    {
+      "id": "hist-absent_006413",
+      "image": "images/hist-absent_006413.png",
+      "image_sha256": "824a92aae1e9388dce93f8564c3474070f2519ff2917db55f7d44a3d4ae7b23d",
+      "width": 164,
+      "height": 90,
+      "state": "ic_missing_terminal_present",
+      "capture_group": "historical-source-run-absent",
+      "source_ancestor_sha256": "391dd26e8279d4a505956932a463ceec9949afe8abae5b0907d13ba5449f0df3",
+      "source_to_crop": [
+        [
+          0.3044551023847337,
+          -0.9481596373445564,
+          245.46623089271958
+        ],
+        [
+          0.9387088171766659,
+          0.3014201527789387,
+          -863.5802158427302
+        ],
+        [
+          -1.5595540490719008e-18,
+          5.6466392597255604e-18,
+          1
+        ]
+      ],
+      "split": "historical_train_candidate_pool_unsplit",
+      "original_split": "train",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 0,
+          "label": "IC_Fail",
+          "xyxy": [
+            82.60000000000001,
+            30.421875,
+            100,
+            56.148162841796875
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            98.31597137451172,
+            15.821396827697754,
+            150.37770080566406,
+            78.3577880859375
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "review_priority": "normal",
+      "historical_camera": true,
+      "reviewed_utc": "2026-11-15T15:29:12.093Z"
+    },
+    {
+      "id": "hist-absent_002078",
+      "image": "images/hist-absent_002078.png",
+      "image_sha256": "e3acb3a953f60c5c5025287cdaf343b6f2daf0e53edd4f67732a1fee13d25cff",
+      "width": 163,
+      "height": 97,
+      "state": "ic_missing_terminal_present",
+      "capture_group": "historical-source-run-absent",
+      "source_ancestor_sha256": "1ff780cdc306b136ab680fa9fbf6ce9ca47f8a47d008ab61c64c542da675e6a9",
+      "source_to_crop": [
+        [
+          0.6029101315098158,
+          -0.7892649258022496,
+          6.420362652752147
+        ],
+        [
+          0.7903659437800569,
+          0.6037517936239198,
+          -857.0679412731096
+        ],
+        [
+          7.3508851081739515e-19,
+          -1.7225564210014608e-18,
+          1
+        ]
+      ],
+      "split": "historical_train_candidate_pool_unsplit",
+      "original_split": "train",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 0,
+          "label": "IC_Fail",
+          "xyxy": [
+            77.40328216552734,
+            35.14079666137695,
+            101.91424560546875,
+            61.287086486816406
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            93.6998291015625,
+            21.554576873779297,
+            154.82496643066406,
+            86.41346740722656
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "review_priority": "normal",
+      "historical_camera": true,
+      "reviewed_utc": "2026-11-15T15:29:14.837Z"
+    },
+    {
+      "id": "hist-absent_008761",
+      "image": "images/hist-absent_008761.png",
+      "image_sha256": "756ec2684c543431e2bfdeffb78a42780479e485d219f670fa09fe8ad1f5eb71",
+      "width": 198,
+      "height": 120,
+      "state": "ic_missing_terminal_present",
+      "capture_group": "historical-source-run-absent",
+      "source_ancestor_sha256": "eca431ff12e50a732298f0d508bae7d7603233593cc950fa304f15c7ac310016",
+      "source_to_crop": [
+        [
+          0.8952520995963801,
+          -0.4328684240946452,
+          -249.01564094570426
+        ],
+        [
+          0.4319229331395091,
+          0.8932954246619291,
+          -699.3199981926924
+        ],
+        [
+          7.976758830009699e-10,
+          -1.0067414151375018e-9,
+          1
+        ]
+      ],
+      "split": "historical_train_candidate_pool_unsplit",
+      "original_split": "train",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 0,
+          "label": "IC_Fail",
+          "xyxy": [
+            112.62596893310547,
+            43.85591506958008,
+            133.42095947265625,
+            68.72103881835938
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            125.58354187011719,
+            39.53295135498047,
+            187.3010711669922,
+            93.44312286376953
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "review_priority": "normal",
+      "historical_camera": true,
+      "reviewed_utc": "2026-11-15T15:29:17.628Z"
+    },
+    {
+      "id": "hist-absent_004878",
+      "image": "images/hist-absent_004878.png",
+      "image_sha256": "150237d92e1365d913b76277d731decc03be95696793a2fd92ea80d312990d13",
+      "width": 201,
+      "height": 128,
+      "state": "ic_missing_terminal_present",
+      "capture_group": "historical-source-run-absent",
+      "source_ancestor_sha256": "1280b6b1bd6f1c3e262fc012f7bb3ca24cb9c903e32702f495294cc0c5bc3264",
+      "source_to_crop": [
+        [
+          0.9659994516672877,
+          -0.22954458403102182,
+          -347.2241211354776
+        ],
+        [
+          0.23008985217479092,
+          0.9682953411665286,
+          -580.5744328604156
+        ],
+        [
+          1.0603735365388941e-9,
+          -5.340981246205215e-10,
+          1
+        ]
+      ],
+      "split": "historical_train_candidate_pool_unsplit",
+      "original_split": "train",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 0,
+          "label": "IC_Fail",
+          "xyxy": [
+            116.6015853881836,
+            47.69153594970703,
+            136.00738525390625,
+            75.0721435546875
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            135.7538299560547,
+            42.410335540771484,
+            183.5832977294922,
+            102.68160247802734
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "review_priority": "normal",
+      "historical_camera": true,
+      "reviewed_utc": "2026-11-15T15:29:20.133Z"
+    },
+    {
+      "id": "hist-absent_001988",
+      "image": "images/hist-absent_001988.png",
+      "image_sha256": "23af11c7bc37eb83b554d10e2270ff6cb6276268247230bf5603b047080cdde9",
+      "width": 173,
+      "height": 122,
+      "state": "ic_missing_terminal_present",
+      "capture_group": "historical-source-run-absent",
+      "source_ancestor_sha256": "0439f4ccdeb1b4a81bfa690c877448ad9a057d1a5e60951a15f6b07404396028",
+      "source_to_crop": [
+        [
+          -0.9412739307745792,
+          -0.3137586363816009,
+          749.7553513674186
+        ],
+        [
+          0.31250604459247117,
+          -0.9375172639267058,
+          335.19238175788115
+        ],
+        [
+          1.7253235850186374e-9,
+          -2.300429958986266e-9,
+          1
+        ]
+      ],
+      "split": "historical_train_candidate_pool_unsplit",
+      "original_split": "train",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 0,
+          "label": "IC_Fail",
+          "xyxy": [
+            71.0773696899414,
+            33.88039779663086,
+            91.3775405883789,
+            60.78688049316406
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            21.36222267150879,
+            12.73902416229248,
+            70.55066680908203,
+            74.46256256103516
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "review_priority": "normal",
+      "historical_camera": true,
+      "reviewed_utc": "2026-11-15T15:29:22.438Z"
+    },
+    {
+      "id": "hist-absent_005781",
+      "image": "images/hist-absent_005781.png",
+      "image_sha256": "0c755f5ffd3c5b72bb49440a9e161f18a14fc009fe703646aa8405dcebc20ef1",
+      "width": 165,
+      "height": 117,
+      "state": "ic_missing_terminal_present",
+      "capture_group": "historical-source-run-absent",
+      "source_ancestor_sha256": "fea794776d1e03dd9fbfa040b7c39e165a3bb14960cf6c6dec0c74bb83e74424",
+      "source_to_crop": [
+        [
+          -0.807105644662292,
+          -0.5829100351711077,
+          721.9229033656643
+        ],
+        [
+          0.5789952898267697,
+          -0.8016853631283526,
+          111.66833610617901
+        ],
+        [
+          2.998562872422202e-9,
+          -9.931130819237789e-10,
+          1
+        ]
+      ],
+      "split": "historical_train_candidate_pool_unsplit",
+      "original_split": "train",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 0,
+          "label": "IC_Fail",
+          "xyxy": [
+            59.15987777709961,
+            35.27008056640625,
+            85.17192840576172,
+            63.29201126098633
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            5.7801642417907715,
+            8.837529182434082,
+            70.81748962402344,
+            77.54212188720703
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "review_priority": "normal",
+      "historical_camera": true,
+      "reviewed_utc": "2026-11-15T15:29:27.477Z"
+    },
+    {
+      "id": "hist-absent_000994",
+      "image": "images/hist-absent_000994.png",
+      "image_sha256": "f5464aaebb7079d02c67de4d328931f94302f24bf890ce86cdf50fe4c1b996f4",
+      "width": 167,
+      "height": 115,
+      "state": "ic_missing_terminal_present",
+      "capture_group": "historical-source-run-absent",
+      "source_ancestor_sha256": "30439ed5a5e87c49381d6086ebbeae14ccb2515be10a39b0007fbdf9feae8b8f",
+      "source_to_crop": [
+        [
+          -0.6799715365277033,
+          -0.7224698232015925,
+          665.884374754837
+        ],
+        [
+          0.7198987030269276,
+          -0.6775517629229529,
+          -24.200260846090668
+        ],
+        [
+          1.5788065443113664e-9,
+          9.577303651123877e-11,
+          1
+        ]
+      ],
+      "split": "historical_train_candidate_pool_unsplit",
+      "original_split": "train",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 0,
+          "label": "IC_Fail",
+          "xyxy": [
+            61.164093017578125,
+            40.29267120361328,
+            86.54033660888672,
+            65.99999237060547
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            9.60801887512207,
+            10.584111213684082,
+            72.83064270019531,
+            74.26649475097656
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "review_priority": "normal",
+      "historical_camera": true,
+      "reviewed_utc": "2026-11-15T15:29:29.133Z"
+    },
+    {
+      "id": "hist-absent_009122",
+      "image": "images/hist-absent_009122.png",
+      "image_sha256": "5cc8f4f3f868160bc04f2973cae9113417eef7c01d2aecce819b42a2486bb8bc",
+      "width": 177,
+      "height": 108,
+      "state": "ic_missing_terminal_present",
+      "capture_group": "historical-source-run-absent",
+      "source_ancestor_sha256": "a16abb93b3e0e04d0e3316ecf2916a7c9dc958dcdbf48bcf7a0872fcb6dd7b8d",
+      "source_to_crop": [
+        [
+          -0.20005740110986717,
+          -0.9743083116914223,
+          471.1055805939512
+        ],
+        [
+          0.9685865268912306,
+          -0.1988821722641166,
+          -334.9629232846521
+        ],
+        [
+          -8.367839619011808e-10,
+          2.092831649511648e-9,
+          1
+        ]
+      ],
+      "split": "historical_train_candidate_pool_unsplit",
+      "original_split": "train",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 0,
+          "label": "IC_Fail",
+          "xyxy": [
+            64.853515625,
+            32.089576721191406,
+            83.4520492553711,
+            59.015323638916016
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            16.895030975341797,
+            12.258550643920898,
+            63.649757385253906,
+            74.34065246582031
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "review_priority": "normal",
+      "historical_camera": true,
+      "reviewed_utc": "2026-11-15T15:29:31.085Z"
+    },
+    {
+      "id": "hist-absent_001898",
+      "image": "images/hist-absent_001898.png",
+      "image_sha256": "2cdea650392ca6e1a945b9d1fdbbcdab1665268c979a163f9c2da581385f5840",
+      "width": 176,
+      "height": 98,
+      "state": "ic_missing_terminal_present",
+      "capture_group": "historical-source-run-absent",
+      "source_ancestor_sha256": "9a41410040f6ce42b359de8f90d71d5e1bc36f0e0b8bbb0d9b10b34422f73a79",
+      "source_to_crop": [
+        [
+          -0.008095452759554944,
+          -0.9956470735872349,
+          352.07944648895085
+        ],
+        [
+          0.9862672849479024,
+          -0.00801947744203165,
+          -408.8029898733945
+        ],
+        [
+          1.7652705428590387e-9,
+          -2.8708877847019436e-11,
+          1
+        ]
+      ],
+      "split": "historical_train_candidate_pool_unsplit",
+      "original_split": "train",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 0,
+          "label": "IC_Fail",
+          "xyxy": [
+            66.57852172851562,
+            33.14242172241211,
+            80.08641052246094,
+            55.94426345825195
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            22.634716033935547,
+            15.589471817016602,
+            58.15449142456055,
+            68.68672180175781
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "review_priority": "normal",
+      "historical_camera": true,
+      "reviewed_utc": "2026-11-15T15:29:32.669Z"
+    },
+    {
+      "id": "hist-absent_008581",
+      "image": "images/hist-absent_008581.png",
+      "image_sha256": "90fa8428ff7265f7e02611b0c1f069558f718a0a63359270e2c85afe85712b2b",
+      "width": 174,
+      "height": 90,
+      "state": "ic_missing_terminal_present",
+      "capture_group": "historical-source-run-absent",
+      "source_ancestor_sha256": "95bcae949a3a89b7b5827e46f88f3e4c62e10a6cd7df99f564beef9cb5604a47",
+      "source_to_crop": [
+        [
+          0.4019918392107791,
+          -0.908589953195799,
+          45.809717636132156
+        ],
+        [
+          0.9058350811690871,
+          0.40077293411301496,
+          -486.91386596037154
+        ],
+        [
+          7.87494706655974e-10,
+          -2.0337057943078103e-9,
+          1
+        ]
+      ],
+      "split": "historical_train_candidate_pool_unsplit",
+      "original_split": "train",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 0,
+          "label": "IC_Fail",
+          "xyxy": [
+            62.01961135864258,
+            33.33186340332031,
+            84.7640609741211,
+            61.300071716308594
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            13.184813499450684,
+            11.710901260375977,
+            67.91069793701172,
+            74.10423278808594
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "review_priority": "normal",
+      "historical_camera": true,
+      "reviewed_utc": "2026-11-15T15:29:34.493Z"
+    },
+    {
+      "id": "hist-absent_004697",
+      "image": "images/hist-absent_004697.png",
+      "image_sha256": "2faf225dcf09cb7fefcc0c4a55085574ecd9397192c855a07c132ef0fe29c27f",
+      "width": 165,
+      "height": 89,
+      "state": "ic_missing_terminal_present",
+      "capture_group": "historical-source-run-absent",
+      "source_ancestor_sha256": "705192d0bb8c5871d59895083d1a5460dda1c190d4b71eb347bc194d7efe8364",
+      "source_to_crop": [
+        [
+          0.6953757959197654,
+          -0.7071618206192587,
+          -211.55475168664015
+        ],
+        [
+          0.7020559947233314,
+          0.6903551742923287,
+          -447.2403623654957
+        ],
+        [
+          -2.0819963164984495e-9,
+          -9.976202380577966e-10,
+          1
+        ]
+      ],
+      "split": "historical_train_candidate_pool_unsplit",
+      "original_split": "train",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 0,
+          "label": "IC_Fail",
+          "xyxy": [
+            60.00767135620117,
+            34.37031936645508,
+            86.16388702392578,
+            60.43865966796875
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            6.712123394012451,
+            9.89897346496582,
+            73.37647247314453,
+            76.27366638183594
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "review_priority": "normal",
+      "historical_camera": true,
+      "reviewed_utc": "2026-11-15T15:29:38.405Z"
+    },
+    {
+      "id": "hist-absent_001807",
+      "image": "images/hist-absent_001807.png",
+      "image_sha256": "b66e38e0809dd92822c2df04804a8cc546c6bdb8d0a8b207e9a120069f851022",
+      "width": 165,
+      "height": 93,
+      "state": "ic_missing_terminal_present",
+      "capture_group": "historical-source-run-absent",
+      "source_ancestor_sha256": "4871f70ff28dedbe232c8d9e1c799cd64faa517a88b0d1390c529b14fb2f378c",
+      "source_to_crop": [
+        [
+          0.9162831771804282,
+          -0.38580296236157036,
+          -459.9815164930275
+        ],
+        [
+          0.3837939124643592,
+          0.9115102590716431,
+          -304.35582242089794
+        ],
+        [
+          1.7372765604634204e-10,
+          -1.778219307172299e-10,
+          1
+        ]
+      ],
+      "split": "historical_train_candidate_pool_unsplit",
+      "original_split": "train",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 0,
+          "label": "IC_Fail",
+          "xyxy": [
+            63.119712829589844,
+            37.472450256347656,
+            85.63893127441406,
+            64.69254302978516
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            13.733508110046387,
+            13.800848960876465,
+            68.73413848876953,
+            77.67108917236328
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "review_priority": "normal",
+      "historical_camera": true,
+      "reviewed_utc": "2026-11-15T15:29:41.589Z"
+    },
+    {
+      "id": "hist-absent_000362",
+      "image": "images/hist-absent_000362.png",
+      "image_sha256": "9909beb7bb996ebd6764f2edaf3e34381867592a2c7e47ef68a172bcae7ccd72",
+      "width": 164,
+      "height": 99,
+      "state": "ic_missing_terminal_present",
+      "capture_group": "historical-source-run-absent",
+      "source_ancestor_sha256": "d75be9001c51a4c70a21275cbf662dcd159ed4e78afe9e3b7208f0f4175732f6",
+      "source_to_crop": [
+        [
+          0.992538723242647,
+          -0.0506395525258685,
+          -617.6725429938639
+        ],
+        [
+          0.050457818860228404,
+          0.9889736181741915,
+          -103.70053305929024
+        ],
+        [
+          -1.4554491861068402e-18,
+          1.838466547013768e-18,
+          1
+        ]
+      ],
+      "split": "historical_train_candidate_pool_unsplit",
+      "original_split": "train",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 0,
+          "label": "IC_Fail",
+          "xyxy": [
+            67.90420532226562,
+            46.2938117980957,
+            80.36772155761719,
+            67.1781234741211
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            20.591394424438477,
+            23.81283187866211,
+            60.74350357055664,
+            77.54199981689453
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "review_priority": "normal",
+      "historical_camera": true,
+      "reviewed_utc": "2026-11-15T15:29:43.429Z"
+    },
+    {
+      "id": "hist-absent_008942",
+      "image": "images/hist-absent_008942.png",
+      "image_sha256": "dfe07da66969b300aaafb804f37e8029b9a6a8ca7c81085a5011c9dbfe91e7e3",
+      "width": 165,
+      "height": 91,
+      "state": "ic_missing_terminal_present",
+      "capture_group": "historical-source-run-absent",
+      "source_ancestor_sha256": "433bcbb45dfdf700a1ba1fefe08a18589a563e0037b8d5fc3db4c045baacaf39",
+      "source_to_crop": [
+        [
+          -0.8727801712875825,
+          -0.47606215478388186,
+          873.0562373939244
+        ],
+        [
+          0.4749514282597586,
+          -0.8707439181600242,
+          -181.78937539313566
+        ],
+        [
+          2.759512289655975e-10,
+          4.285363075822127e-10,
+          1
+        ]
+      ],
+      "split": "historical_train_candidate_pool_unsplit",
+      "original_split": "train",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 0,
+          "label": "IC_Fail",
+          "xyxy": [
+            77.53640747070312,
+            28.231815338134766,
+            100.72547912597656,
+            54.565040588378906
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            93.04427337646484,
+            14.414128303527832,
+            150.91847229003906,
+            78.33956146240234
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "review_priority": "normal",
+      "historical_camera": true,
+      "reviewed_utc": "2026-11-15T15:29:45.917Z"
+    },
+    {
+      "id": "hist-absent_009393",
+      "image": "images/hist-absent_009393.png",
+      "image_sha256": "b0d0cee0ae83dbb2f913f2f30206f318c901990ceadd2b884e605b83cdebb6a1",
+      "width": 173,
+      "height": 91,
+      "state": "ic_missing_terminal_present",
+      "capture_group": "historical-source-run-absent",
+      "source_ancestor_sha256": "827e536642e5fca638c819f289a67334fbf717d8ef6c212c3b06391174537b72",
+      "source_to_crop": [
+        [
+          -0.5251022000384811,
+          -0.8421445465802523,
+          761.66272369523
+        ],
+        [
+          0.8416359885942187,
+          -0.5247853147839391,
+          -534.2335539367331
+        ],
+        [
+          4.728154021242055e-18,
+          2.4202224348012288e-18,
+          1
+        ]
+      ],
+      "split": "historical_train_candidate_pool_unsplit",
+      "original_split": "train",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 0,
+          "label": "IC_Fail",
+          "xyxy": [
+            78.00357818603516,
+            28.229036331176758,
+            101.91732788085938,
+            55.42036056518555
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            93.96695709228516,
+            15.197186470031738,
+            153.6250457763672,
+            80.46559143066406
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "review_priority": "normal",
+      "historical_camera": true,
+      "reviewed_utc": "2026-11-15T15:29:48.581Z"
+    },
+    {
+      "id": "hist-absent_005962",
+      "image": "images/hist-absent_005962.png",
+      "image_sha256": "dbe27022c14537e4bac37e6acff93e4a5803ad7d9f7bc1b4f70f6008c9e3a07a",
+      "width": 163,
+      "height": 90,
+      "state": "ic_missing_terminal_present",
+      "capture_group": "historical-source-run-absent",
+      "source_ancestor_sha256": "8f32c83ef197c128e73844a1ae81e9f19ec0b41e0f2efb52cc51b48cfe297706",
+      "source_to_crop": [
+        [
+          -0.09506307750071938,
+          -0.9886541300314111,
+          525.2575677455751
+        ],
+        [
+          0.9791246265154648,
+          -0.09414647129050562,
+          -762.3833835701745
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "split": "historical_train_candidate_pool_unsplit",
+      "original_split": "train",
+      "boxes": [
+        {
+          "target": "IC",
+          "class_id": 0,
+          "label": "IC_Fail",
+          "xyxy": [
+            82.28052520751953,
+            29.42797088623047,
+            98.65343475341797,
+            54.607810974121094
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        },
+        {
+          "target": "terminal",
+          "class_id": 1,
+          "label": "Terminal_pass",
+          "xyxy": [
+            102.07884216308594,
+            19.517087936401367,
+            143.99801635742188,
+            77.07674407958984
+          ],
+          "proposal_source": "historical TRAIN YOLO box projected to frozen hybrid crop; new manual review required"
+        }
+      ],
+      "review_status": "reviewed",
+      "reviewer": "H",
+      "review_notes": "",
+      "training_eligible": false,
+      "review_priority": "normal",
+      "historical_camera": true,
+      "reviewed_utc": "2026-11-15T15:29:55.324Z"
+    }
+  ],
+  "exported_utc": "2026-11-15T15:30:14.365Z"
+}

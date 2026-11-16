@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><title>Portable PCB annotation review — DRAFT</title>
+<style>
+body{font:15px system-ui;background:#151a22;color:#eee;margin:20px}button,input,select{font:inherit;margin:4px;padding:7px}a{color:#8cd5ff}canvas{background:#333;max-width:100%;touch-action:none;cursor:crosshair}#status{color:#ffdb76;white-space:pre-wrap}textarea{width:95%;height:55px} .warning{background:#493916;padding:12px}#caption{font-weight:bold}#points{white-space:pre-wrap;font-family:monospace;font-size:12px} .small{font-size:13px;color:#ccc}
+</style>
+<h1>PCB / inspection-site review — provisional labels</h1>
+<p class="warning">None of these labels is approved ground truth. Check the ORIGINAL pixels, not just whether a proposed outline looks plausible. Missing-component footprints and obscured substrate corners may be inferred. Reject or flag uncertain images. Export saves a NEW JSON file; it does not overwrite the original draft or the separate LabelMe files.</p>
+<div><button id="previous">← Previous</button><select id="select"></select><button id="next">Next →</button><label><input id="priority" type="checkbox">High priority only</label><span id="progress"></span></div>
+<p id="caption"></p><p id="status"></p>
+<div><label>Reviewer <input id="reviewer" placeholder="Your name"></label><button id="approve">Mark reviewed</button><button id="flag">Needs correction / uncertain</button><button id="pending">Reset to pending</button><button id="export">Export review JSON</button><label>Resume exported JSON <input id="import" type="file" accept=".json"></label></div>
+<div><label>Visible/editable geometry <select id="geometry"><option value="all">All</option><option value="board">PCB corners</option><option value="IC">IC footprint</option><option value="terminal">Terminal footprint</option><option value="none">None — original pixels</option></select></label><label><input id="full" type="checkbox">Full frame</label><button id="reset">Restore this image's original proposals</button></div>
+<p class="small">Drag coloured vertices to correct geometry. Cyan = PCB, yellow = IC, magenta = terminal. Arrow points HEADER → TERMINAL. PCB points 0/3 are the header end, 1/2 the terminal end. Changing PCB corners does NOT automatically move site polygons: review each. Arrow keys navigate (outside text fields).</p>
+<canvas id="canvas" width="1100" height="600"></canvas><p id="points"></p>
+<label>Review notes<textarea id="notes"></textarea></label>
+<p class="small">“Reviewed” records a named human review, not a model accuracy result or permission to train. All existing captures stay development-only. Browser changes stay in memory until exported. No upload, server, board connection or local-file write permission is used.</p>
+<script>
+'use strict';
+const original=/*ANNOTATION_DATA*/null;
+let data=structuredClone(original), index=0, image=new Image(), viewport=null, dragging=null, dirty=false, drawToken=0;
+const $=id=>document.getElementById(id), canvas=$('canvas'), ctx=canvas.getContext('2d');
+const colours={board:'#00cfff',IC:'#ffdf00',terminal:'#ff4fff'};
+function row(){return data.annotations[index]}
+function groups(r){return {board:r.board_quad,IC:r.sites.IC.polygon,terminal:r.sites.terminal.polygon}}
+function selectedKeys(){const g=$('geometry').value;return g==='none'?[]:g==='all'?['board','IC','terminal']:[g]}
+function ids(){return data.annotations.map((r,i)=>i).filter(i=>!$('priority').checked||data.annotations[i].review_priority==='high')}
+function updateOrientation(r){const q=r.board_quad,h=[(q[0][0]+q[3][0])/2,(q[0][1]+q[3][1])/2],t=[(q[1][0]+q[2][0])/2,(q[1][1]+q[2][1])/2];r.orientation={header_center:h,terminal_end_center:t,header_to_terminal_degrees_clockwise_from_image_x:(Math.atan2(t[1]-h[1],t[0]-h[0])*180/Math.PI+360)%360}}
+function invalidate(){row().review_status='pending';row().reviewer=null;row().geometry_independently_reviewed=false;row().training_eligible=false;dirty=true}
+function convex(p){let sign=0;for(let i=0;i<4;i++){let a=p[i],b=p[(i+1)%4],c=p[(i+2)%4];let cross=(b[0]-a[0])*(c[1]-b[1])-(b[1]-a[1])*(c[0]-b[0]);if(cross<=0)return false;sign+=cross}return sign>2}
+function valid(r){return Object.values(groups(r)).every(p=>p.length===4&&p.every(v=>v.length===2&&v.every(Number.isFinite)&&v[0]>=0&&v[0]<r.width&&v[1]>=0&&v[1]<r.height)&&convex(p))}
+function show(){
+ const r=row(), choices=ids();if(!choices.includes(index)&&choices.length)index=choices[0];const current=row();
+ $('select').replaceChildren(...choices.map(i=>{let o=document.createElement('option');o.value=i;o.textContent=data.annotations[i].id+' — '+data.annotations[i].review_status;o.selected=i===index;return o}));
+ $('caption').textContent=current.id+' | '+current.state+' | '+current.review_priority+' priority | '+current.proposal_method;
+ $('notes').value=current.review_notes||'';
+ $('status').textContent='Status: '+current.review_status+'\nProposal notes: '+current.notes;
+ $('progress').textContent=data.annotations.filter(r=>r.review_status==='reviewed').length+'/'+data.annotations.length+' reviewed';
+ const token=++drawToken;image=new Image();image.onload=()=>{if(token===drawToken)draw()};image.onerror=()=>{$('status').textContent+='\nIMAGE NOT FOUND: keep review.html beside the images folder.'};image.src=current.image;
+}
+function draw(){
+ if(!image.complete||!image.naturalWidth)return;const r=row(),points=Object.values(groups(r)).flat();
+ let x0=0,y0=0,x1=r.width,y1=r.height;
+ if(!$('full').checked){x0=Math.max(0,Math.min(...points.map(p=>p[0]))-40);y0=Math.max(0,Math.min(...points.map(p=>p[1]))-40);x1=Math.min(r.width,Math.max(...points.map(p=>p[0]))+40);y1=Math.min(r.height,Math.max(...points.map(p=>p[1]))+40)}
+ if(dragging){const v=dragging.viewport;x0=v.x;y0=v.y;x1=v.x1;y1=v.y1}
+ const s=Math.min(canvas.width/(x1-x0),canvas.height/(y1-y0));viewport={x:x0,y:y0,x1,y1,s};ctx.clearRect(0,0,canvas.width,canvas.height);ctx.drawImage(image,x0,y0,x1-x0,y1-y0,0,0,(x1-x0)*s,(y1-y0)*s);
+ for(const name of selectedKeys()){const pts=groups(r)[name];ctx.strokeStyle=colours[name];ctx.fillStyle=colours[name];ctx.lineWidth=2;ctx.beginPath();pts.forEach((p,j)=>{const x=(p[0]-x0)*s,y=(p[1]-y0)*s;j?ctx.lineTo(x,y):ctx.moveTo(x,y)});ctx.closePath();ctx.stroke();pts.forEach((p,j)=>{const x=(p[0]-x0)*s,y=(p[1]-y0)*s;ctx.beginPath();ctx.arc(x,y,6,0,Math.PI*2);ctx.fill();ctx.font='16px system-ui';ctx.fillText(name+' '+j,x+8,y-8)})}
+ updateOrientation(r);if(selectedKeys().includes('board')){const h=r.orientation.header_center,t=r.orientation.terminal_end_center;ctx.strokeStyle='#6cff6c';ctx.beginPath();ctx.moveTo((h[0]-x0)*s,(h[1]-y0)*s);ctx.lineTo((t[0]-x0)*s,(t[1]-y0)*s);ctx.stroke();ctx.fillStyle='#6cff6c';ctx.fillText('TERMINAL',(t[0]-x0)*s,(t[1]-y0)*s)}
+ $('points').textContent=Object.entries(groups(r)).map(([k,p])=>k+': '+JSON.stringify(p.map(v=>v.map(n=>Math.round(n*10)/10)))).join('\n');
+}
+function eventPoint(e){const b=canvas.getBoundingClientRect();return [(e.clientX-b.left)*canvas.width/b.width,(e.clientY-b.top)*canvas.height/b.height]}
+canvas.onpointerdown=e=>{if(!viewport)return;const p=eventPoint(e),v=viewport;let best=18;for(const name of selectedKeys())groups(row())[name].forEach((pt,j)=>{const d=Math.hypot((pt[0]-v.x)*v.s-p[0],(pt[1]-v.y)*v.s-p[1]);if(d<best){best=d;dragging={name,j,viewport:{...v}}}});if(dragging)canvas.setPointerCapture(e.pointerId)};
+canvas.onpointermove=e=>{if(!dragging)return;const p=eventPoint(e),v=dragging.viewport,r=row();groups(r)[dragging.name][dragging.j]=[Math.max(0,Math.min(r.width-1,p[0]/v.s+v.x)),Math.max(0,Math.min(r.height-1,p[1]/v.s+v.y))];invalidate();draw()};
+canvas.onpointerup=canvas.onpointercancel=()=>{if(dragging){dragging=null;show()}};
+function navigate(delta){const list=ids(),i=list.indexOf(index);index=list[(i+delta+list.length)%list.length];show()}
+$('previous').onclick=()=>navigate(-1);$('next').onclick=()=>navigate(1);$('select').onchange=e=>{index=Number(e.target.value);show()};$('priority').onchange=show;$('geometry').onchange=draw;$('full').onchange=draw;
+$('notes').oninput=()=>{row().review_notes=$('notes').value;dirty=true};
+$('approve').onclick=()=>{const name=$('reviewer').value.trim();if(!name)return alert('Enter the human reviewer name.');if(!valid(row()))return alert('Invalid polygon: check convexity, point order and image bounds.');row().review_status='reviewed';row().reviewer=name;row().reviewed_utc=new Date().toISOString();row().geometry_independently_reviewed=true;row().training_eligible=false;dirty=true;show()};
+$('flag').onclick=()=>{invalidate();row().review_status='needs_correction';row().reviewer=$('reviewer').value.trim()||null;show()};$('pending').onclick=()=>{invalidate();show()};
+$('reset').onclick=()=>{if(confirm('Discard this image\'s edits and restore original unreviewed proposals?')){data.annotations[index]=structuredClone(original.annotations[index]);dirty=true;show()}};
+$('export').onclick=()=>{data.exported_utc=new Date().toISOString();data.coverage.approved_geometry=data.annotations.filter(r=>r.review_status==='reviewed').length;data.status='Human review export; inspect per-image status. NOT a training export.';const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='annotations.review-export.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),5000);dirty=false};
+$('import').onchange=async e=>{try{const candidate=JSON.parse(await e.target.files[0].text());if(candidate.schema!==original.schema||candidate.annotations.length!==original.annotations.length)throw Error('Schema/count differs');candidate.annotations.forEach((r,i)=>{const o=original.annotations[i];if(r.id!==o.id||r.source_image_sha256!==o.source_image_sha256||r.image!==o.image||r.width!==o.width||r.height!==o.height||r.capture_group!==o.capture_group||r.state!==o.state||JSON.stringify(r.sites.IC.presence)!==JSON.stringify(o.sites.IC.presence)||JSON.stringify(r.sites.terminal.presence)!==JSON.stringify(o.sites.terminal.presence)||!valid(r))throw Error('Source identity/state or geometry differs: '+r.id);r.training_eligible=false});data=candidate;dirty=true;show()}catch(err){alert('Import refused: '+err.message)}};
+document.onkeydown=e=>{if(['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName))return;if(e.key==='ArrowRight')navigate(1);if(e.key==='ArrowLeft')navigate(-1)};
+window.onbeforeunload=e=>{if(dirty){e.preventDefault();e.returnValue='Export your review before leaving.'}};
+show();
+</script></html>
